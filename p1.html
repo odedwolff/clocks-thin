@@ -1,0 +1,274 @@
+
+
+
+
+
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>The HTML5 Herald</title>
+        <meta name="description" content="The HTML5 Herald">
+        <meta name="author" content="SitePoint">
+
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <link rel="stylesheet" href="p1.css">
+
+
+        <!--[if lt IE 9]>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+              
+        <![endif]-->
+    </head>
+
+    <body>
+        <!--  <script src="js/scripts.js"></script>  -->
+
+        <div id = root>
+            <div id = buttonsPanel1>
+                <button id=start class="controlButton">start</button>
+                <button id=stop	 class="controlButton">stop</button>
+                <button id=next class="controlButton">next</button>
+                <button id=prev	 class="controlButton">prev</button>
+            </div>
+
+            <div id = svgCont>
+                <div id = panel4	class = panelCls>
+                    <svg id=svg1 class="gridCell1" viewBox="0 0 800 800" preserveAspectRatio="none">
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+
+            var interval;
+            var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            var svgNS = svg.namespaceURI;
+
+            var rect = document.createElementNS(svgNS, 'rect');
+            rect.setAttribute('x', 5);
+            rect.setAttribute('y', 30);
+            rect.setAttribute('width', 70);
+            rect.setAttribute('height', 40);
+            rect.setAttribute('fill', 'red');
+            
+
+            function testAddCirclesArray(startLoc, spacing, radius, numInstances) {
+                for (var i = 0; i < numInstances; i++) {
+                    var circle = document.createElementNS(svgNS, 'circle');
+                    circle.setAttribute('cx', startLoc[0] + i * spacing);
+                    circle.setAttribute('cy', startLoc[1]);
+                    circle.setAttribute('fill', 'red');
+                    circle.setAttribute('r', radius);
+
+                    //$("#svg2").append(circle);
+                }
+            }
+
+           
+
+            //returns a function of x
+            function gausian(a, b, c) {
+                f = function (x) {
+                    //return -1.0 * a * Math.exp( -1.0 * Math.pow((x-b),2)) / (2*Math.pow(c, 2));
+                    return 1.0 * a * Math.exp(-1.0 * Math.pow((x - b), 2)) / (2 * Math.pow(c, 2));
+                }
+                return f;
+            }
+
+
+            //cos(​t)*​1/​(6+​(t/​2)^​2)
+            //decay must be integer !!
+            function fCustom1(scaleX, scaleY, decay) {
+                f = function (x) {
+                    x = x * scaleX;
+                    //x = Math.abs(x);
+                    return scaleY * Math.cos(x) / (6 + Math.pow(x / 2, decay));
+                    //return scaleY * Math.cos(x) / (6  + (Math.pow(x/2, decay))); 
+                }
+                return f;
+            }
+
+
+            //return white regardless of angle 	
+            function constantWhite(angle, currentTimeMilli) {
+                return "red";
+            }
+
+            //returns proper circling element 
+            function fCircElm(angle, time) {
+                var radiusNormal = 2;
+                var radiusFullHr = 4;
+                var mnClr = "#3D8B02";
+                var hrClr = "pink";
+                var dfltClr = "red";
+                var color;
+                var radius;
+                var threshold = 2 * Math.PI / 100;
+
+                var circle = document.createElementNS(svgNS, 'circle');
+                circle.setAttribute('cx', x);
+                circle.setAttribute('cy', y);
+                
+                var mntAngle = (time.getMinutes() / 60) * Math.PI * 2;
+                var diffMinAng = sharpAngel((angle + Math.PI / 2) - mntAngle);
+
+                var hrAngle = (time.getHours() / 12) * Math.PI * 2 + mntAngle / 12;
+                var diffHrAngle = sharpAngel((angle + Math.PI / 2) - hrAngle);
+
+
+                //a match for minute match 
+                if (Math.abs(diffMinAng) < threshold) {
+                    circle.setAttribute('fill', mnClr);
+                    circle.setAttribute('r', radiusNormal);
+                    return circle;
+                }
+
+                //pointed by hour hand
+                if (Math.abs(diffHrAngle) < threshold) {
+                    circle.setAttribute('fill', hrClr);
+                    circle.setAttribute('r', radiusNormal);
+                    return circle;
+                }
+
+                //pointed by minutes hand
+                if (angleCloeToHrMark(angle)) {
+                    circle.setAttribute('fill', hrClr);
+                    circle.setAttribute('r', radiusFullHr);
+                    return circle;
+                }
+
+                //the default element 
+                circle.setAttribute('fill', dfltClr);
+                circle.setAttribute('r', radiusNormal);
+                return circle;
+            }
+
+
+
+            //returns true iff angle close within margin to a whole hour marign mark 
+            function angleCloeToHrMark(angle) {
+                var margin = Math.PI * 2 / 120;
+                var hrSlice = Math.PI * 2 / 12;
+                var hrBelow = angle - angle % hrSlice;
+                var hrAbove = hrBelow + hrSlice;
+                if (hrAbove - angle < margin || angle - hrBelow < margin) {
+                    return true;
+                }
+                return false;
+            }
+
+
+            function pojectFunctionOnRadCrd(panelName, center, numSections, outerRadius, f, zoomX, zoomY, offsetAngleRad, circElmFnc, currentTime) {
+                colorsPointer = 0;
+                var angle = 0;
+                for (var i = 0; i < numSections; i++) {
+                    angVar = sharpAngel(angle - offsetAngleRad) * zoomX;
+
+                    addedRad = f(angVar);
+                    console.log("angle,angVar, f(angVar) " + angle + ";" + angVar + ";" + addedRad);
+                    x = center[0] + Math.cos(angle) * outerRadius * (1 + zoomY * addedRad);
+                    y = center[1] + Math.sin(angle) * outerRadius * (1 + zoomY * addedRad);
+
+                    angle += 2 * Math.PI / numSections;
+
+                    var circle = circElmFnc(angle, currentTime);
+
+                    $("#" + panelName).append(circle);
+
+                }
+            }
+
+
+
+
+            function sharpAngel(angle) {
+
+                angle = angle % (2 * Math.PI);
+                if (angle > Math.PI) {
+                    return  -1 * (2 * Math.PI - angle);
+                }
+                if (angle < -Math.PI) {
+                    return  (2 * Math.PI + angle);
+                }
+                return angle;
+
+            }
+
+           
+
+
+            
+
+
+
+            function startTickingFCst1CheckClock(numPracitalPerSecond, panelName) {
+                
+                var d = new Date();
+                numOfTicks = numPracitalPerSecond * 60;
+                var curruentSecProp;
+                var time;
+                var tick = function () {
+                    d = new Date();
+                    time = d.getTime();
+                    curruentSecProp = (time % (1000 * 60)) / (1000 * 60);
+                    $("#" + panelName).empty();
+                    //f = gausian(5.5, 0, 0.5);
+                    f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
+
+                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
+                            /*numSections*/ 250, /*outerRadius*/250, /*projected fnc*/f,
+                            /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * curruentSecProp - Math.PI / 2,
+                            /*circElmFnc*/fCircElm, /*time*/ d);
+
+
+
+                };
+                return setInterval(tick, 1000 / numPracitalPerSecond);
+            }
+
+
+
+
+            
+
+
+            //$("#start").click(testStartTicking);
+            $("#start").click(function () {
+                interval = startTickingFCst1CheckClock(11, "svg1");
+            });
+
+
+            $("#stop").click(function () {
+                clearInterval(interval)
+            });
+
+
+        </script>
+
+        <label id=label1>label1</label>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a

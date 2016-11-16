@@ -1,0 +1,65 @@
+
+/*
+#svg1{
+	width:200px;
+	height:500px;
+	background-color:pink;
+}
+*/
+
+.gridCell1{
+	width:500px;
+	height:700px;
+	background-color:black;
+	margin-left: 15%;
+    margin-top: 4%;
+	color:yellow;
+}
+
+
+#avcd{
+  fill: #ace63c;
+  stroke: blue;  
+}
+#avcd:hover {
+  fill: none;
+  stroke: red;  
+}
+
+
+#label1{
+  //fill: #ace63c;
+  color: green;  
+
+}
+
+#label1:hover {
+  //fill: #ace63c;
+  color: red;  
+}
+
+.c1{
+	stroke: blue;  	
+}
+
+.controlButton{
+	background-color:red;
+	color:yellow;
+}
+
+.panelCls{
+	background:gray;
+	color:yellow;
+	
+	margin-left: 15%;
+    margin-top: 4%;
+    padding-left: 10%;
+    width: 50%;
+}
+
+#buttonsPanel1{
+	width: 80%;
+	height: 10%;
+}
+
+

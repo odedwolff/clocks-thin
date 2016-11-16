@@ -1,0 +1,31 @@
+<head>
+</head>
+<body>
+	<script>
+		function fCustom1(scaleX, scaleY, decay){
+			f = function(x){
+				x = x*scaleX;
+				//return scaleY * Math.cos(x) / (6  + Math.pow(x/2, decay)); 
+				return scaleY * Math.cos(x) / (6  + Math.abs(Math.pow(x/2, decay))); 
+			}
+			return f;
+		}
+		
+		function testNumeric(f, minRange, maxRange, numSteps){
+			interval = (maxRange - minRange) / numSteps;
+			for(var i = 0 ; i < numSteps ;i++){
+				x = i * interval;
+				console.log("x,f(x)= " + x + ";" + f(x));
+			}
+		}
+		
+		f = fCustom1(2.5, 25.0, 1.25);
+		//testNumeric(f, -20, 20, 1000);
+		console.log(f(0));
+		x = -1.0367255756848603
+		console.log(f(-1.0367255756848603));
+		console.log(6  + Math.abs(Math.pow(x/2, 1.25)))
+		console.log(Math.pow(x/2, 1.25))
+		
+	</script>
+</body>
