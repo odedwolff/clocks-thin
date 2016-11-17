@@ -10,7 +10,7 @@
 .gridCell1{
 	width:500px;
 	height:700px;
-	background-color:black;
+	background-color: #01001B;
 	margin-left: 15%;
     margin-top: 4%;
 	color:yellow;
@@ -48,7 +48,7 @@
 }
 
 .panelCls{
-	background:gray;
+	//background:gray;
 	color:yellow;
 	
 	margin-left: 15%;
@@ -60,6 +60,14 @@
 #buttonsPanel1{
 	width: 80%;
 	height: 10%;
+}
+
+div#svgCont {
+    background: #000000;
+}
+
+div#root {
+    background: #000000;
 }
 
 

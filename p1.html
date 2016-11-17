@@ -103,12 +103,14 @@
             function fCircElm(angle, time) {
                 var radiusNormal = 2;
                 var radiusFullHr = 4;
-                var mnClr = "#3D8B02";
-                var hrClr = "pink";
-                var dfltClr = "red";
-                var color;
-                var radius;
-                var threshold = 2 * Math.PI / 100;
+                var mnClr = "#EC6F00";
+                var hrClr = "#830000";
+                var dfltClr = "#FFFFFF";
+                //var threshold = 2 * Math.PI / 200;
+                
+                var thrshMin = 2 * Math.PI / 400;
+                var thrshHr = 2 * Math.PI / 200;
+                        
 
                 var circle = document.createElementNS(svgNS, 'circle');
                 circle.setAttribute('cx', x);
@@ -121,23 +123,23 @@
                 var diffHrAngle = sharpAngel((angle + Math.PI / 2) - hrAngle);
 
 
-                //a match for minute match 
-                if (Math.abs(diffMinAng) < threshold) {
+                //pointed by minutes hand
+                if (Math.abs(diffMinAng) < thrshMin) {
                     circle.setAttribute('fill', mnClr);
-                    circle.setAttribute('r', radiusNormal);
+                    circle.setAttribute('r', radiusFullHr);
                     return circle;
                 }
 
                 //pointed by hour hand
-                if (Math.abs(diffHrAngle) < threshold) {
+                if (Math.abs(diffHrAngle) < thrshHr) {
                     circle.setAttribute('fill', hrClr);
-                    circle.setAttribute('r', radiusNormal);
+                    circle.setAttribute('r', radiusFullHr);
                     return circle;
                 }
 
-                //pointed by minutes hand
+                //match for hour mark
                 if (angleCloeToHrMark(angle)) {
-                    circle.setAttribute('fill', hrClr);
+                    circle.setAttribute('fill', dfltClr);
                     circle.setAttribute('r', radiusFullHr);
                     return circle;
                 }
@@ -152,7 +154,7 @@
 
             //returns true iff angle close within margin to a whole hour marign mark 
             function angleCloeToHrMark(angle) {
-                var margin = Math.PI * 2 / 120;
+                var margin = Math.PI * 2 / 250;
                 var hrSlice = Math.PI * 2 / 12;
                 var hrBelow = angle - angle % hrSlice;
                 var hrAbove = hrBelow + hrSlice;
