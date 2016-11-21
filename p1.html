@@ -29,9 +29,11 @@
         <div id = root>
             <div id = buttonsPanel1>
                 <button id=start class="controlButton">start</button>
+                <button id=start2 class="controlButton">start2</button>
                 <button id=stop	 class="controlButton">stop</button>
                 <button id=next class="controlButton">next</button>
                 <button id=prev	 class="controlButton">prev</button>
+                
             </div>
 
             <div id = svgCont>
@@ -164,15 +166,22 @@
                 return false;
             }
 
-
+            /**
+             * renders a Seconds dial for given offset and given projected function 
+             * the passed time does not affect the porjection of the function, that is, the computed locaiton 
+             * of elements, but it is being passed on to the function that renders the elemnts, thus allowes for 
+             * instance to mark the seconds and minutes hands by coloring their corresponing elemnts 
+             * **/
             function pojectFunctionOnRadCrd(panelName, center, numSections, outerRadius, f, zoomX, zoomY, offsetAngleRad, circElmFnc, currentTime) {
                 colorsPointer = 0;
                 var angle = 0;
                 for (var i = 0; i < numSections; i++) {
-                    angVar = sharpAngel(angle - offsetAngleRad) * zoomX;
+                    //the angular distance of currently rendered angle from the offset (offset is the center of the projected
+                    //function) 
+                    var angDist = sharpAngel(angle - offsetAngleRad) * zoomX;
 
-                    addedRad = f(angVar);
-                    console.log("angle,angVar, f(angVar) " + angle + ";" + angVar + ";" + addedRad);
+                    var addedRad = f(angDist);
+                    //console.log("angle,angVar, f(angVar) " + angle + ";" + angVar + ";" + addedRad);
                     x = center[0] + Math.cos(angle) * outerRadius * (1 + zoomY * addedRad);
                     y = center[1] + Math.sin(angle) * outerRadius * (1 + zoomY * addedRad);
 
@@ -232,6 +241,52 @@
                 };
                 return setInterval(tick, 1000 / numPracitalPerSecond);
             }
+            
+            
+            
+            
+            
+            
+            function startTicking3porjections(numPracitalPerSecond, panelName){
+                 var d = new Date();
+                numOfTicks = numPracitalPerSecond * 60;
+                var curruentSecProp;
+                var currentMinProp;
+                var currentHRProp;
+                var time;
+                var tick = function () {
+                    d = new Date();
+                    time = d.getTime();
+                    curruentSecProp = (time % (1000 * 60)) / (1000 * 60);
+                    currentMinProp = d.getMinutes() / 60;
+                    currentHRProp = d.getHours() / 12;
+                    
+                    $("#" + panelName).empty();
+                    //f = gausian(5.5, 0, 0.5);
+                    f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
+                    
+                    
+                    //render secondes circle 
+                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
+                            /*numSections*/ 250, /*outerRadius*/250, /*projected fnc*/f,
+                            /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * curruentSecProp - Math.PI / 2,
+                            /*circElmFnc*/fCircElm, /*time*/ d);
+                           
+                    //render minutes circle 
+                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
+                            /*numSections*/ 250, /*outerRadius*/150, /*projected fnc*/f,
+                            /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * currentMinProp - Math.PI / 2,
+                            /*circElmFnc*/fCircElm, /*time*/ d);
+                    
+                    //render hours circle 
+                             pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
+                            /*numSections*/ 250, /*outerRadius*/ 78, /*projected fnc*/f,
+                            /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * currentHRProp - Math.PI / 2,
+                            /*circElmFnc*/fCircElm, /*time*/ d);
+                    
+                };
+                return setInterval(tick, 1000 / numPracitalPerSecond); 
+            }
 
 
 
@@ -241,12 +296,18 @@
 
             //$("#start").click(testStartTicking);
             $("#start").click(function () {
+                clearInterval(interval);
                 interval = startTickingFCst1CheckClock(11, "svg1");
+            });
+            
+             $("#start2").click(function () {
+                clearInterval(interval);
+                interval = startTicking3porjections(11, "svg1");
             });
 
 
             $("#stop").click(function () {
-                clearInterval(interval)
+                clearInterval(interval);
             });
 
 
