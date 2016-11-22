@@ -75,7 +75,7 @@
 
             //returns a function of x
             function gausian(a, b, c) {
-                f = function (x) {
+                var f = function (x) {
                     //return -1.0 * a * Math.exp( -1.0 * Math.pow((x-b),2)) / (2*Math.pow(c, 2));
                     return 1.0 * a * Math.exp(-1.0 * Math.pow((x - b), 2)) / (2 * Math.pow(c, 2));
                 }
@@ -86,7 +86,7 @@
             //cos(​t)*​1/​(6+​(t/​2)^​2)
             //decay must be integer !!
             function fCustom1(scaleX, scaleY, decay) {
-                f = function (x) {
+                var f = function (x) {
                     x = x * scaleX;
                     //x = Math.abs(x);
                     return scaleY * Math.cos(x) / (6 + Math.pow(x / 2, decay));
@@ -99,6 +99,16 @@
             //return white regardless of angle 	
             function constantWhite(angle, currentTimeMilli) {
                 return "red";
+            }
+            
+            
+            /*
+             * returns constant white element, regardless of parameters 
+             */
+            function fElmClock3MinCircles (angle, time){
+                var color = "#FFFFFF";
+                var circle = document.createElementNS(svgNS, 'circle');
+                
             }
 
             //returns proper circling element 
@@ -115,8 +125,8 @@
                         
 
                 var circle = document.createElementNS(svgNS, 'circle');
-                circle.setAttribute('cx', x);
-                circle.setAttribute('cy', y);
+               // circle.setAttribute('cx', x);
+               // circle.setAttribute('cy', y);
                 
                 var mntAngle = (time.getMinutes() / 60) * Math.PI * 2;
                 var diffMinAng = sharpAngel((angle + Math.PI / 2) - mntAngle);
@@ -182,12 +192,15 @@
 
                     var addedRad = f(angDist);
                     //console.log("angle,angVar, f(angVar) " + angle + ";" + angVar + ";" + addedRad);
-                    x = center[0] + Math.cos(angle) * outerRadius * (1 + zoomY * addedRad);
-                    y = center[1] + Math.sin(angle) * outerRadius * (1 + zoomY * addedRad);
+                    var x = center[0] + Math.cos(angle) * outerRadius * (1 + zoomY * addedRad);
+                    var y = center[1] + Math.sin(angle) * outerRadius * (1 + zoomY * addedRad);
 
                     angle += 2 * Math.PI / numSections;
 
                     var circle = circElmFnc(angle, currentTime);
+                    
+                    circle.setAttribute('cx', x);
+                    circle.setAttribute('cy', y);
 
                     $("#" + panelName).append(circle);
 
@@ -219,24 +232,20 @@
 
             function startTickingFCst1CheckClock(numPracitalPerSecond, panelName) {
                 
-                var d = new Date();
-                numOfTicks = numPracitalPerSecond * 60;
-                var curruentSecProp;
-                var time;
                 var tick = function () {
+                    var d = new Date();
+                    var curruentSecProp;
+                    var time;
                     d = new Date();
                     time = d.getTime();
                     curruentSecProp = (time % (1000 * 60)) / (1000 * 60);
                     $("#" + panelName).empty();
-                    //f = gausian(5.5, 0, 0.5);
-                    f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
+                    var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
 
                     pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
                             /*numSections*/ 250, /*outerRadius*/250, /*projected fnc*/f,
                             /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * curruentSecProp - Math.PI / 2,
                             /*circElmFnc*/fCircElm, /*time*/ d);
-
-
 
                 };
                 return setInterval(tick, 1000 / numPracitalPerSecond);
@@ -248,22 +257,20 @@
             
             
             function startTicking3porjections(numPracitalPerSecond, panelName){
-                 var d = new Date();
-                numOfTicks = numPracitalPerSecond * 60;
-                var curruentSecProp;
-                var currentMinProp;
-                var currentHRProp;
-                var time;
+                
                 var tick = function () {
-                    d = new Date();
+                    var curruentSecProp;
+                    var currentMinProp;
+                    var currentHRProp;
+                    var time;
+                    var d = new Date();
                     time = d.getTime();
                     curruentSecProp = (time % (1000 * 60)) / (1000 * 60);
                     currentMinProp = d.getMinutes() / 60;
                     currentHRProp = d.getHours() / 12;
                     
                     $("#" + panelName).empty();
-                    //f = gausian(5.5, 0, 0.5);
-                    f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
+                    var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
                     
                     
                     //render secondes circle 
