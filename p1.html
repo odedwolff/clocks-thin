@@ -33,7 +33,7 @@
                 <button id=stop	 class="controlButton">stop</button>
                 <button id=next class="controlButton">next</button>
                 <button id=prev	 class="controlButton">prev</button>
-                
+
             </div>
 
             <div id = svgCont>
@@ -57,7 +57,7 @@
             rect.setAttribute('width', 70);
             rect.setAttribute('height', 40);
             rect.setAttribute('fill', 'red');
-            
+
 
             function testAddCirclesArray(startLoc, spacing, radius, numInstances) {
                 for (var i = 0; i < numInstances; i++) {
@@ -71,7 +71,7 @@
                 }
             }
 
-           
+
 
             //returns a function of x
             function gausian(a, b, c) {
@@ -100,16 +100,33 @@
             function constantWhite(angle, currentTimeMilli) {
                 return "red";
             }
-            
-            
+
+
             /*
              * returns constant white element, regardless of parameters 
              */
-            function fElmClock3MinCircles (angle, time){
+            function fElmClock3MinCircle(angle, time) {
                 var color = "#FFFFFF";
+                var radius = 2;
                 var circle = document.createElementNS(svgNS, 'circle');
-                
+                circle.setAttribute('r', radius);
+                circle.setAttribute('fill', color);
+                return circle;
             }
+
+            /*
+             * returns constant white element, regardless of parameters 
+             */
+            function fElmClock3HRCircle(angle, time) {
+                var color = "#FFFFFF";
+                var radius = 1;
+                var circle = document.createElementNS(svgNS, 'circle');
+                circle.setAttribute('r', radius);
+                circle.setAttribute('fill', color);
+                return circle;
+            }
+
+
 
             //returns proper circling element 
             function fCircElm(angle, time) {
@@ -119,15 +136,15 @@
                 var hrClr = "#830000";
                 var dfltClr = "#FFFFFF";
                 //var threshold = 2 * Math.PI / 200;
-                
+
                 var thrshMin = 2 * Math.PI / 400;
                 var thrshHr = 2 * Math.PI / 200;
-                        
+
 
                 var circle = document.createElementNS(svgNS, 'circle');
-               // circle.setAttribute('cx', x);
-               // circle.setAttribute('cy', y);
-                
+                // circle.setAttribute('cx', x);
+                // circle.setAttribute('cy', y);
+
                 var mntAngle = (time.getMinutes() / 60) * Math.PI * 2;
                 var diffMinAng = sharpAngel((angle + Math.PI / 2) - mntAngle);
 
@@ -198,7 +215,7 @@
                     angle += 2 * Math.PI / numSections;
 
                     var circle = circElmFnc(angle, currentTime);
-                    
+
                     circle.setAttribute('cx', x);
                     circle.setAttribute('cy', y);
 
@@ -223,15 +240,15 @@
 
             }
 
-           
 
 
-            
+
+
 
 
 
             function startTickingFCst1CheckClock(numPracitalPerSecond, panelName) {
-                
+
                 var tick = function () {
                     var d = new Date();
                     var curruentSecProp;
@@ -250,55 +267,55 @@
                 };
                 return setInterval(tick, 1000 / numPracitalPerSecond);
             }
-            
-            
-            
-            
-            
-            
-            function startTicking3porjections(numPracitalPerSecond, panelName){
-                
+
+
+
+
+
+
+            function startTicking3porjections(numPracitalPerSecond, panelName) {
+
                 var tick = function () {
                     var curruentSecProp;
                     var currentMinProp;
                     var currentHRProp;
-                    var time;
                     var d = new Date();
-                    time = d.getTime();
-                    curruentSecProp = (time % (1000 * 60)) / (1000 * 60);
+                    var time = d.getTime();
+                    var msIn1Min = 1000 * 60;
+                    curruentSecProp = (time % msIn1Min) / msIn1Min;
                     currentMinProp = d.getMinutes() / 60;
-                    currentHRProp = d.getHours() / 12;
-                    
+                    currentHRProp = d.getHours() / 12 + currentMinProp / 12;
+
                     $("#" + panelName).empty();
                     var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
-                    
-                    
+
+
                     //render secondes circle 
                     pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
                             /*numSections*/ 250, /*outerRadius*/250, /*projected fnc*/f,
                             /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * curruentSecProp - Math.PI / 2,
                             /*circElmFnc*/fCircElm, /*time*/ d);
-                           
+
                     //render minutes circle 
                     pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
                             /*numSections*/ 250, /*outerRadius*/150, /*projected fnc*/f,
                             /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * currentMinProp - Math.PI / 2,
-                            /*circElmFnc*/fCircElm, /*time*/ d);
-                    
+                            /*circElmFnc*/fElmClock3MinCircle, /*time*/ d);
+
                     //render hours circle 
-                             pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
+                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
                             /*numSections*/ 250, /*outerRadius*/ 78, /*projected fnc*/f,
                             /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * currentHRProp - Math.PI / 2,
-                            /*circElmFnc*/fCircElm, /*time*/ d);
-                    
+                            /*circElmFnc*/fElmClock3HRCircle, /*time*/ d);
+
                 };
-                return setInterval(tick, 1000 / numPracitalPerSecond); 
+                return setInterval(tick, 1000 / numPracitalPerSecond);
             }
 
 
 
 
-            
+
 
 
             //$("#start").click(testStartTicking);
@@ -306,8 +323,8 @@
                 clearInterval(interval);
                 interval = startTickingFCst1CheckClock(11, "svg1");
             });
-            
-             $("#start2").click(function () {
+
+            $("#start2").click(function () {
                 clearInterval(interval);
                 interval = startTicking3porjections(11, "svg1");
             });
