@@ -127,14 +127,14 @@
             }
 
 
-            function fCircElmColorHrSec(angle, time){
+            function fCircElmColorHrSec(angle, time) {
                 return fCircElm(angle, time, true);
             }
-            
-             function fCircElmNoColorHrSec(angle, time){
+
+            function fCircElmNoColorHrSec(angle, time) {
                 return fCircElm(angle, time, false);
             }
-            
+
 
 
             //returns proper circling element 
@@ -282,7 +282,7 @@
 
 
 
-            function startTicking3porjections(numPracitalPerSecond, panelName) {
+            function startTicking3porjectionsOld(numPracitalPerSecond, panelName) {
 
                 var tick = function () {
                     var curruentSecProp;
@@ -323,8 +323,61 @@
 
 
 
+            function startTicking3porjections(numPracitalPerSecond, panelName,
+                    fRenderHr, fRenderMin, fRenderSec) {
+
+                var tick = function () {
+                    var d = new Date();
+                    $("#" + panelName).empty();
+                    fRenderHr(d);
+                    fRenderMin(d);
+                    fRenderSec(d);
 
 
+                };
+                return setInterval(tick, 1000 / numPracitalPerSecond);
+            }
+
+            function start3CirclesTicking(numPracitalPerSecond, panelName) {
+
+                var fRenderHr = function (dateTimeInfo) {
+                    var currentMinProp = dateTimeInfo.getMinutes() / 60;
+                    var currentHRProp = dateTimeInfo.getHours() / 12 + currentMinProp / 12;
+                    var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
+                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
+                            /*numSections*/ 250, /*outerRadius*/ 78, /*projected fnc*/f,
+                            /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * currentHRProp - Math.PI / 2,
+                            /*circElmFnc*/fElmClock3HRCircle, /*time*/ dateTimeInfo);
+
+                };
+
+                var fRenderMin = function (dateTimeInfo) {
+                    var currentMinProp = dateTimeInfo.getMinutes() / 60;
+                    var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
+                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
+                            /*numSections*/ 250, /*outerRadius*/ 150, /*projected fnc*/f,
+                            /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * currentMinProp - Math.PI / 2,
+                            /*circElmFnc*/fElmClock3MinCircle, /*time*/ dateTimeInfo);
+
+                };
+
+                var fRenderSec = function (dateTimeInfo) {
+                    var msIn1Min = 1000 * 60;
+                    var curruentSecProp = (dateTimeInfo.getTime() % msIn1Min) / msIn1Min;
+                    var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
+                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
+                            /*numSections*/ 250, /*outerRadius*/ 250, /*projected fnc*/f,
+                            /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * curruentSecProp - Math.PI / 2,
+                            /*circElmFnc*/fCircElmNoColorHrSec, /*time*/ dateTimeInfo);
+
+                };
+
+                return startTicking3porjections(numPracitalPerSecond, panelName,
+                        fRenderHr, fRenderMin, fRenderSec);
+
+
+
+            }
 
 
             //$("#start").click(testStartTicking);
@@ -335,7 +388,9 @@
 
             $("#start2").click(function () {
                 clearInterval(interval);
-                interval = startTicking3porjections(11, "svg1");
+                //interval = startTicking3porjections(11, "svg1");
+
+                interval = start3CirclesTicking(11, "svg1");
             });
 
 
