@@ -127,9 +127,18 @@
             }
 
 
+            function fCircElmColorHrSec(angle, time){
+                return fCircElm(angle, time, true);
+            }
+            
+             function fCircElmNoColorHrSec(angle, time){
+                return fCircElm(angle, time, false);
+            }
+            
+
 
             //returns proper circling element 
-            function fCircElm(angle, time) {
+            function fCircElm(angle, time, shouldColorHrMin) {
                 var radiusNormal = 2;
                 var radiusFullHr = 4;
                 var mnClr = "#EC6F00";
@@ -153,14 +162,14 @@
 
 
                 //pointed by minutes hand
-                if (Math.abs(diffMinAng) < thrshMin) {
+                if (shouldColorHrMin && Math.abs(diffMinAng) < thrshMin) {
                     circle.setAttribute('fill', mnClr);
                     circle.setAttribute('r', radiusFullHr);
                     return circle;
                 }
 
                 //pointed by hour hand
-                if (Math.abs(diffHrAngle) < thrshHr) {
+                if (shouldColorHrMin && Math.abs(diffHrAngle) < thrshHr) {
                     circle.setAttribute('fill', hrClr);
                     circle.setAttribute('r', radiusFullHr);
                     return circle;
@@ -262,7 +271,7 @@
                     pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
                             /*numSections*/ 250, /*outerRadius*/250, /*projected fnc*/f,
                             /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * curruentSecProp - Math.PI / 2,
-                            /*circElmFnc*/fCircElm, /*time*/ d);
+                            /*circElmFnc*/fCircElmColorHrSec, /*time*/ d);
 
                 };
                 return setInterval(tick, 1000 / numPracitalPerSecond);
@@ -294,7 +303,7 @@
                     pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
                             /*numSections*/ 250, /*outerRadius*/250, /*projected fnc*/f,
                             /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * curruentSecProp - Math.PI / 2,
-                            /*circElmFnc*/fCircElm, /*time*/ d);
+                            /*circElmFnc*/fCircElmNoColorHrSec, /*time*/ d);
 
                     //render minutes circle 
                     pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
