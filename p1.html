@@ -50,6 +50,8 @@
             var interval;
             var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
             var svgNS = svg.namespaceURI;
+            
+            var msIn1Min = 1000 * 60;
 
             var rect = document.createElementNS(svgNS, 'rect');
             rect.setAttribute('x', 5);
@@ -352,7 +354,8 @@
                 };
 
                 var fRenderMin = function (dateTimeInfo) {
-                    var currentMinProp = dateTimeInfo.getMinutes() / 60;
+                    
+                    var currentMinProp = dateTimeInfo.getMinutes() / 60;         
                     var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
                     pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
                             /*numSections*/ 250, /*outerRadius*/ 150, /*projected fnc*/f,
@@ -362,7 +365,7 @@
                 };
 
                 var fRenderSec = function (dateTimeInfo) {
-                    var msIn1Min = 1000 * 60;
+                    
                     var curruentSecProp = (dateTimeInfo.getTime() % msIn1Min) / msIn1Min;
                     var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
                     pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
