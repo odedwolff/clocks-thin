@@ -30,6 +30,7 @@
             <div id = buttonsPanel1>
                 <button id=start class="controlButton">start</button>
                 <button id=start2 class="controlButton">start2</button>
+                <button id=startCrossAllOut class="controlButton">cross all out</button>
                 <button id=stop	 class="controlButton">stop</button>
                 <button id=next class="controlButton">next</button>
                 <button id=prev	 class="controlButton">prev</button>
@@ -50,7 +51,7 @@
             var interval;
             var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
             var svgNS = svg.namespaceURI;
-            
+
             var msIn1Min = 1000 * 60;
 
             var rect = document.createElementNS(svgNS, 'rect');
@@ -354,8 +355,8 @@
                 };
 
                 var fRenderMin = function (dateTimeInfo) {
-                    
-                    var currentMinProp = dateTimeInfo.getMinutes() / 60;         
+
+                    var currentMinProp = dateTimeInfo.getMinutes() / 60;
                     var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
                     pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
                             /*numSections*/ 250, /*outerRadius*/ 150, /*projected fnc*/f,
@@ -365,7 +366,7 @@
                 };
 
                 var fRenderSec = function (dateTimeInfo) {
-                    
+
                     var curruentSecProp = (dateTimeInfo.getTime() % msIn1Min) / msIn1Min;
                     var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
                     pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
@@ -378,7 +379,72 @@
                 return startTicking3porjections(numPracitalPerSecond, panelName,
                         fRenderHr, fRenderMin, fRenderSec);
 
+            }
 
+            /**
+             seconds dial at center and longest, and corsses 2 others. etc. 
+             all are pointing out 
+             * **/
+            function start3CircCrossingAllOut(numPracitalPerSecond, panelName) {
+
+                var fHrElm = fCircElmNoColorHrSec;
+                var fMinElm = function () {
+                    var color = "#C5C6C4";
+                    var radius = 2;
+                    var circle = document.createElementNS(svgNS, 'circle');
+                    circle.setAttribute('r', radius);
+                    circle.setAttribute('fill', color);
+                    return circle;
+                };
+                var fSecElm = function () {
+                    var color = "#787A76";
+                    var radius = 2;
+                    var circle = document.createElementNS(svgNS, 'circle');
+                    circle.setAttribute('r', radius);
+                    circle.setAttribute('fill', color);
+                    return circle;
+                };
+
+
+
+                var fRenderHr = function (dateTimeInfo) {
+                    var currentMinProp = dateTimeInfo.getMinutes() / 60;
+                    var currentHRProp = dateTimeInfo.getHours() / 12 + currentMinProp / 12;
+                    var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
+
+                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
+                            /*numSections*/ 250, /*outerRadius*/ 230, /*projected fnc*/f,
+                            /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * currentHRProp - Math.PI / 2,
+                            /*circElmFnc*/fHrElm, /*time*/ dateTimeInfo);
+
+                };
+
+                var fRenderMin = function (dateTimeInfo) {
+
+                    var currentMinProp = dateTimeInfo.getMinutes() / 60;
+                    var f = fCustom1(/*scaleX*/2.0, /*scaleY*/70.0, /*decay*/ 2);
+
+                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
+                            /*numSections*/ 250, /*outerRadius*/ 215, /*projected fnc*/f,
+                            /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * currentMinProp - Math.PI / 2,
+                            /*circElmFnc*/fMinElm, /*time*/ dateTimeInfo);
+
+                };
+
+                var fRenderSec = function (dateTimeInfo) {
+
+                    var curruentSecProp = (dateTimeInfo.getTime() % msIn1Min) / msIn1Min;
+                    var f = fCustom1(/*scaleX*/4.0, /*scaleY*/100.0, /*decay*/ 2);
+
+                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
+                            /*numSections*/ 250, /*outerRadius*/ 200, /*projected fnc*/f,
+                            /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * curruentSecProp - Math.PI / 2,
+                            /*circElmFnc*/fSecElm, /*time*/ dateTimeInfo);
+
+                };
+
+                return startTicking3porjections(numPracitalPerSecond, panelName,
+                        fRenderHr, fRenderMin, fRenderSec);
 
             }
 
@@ -395,6 +461,16 @@
 
                 interval = start3CirclesTicking(11, "svg1");
             });
+
+
+            $("#startCrossAllOut").click(function () {
+                clearInterval(interval);
+                //interval = startTicking3porjections(11, "svg1");
+
+                interval = start3CircCrossingAllOut(11, "svg1");
+            });
+
+
 
 
             $("#stop").click(function () {
