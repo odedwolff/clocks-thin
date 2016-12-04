@@ -70,7 +70,6 @@
                     circle.setAttribute('fill', 'red');
                     circle.setAttribute('r', radius);
 
-                    //$("#svg2").append(circle);
                 }
             }
 
@@ -79,7 +78,6 @@
             //returns a function of x
             function gausian(a, b, c) {
                 var f = function (x) {
-                    //return -1.0 * a * Math.exp( -1.0 * Math.pow((x-b),2)) / (2*Math.pow(c, 2));
                     return 1.0 * a * Math.exp(-1.0 * Math.pow((x - b), 2)) / (2 * Math.pow(c, 2));
                 }
                 return f;
@@ -105,51 +103,17 @@
             }
 
 
-            /*
-             * returns constant color element, regardless of time and location
-             *              
-             */
-            function fElmClock3MinCircle(angle, time) {
-                //var color = "#FFFFFF";
-                var color = this.color;
-                //var radius = 2;
-                var radius = this.radius;
-
-                var circle = document.createElementNS(svgNS, 'circle');
-                circle.setAttribute('r', radius);
-                circle.setAttribute('fill', color);
-                return circle;
-            }
-
-
 
             /*
              * returns constant color and ardius element, regardless of time and location
              *              
              */
             function fElmConstant(angle, time) {
-                //var color = "#FFFFFF";
+                
+                //TODO - a defualt to support usage without binded context? 
                 var color = this.color;
-                //var radius = 2;
                 var radius = this.radius;
 
-                var circle = document.createElementNS(svgNS, 'circle');
-                circle.setAttribute('r', radius);
-                circle.setAttribute('fill', color);
-                return circle;
-            }
-
-
-
-
-            /*
-             * returns constant white element, regardless of parameters 
-             */
-            function fElmClock3HRCircle(angle, time) {
-                //var color = "#FFFFFF";
-                var color = this.color;
-                //var radius = 1;
-                var radius = this.radius;
                 var circle = document.createElementNS(svgNS, 'circle');
                 circle.setAttribute('r', radius);
                 circle.setAttribute('fill', color);
@@ -158,14 +122,12 @@
 
 
             function fCircElmColorHrSec(angle, time) {
-                //return fCircElm(angle, time, true);
                 var elmGenerator = fCircElm.bind(this);
                 return elmGenerator(angle, time, true);
 
             }
 
             function fCircElmNoColorHrSec(angle, time) {
-                //return fCircElm(angle, time, false);
                 var elmGenerator = fCircElm.bind(this);
                 return elmGenerator(angle, time, false);
             }
@@ -174,35 +136,20 @@
 
             //returns proper circling element 
             function fCircElm(angle, time, shouldColorHrMin) {
-                //var radiusNormal = 2;
+                
+                 //TODO - a defualt to support usage without binded context? 
                 var radiusNormal = this.radiusNormal;
-                //var radiusFullHr = 4;
                 var radiusFullHr = this.radiusFullHr;
-                //var mnClr = "#EC6F00";
                 var mnClr = this.mnClr;
-                //var hrClr = "#830000";
                 var hrClr = this.hrClr;
-                //var dfltClr = "#FFFFFF";
                 var dfltClr = this.dfltClr;
-
-
-
-                //var threshold = 2 * Math.PI / 200;
-
                 var thrshMin = 2 * Math.PI / 400;
                 var thrshHr = 2 * Math.PI / 200;
-
-
                 var circle = document.createElementNS(svgNS, 'circle');
-                // circle.setAttribute('cx', x);
-                // circle.setAttribute('cy', y);
-
                 var mntAngle = (time.getMinutes() / 60) * Math.PI * 2;
                 var diffMinAng = sharpAngel((angle + Math.PI / 2) - mntAngle);
-
                 var hrAngle = (time.getHours() / 12) * Math.PI * 2 + mntAngle / 12;
                 var diffHrAngle = sharpAngel((angle + Math.PI / 2) - hrAngle);
-
 
                 //pointed by minutes hand
                 if (shouldColorHrMin && Math.abs(diffMinAng) < thrshMin) {
@@ -258,25 +205,16 @@
                     //the angular distance of currently rendered angle from the offset (offset is the center of the projected
                     //function) 
                     var angDist = sharpAngel(angle - offsetAngleRad) * zoomX;
-
                     var addedRad = f(angDist);
-                    //console.log("angle,angVar, f(angVar) " + angle + ";" + angVar + ";" + addedRad);
                     var x = center[0] + Math.cos(angle) * outerRadius * (1 + zoomY * addedRad);
                     var y = center[1] + Math.sin(angle) * outerRadius * (1 + zoomY * addedRad);
-
                     angle += 2 * Math.PI / numSections;
-
                     var circle = circElmFnc(angle, currentTime);
-
                     circle.setAttribute('cx', x);
                     circle.setAttribute('cy', y);
-
                     $("#" + panelName).append(circle);
-
                 }
             }
-
-
 
 
             function sharpAngel(angle) {
@@ -291,12 +229,6 @@
                 return angle;
 
             }
-
-
-
-
-
-
 
 
             function startTickingFCst1CheckClock(numPracitalPerSecond, panelName) {
@@ -392,12 +324,9 @@
                     var dsnParmatsSec = {
                         radiusNormal: 2,
                         radiusFullHr: 4,
-                        //mnClr:"#EC6F00",
-                        //hrClr:"#830000",
                         dfltClr: "#FFFFFF"
                     };
 
-                    //fElmGenerator = fCircElmColorHrSec.bind(dsnParmats);
                     fElmGeneratorSec = fCircElmNoColorHrSec.bind(dsnParmatsSec);
 
                     pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
@@ -421,51 +350,22 @@
                 var dsnParmatsHr = {
                     radiusNormal: 2,
                     radiusFullHr: 4,
-                    //mnClr:"#EC6F00",
-                    //hrClr:"#830000",
                     dfltClr: "#FFFFFF"
                 };
-
-
-                //var fHrElm = fCircElmNoColorHrSec;
                 var fHrElm = fCircElmNoColorHrSec.bind(dsnParmatsHr);
-
-                /*
-                 var fMinElm = function () {
-                 var color = "red";
-                 var radius = 2;
-                 var circle = document.createElementNS(svgNS, 'circle');
-                 circle.setAttribute('r', radius);
-                 circle.setAttribute('fill', color);
-                 return circle;
-                 };
-                 */
 
                 var prmsMin = {
                     color: "red",
                     radius: 2
                 };
                 var fMinElm = fElmConstant.bind(prmsMin);
-
-                /*
-                var fSecElm = function () {
-                    var color = "yellow";
-                    var radius = 2;
-                    var circle = document.createElementNS(svgNS, 'circle');
-                    circle.setAttribute('r', radius);
-                    circle.setAttribute('fill', color);
-                    return circle;
-                };
-                */
-               
+     
                 var prmsSec = {
                     color: "yellow",
                     radius: 2
                 };
                 var fSecElm = fElmConstant.bind(prmsSec);
                
-
-
 
                 var fRenderHr = function (dateTimeInfo) {
                     var currentMinProp = dateTimeInfo.getMinutes() / 60;
@@ -508,8 +408,6 @@
 
             }
 
-
-            //$("#start").click(testStartTicking);
             $("#start").click(function () {
                 clearInterval(interval);
                 interval = startTickingFCst1CheckClock(11, "svg1");
