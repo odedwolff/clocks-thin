@@ -106,23 +106,50 @@
 
 
             /*
-             * returns constant white element, regardless of parameters 
+             * returns constant color element, regardless of time and location
+             *              
              */
             function fElmClock3MinCircle(angle, time) {
-                var color = "#FFFFFF";
-                var radius = 2;
+                //var color = "#FFFFFF";
+                var color = this.color;
+                //var radius = 2;
+                var radius = this.radius;
+
                 var circle = document.createElementNS(svgNS, 'circle');
                 circle.setAttribute('r', radius);
                 circle.setAttribute('fill', color);
                 return circle;
             }
 
+
+
+            /*
+             * returns constant color and ardius element, regardless of time and location
+             *              
+             */
+            function fElmConstant(angle, time) {
+                //var color = "#FFFFFF";
+                var color = this.color;
+                //var radius = 2;
+                var radius = this.radius;
+
+                var circle = document.createElementNS(svgNS, 'circle');
+                circle.setAttribute('r', radius);
+                circle.setAttribute('fill', color);
+                return circle;
+            }
+
+
+
+
             /*
              * returns constant white element, regardless of parameters 
              */
             function fElmClock3HRCircle(angle, time) {
-                var color = "#FFFFFF";
-                var radius = 1;
+                //var color = "#FFFFFF";
+                var color = this.color;
+                //var radius = 1;
+                var radius = this.radius;
                 var circle = document.createElementNS(svgNS, 'circle');
                 circle.setAttribute('r', radius);
                 circle.setAttribute('fill', color);
@@ -131,22 +158,35 @@
 
 
             function fCircElmColorHrSec(angle, time) {
-                return fCircElm(angle, time, true);
+                //return fCircElm(angle, time, true);
+                var elmGenerator = fCircElm.bind(this);
+                return elmGenerator(angle, time, true);
+
             }
 
             function fCircElmNoColorHrSec(angle, time) {
-                return fCircElm(angle, time, false);
+                //return fCircElm(angle, time, false);
+                var elmGenerator = fCircElm.bind(this);
+                return elmGenerator(angle, time, false);
             }
 
 
 
             //returns proper circling element 
             function fCircElm(angle, time, shouldColorHrMin) {
-                var radiusNormal = 2;
-                var radiusFullHr = 4;
-                var mnClr = "#EC6F00";
-                var hrClr = "#830000";
-                var dfltClr = "#FFFFFF";
+                //var radiusNormal = 2;
+                var radiusNormal = this.radiusNormal;
+                //var radiusFullHr = 4;
+                var radiusFullHr = this.radiusFullHr;
+                //var mnClr = "#EC6F00";
+                var mnClr = this.mnClr;
+                //var hrClr = "#830000";
+                var hrClr = this.hrClr;
+                //var dfltClr = "#FFFFFF";
+                var dfltClr = this.dfltClr;
+
+
+
                 //var threshold = 2 * Math.PI / 200;
 
                 var thrshMin = 2 * Math.PI / 400;
@@ -271,59 +311,24 @@
                     $("#" + panelName).empty();
                     var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
 
+                    var dsnParmats = {
+                        radiusNormal: 2,
+                        radiusFullHr: 4,
+                        mnClr: "#EC6F00",
+                        hrClr: "#830000",
+                        dfltClr: "#FFFFFF"
+                    };
+
+                    fElmGenerator = fCircElmColorHrSec.bind(dsnParmats);
+
                     pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
                             /*numSections*/ 250, /*outerRadius*/250, /*projected fnc*/f,
                             /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * curruentSecProp - Math.PI / 2,
-                            /*circElmFnc*/fCircElmColorHrSec, /*time*/ d);
+                            /*circElmFnc*/fElmGenerator, /*time*/ d);
 
                 };
                 return setInterval(tick, 1000 / numPracitalPerSecond);
             }
-
-
-
-
-
-
-            function startTicking3porjectionsOld(numPracitalPerSecond, panelName) {
-
-                var tick = function () {
-                    var curruentSecProp;
-                    var currentMinProp;
-                    var currentHRProp;
-                    var d = new Date();
-                    var time = d.getTime();
-                    var msIn1Min = 1000 * 60;
-                    curruentSecProp = (time % msIn1Min) / msIn1Min;
-                    currentMinProp = d.getMinutes() / 60;
-                    currentHRProp = d.getHours() / 12 + currentMinProp / 12;
-
-                    $("#" + panelName).empty();
-                    var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
-
-
-                    //render secondes circle 
-                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
-                            /*numSections*/ 250, /*outerRadius*/250, /*projected fnc*/f,
-                            /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * curruentSecProp - Math.PI / 2,
-                            /*circElmFnc*/fCircElmNoColorHrSec, /*time*/ d);
-
-                    //render minutes circle 
-                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
-                            /*numSections*/ 250, /*outerRadius*/150, /*projected fnc*/f,
-                            /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * currentMinProp - Math.PI / 2,
-                            /*circElmFnc*/fElmClock3MinCircle, /*time*/ d);
-
-                    //render hours circle 
-                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
-                            /*numSections*/ 250, /*outerRadius*/ 78, /*projected fnc*/f,
-                            /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * currentHRProp - Math.PI / 2,
-                            /*circElmFnc*/fElmClock3HRCircle, /*time*/ d);
-
-                };
-                return setInterval(tick, 1000 / numPracitalPerSecond);
-            }
-
 
 
             function startTicking3porjections(numPracitalPerSecond, panelName,
@@ -347,10 +352,17 @@
                     var currentMinProp = dateTimeInfo.getMinutes() / 60;
                     var currentHRProp = dateTimeInfo.getHours() / 12 + currentMinProp / 12;
                     var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
+
+                    var dsnParmasHr = {
+                        color: "#FFFFFF",
+                        radius: 1
+                    };
+                    var fElmGeneratorHr = fElmConstant.bind(dsnParmasHr);
+
                     pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
                             /*numSections*/ 250, /*outerRadius*/ 78, /*projected fnc*/f,
                             /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * currentHRProp - Math.PI / 2,
-                            /*circElmFnc*/fElmClock3HRCircle, /*time*/ dateTimeInfo);
+                            /*circElmFnc*/fElmGeneratorHr, /*time*/ dateTimeInfo);
 
                 };
 
@@ -358,10 +370,17 @@
 
                     var currentMinProp = dateTimeInfo.getMinutes() / 60;
                     var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
+
+                    var dsnParmasMn = {
+                        color: "#FFFFFF",
+                        radius: 2
+                    };
+                    var fElmGeneratorMin = fElmConstant.bind(dsnParmasMn);
+
                     pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
                             /*numSections*/ 250, /*outerRadius*/ 150, /*projected fnc*/f,
                             /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * currentMinProp - Math.PI / 2,
-                            /*circElmFnc*/fElmClock3MinCircle, /*time*/ dateTimeInfo);
+                            /*circElmFnc*/fElmGeneratorMin, /*time*/ dateTimeInfo);
 
                 };
 
@@ -369,10 +388,22 @@
 
                     var curruentSecProp = (dateTimeInfo.getTime() % msIn1Min) / msIn1Min;
                     var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
+
+                    var dsnParmatsSec = {
+                        radiusNormal: 2,
+                        radiusFullHr: 4,
+                        //mnClr:"#EC6F00",
+                        //hrClr:"#830000",
+                        dfltClr: "#FFFFFF"
+                    };
+
+                    //fElmGenerator = fCircElmColorHrSec.bind(dsnParmats);
+                    fElmGeneratorSec = fCircElmNoColorHrSec.bind(dsnParmatsSec);
+
                     pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
                             /*numSections*/ 250, /*outerRadius*/ 250, /*projected fnc*/f,
                             /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * curruentSecProp - Math.PI / 2,
-                            /*circElmFnc*/fCircElmNoColorHrSec, /*time*/ dateTimeInfo);
+                            /*circElmFnc*/fElmGeneratorSec, /*time*/ dateTimeInfo);
 
                 };
 
@@ -387,30 +418,59 @@
              * **/
             function start3CircCrossingAllOut(numPracitalPerSecond, panelName) {
 
-                var fHrElm = fCircElmNoColorHrSec;
-                var fMinElm = function () {
-                    var color = "#C5C6C4";
-                    var radius = 2;
-                    var circle = document.createElementNS(svgNS, 'circle');
-                    circle.setAttribute('r', radius);
-                    circle.setAttribute('fill', color);
-                    return circle;
+                var dsnParmatsHr = {
+                    radiusNormal: 2,
+                    radiusFullHr: 4,
+                    //mnClr:"#EC6F00",
+                    //hrClr:"#830000",
+                    dfltClr: "#FFFFFF"
                 };
+
+
+                //var fHrElm = fCircElmNoColorHrSec;
+                var fHrElm = fCircElmNoColorHrSec.bind(dsnParmatsHr);
+
+                /*
+                 var fMinElm = function () {
+                 var color = "red";
+                 var radius = 2;
+                 var circle = document.createElementNS(svgNS, 'circle');
+                 circle.setAttribute('r', radius);
+                 circle.setAttribute('fill', color);
+                 return circle;
+                 };
+                 */
+
+                var prmsMin = {
+                    color: "red",
+                    radius: 2
+                };
+                var fMinElm = fElmConstant.bind(prmsMin);
+
+                /*
                 var fSecElm = function () {
-                    var color = "#787A76";
+                    var color = "yellow";
                     var radius = 2;
                     var circle = document.createElementNS(svgNS, 'circle');
                     circle.setAttribute('r', radius);
                     circle.setAttribute('fill', color);
                     return circle;
                 };
+                */
+               
+                var prmsSec = {
+                    color: "yellow",
+                    radius: 2
+                };
+                var fSecElm = fElmConstant.bind(prmsSec);
+               
 
 
 
                 var fRenderHr = function (dateTimeInfo) {
                     var currentMinProp = dateTimeInfo.getMinutes() / 60;
                     var currentHRProp = dateTimeInfo.getHours() / 12 + currentMinProp / 12;
-                    var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
+                    var f = fCustom1(/*scaleX*/3.0, /*scaleY*/17.0, /*decay*/ 2);
 
                     pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
                             /*numSections*/ 250, /*outerRadius*/ 230, /*projected fnc*/f,
@@ -422,7 +482,7 @@
                 var fRenderMin = function (dateTimeInfo) {
 
                     var currentMinProp = dateTimeInfo.getMinutes() / 60;
-                    var f = fCustom1(/*scaleX*/2.0, /*scaleY*/70.0, /*decay*/ 2);
+                    var f = fCustom1(/*scaleX*/4.0, /*scaleY*/50.0, /*decay*/ 2);
 
                     pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
                             /*numSections*/ 250, /*outerRadius*/ 215, /*projected fnc*/f,
