@@ -1,21 +1,51 @@
 <head>
+    <link rel="stylesheet" href="p1.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="elm_rendrers.js"></script>
 </head>
 <body>
-        <div id = svgCont>
-                <div id = panelTest	class = panelCls>
-                    <svg id=svg1 class="gridCell1" viewBox="0 0 800 800" preserveAspectRatio="none">
-                    </svg>
-                </div>
+    <div id = svgCont>
+        <div id = panelTest	class = panelCls>
+            <svg id=svg1 class="gridCell1" viewBox="0 0 800 800" preserveAspectRatio="none">
+            </svg>
         </div>
-	<script>
-            
-            var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-            var svgNS = svg.namespaceURI;
-            
-            
-            function testDispFunction(func){
-            
+    </div>
+    <script>
+
+        var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        var svgNS = svg.namespaceURI;
+
+
+        
+        /**
+         * projects a displacemnet math function on a linear array of elements 
+         * **/
+        
+        function projectDispFuncLinear(func) {
+            var elmContext = {
+                color : "white", 
+                radius : 2
+            };
+            var circleRendrer = fElmConstant.bind(elmContext);
+            var circle;
+            for (var x = - 1 * this.xRange / 2 ; x < this.xRange / 2 ; x += this.xRange / this.numOfElms){
+                circle = circleRendrer(null, null);
+                circle.setAttribute('cx', x + 400);
+                circle.setAttribute('cy', 0 + 400);
+                $("#svg1").append(circle);
             }
-		
-	</script>
+        }
+        
+        var context = {
+            xRange: 700,
+            numOfElms: 40
+        };
+        function testPorjectDispEmpty(){
+            projectDispFuncLinear.bind(context)();
+        }
+        
+        testPorjectDispEmpty();
+        
+
+    </script>
 </body>
