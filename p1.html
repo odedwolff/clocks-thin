@@ -49,6 +49,7 @@
         <script>
 
             var interval;
+            var ticksPerSec = 11;
             var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
             var svgNS = svg.namespaceURI;
 
@@ -109,7 +110,7 @@
              *              
              */
             function fElmConstant(angle, time) {
-                
+
                 //TODO - a defualt to support usage without binded context? 
                 var color = this.color;
                 var radius = this.radius;
@@ -136,8 +137,8 @@
 
             //returns proper circling element 
             function fCircElm(angle, time, shouldColorHrMin) {
-                
-                 //TODO - a defualt to support usage without binded context? 
+
+                //TODO - a defualt to support usage without binded context? 
                 var radiusNormal = this.radiusNormal;
                 var radiusFullHr = this.radiusFullHr;
                 var mnClr = this.mnClr;
@@ -280,16 +281,20 @@
 
             function start3CirclesTicking(numPracitalPerSecond, panelName) {
 
+
+                //parameters for Hour elment rendering  
+                var dsnParmasHr = {
+                    color: "#FFFFFF",
+                    radius: 1
+                };
+                //function fer rendering hour elements 
+                var fElmGeneratorHr = fElmConstant.bind(dsnParmasHr);
+
+
                 var fRenderHr = function (dateTimeInfo) {
                     var currentMinProp = dateTimeInfo.getMinutes() / 60;
                     var currentHRProp = dateTimeInfo.getHours() / 12 + currentMinProp / 12;
                     var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
-
-                    var dsnParmasHr = {
-                        color: "#FFFFFF",
-                        radius: 1
-                    };
-                    var fElmGeneratorHr = fElmConstant.bind(dsnParmasHr);
 
                     pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
                             /*numSections*/ 250, /*outerRadius*/ 78, /*projected fnc*/f,
@@ -298,16 +303,18 @@
 
                 };
 
+                //minutes elements parameters
+                var dsnParmasMn = {
+                    color: "#FFFFFF",
+                    radius: 2
+                };
+                //minutes element rendering funciton 
+                var fElmGeneratorMin = fElmConstant.bind(dsnParmasMn);
+
                 var fRenderMin = function (dateTimeInfo) {
 
                     var currentMinProp = dateTimeInfo.getMinutes() / 60;
                     var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
-
-                    var dsnParmasMn = {
-                        color: "#FFFFFF",
-                        radius: 2
-                    };
-                    var fElmGeneratorMin = fElmConstant.bind(dsnParmasMn);
 
                     pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
                             /*numSections*/ 250, /*outerRadius*/ 150, /*projected fnc*/f,
@@ -316,18 +323,20 @@
 
                 };
 
+                
+                //seconds element parameters
+                var dsnParmatsSec = {
+                    radiusNormal: 2,
+                    radiusFullHr: 4,
+                    dfltClr: "#FFFFFF"
+                };
+                //seconds element rendering function 
+                
+                fElmGeneratorSec = fCircElmNoColorHrSec.bind(dsnParmatsSec);
                 var fRenderSec = function (dateTimeInfo) {
 
                     var curruentSecProp = (dateTimeInfo.getTime() % msIn1Min) / msIn1Min;
                     var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
-
-                    var dsnParmatsSec = {
-                        radiusNormal: 2,
-                        radiusFullHr: 4,
-                        dfltClr: "#FFFFFF"
-                    };
-
-                    fElmGeneratorSec = fCircElmNoColorHrSec.bind(dsnParmatsSec);
 
                     pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
                             /*numSections*/ 250, /*outerRadius*/ 250, /*projected fnc*/f,
@@ -359,13 +368,13 @@
                     radius: 2
                 };
                 var fMinElm = fElmConstant.bind(prmsMin);
-     
+
                 var prmsSec = {
                     color: "yellow",
                     radius: 2
                 };
                 var fSecElm = fElmConstant.bind(prmsSec);
-               
+
 
                 var fRenderHr = function (dateTimeInfo) {
                     var currentMinProp = dateTimeInfo.getMinutes() / 60;
@@ -410,14 +419,14 @@
 
             $("#start").click(function () {
                 clearInterval(interval);
-                interval = startTickingFCst1CheckClock(11, "svg1");
+                interval = startTickingFCst1CheckClock(ticksPerSec, "svg1");
             });
 
             $("#start2").click(function () {
                 clearInterval(interval);
                 //interval = startTicking3porjections(11, "svg1");
 
-                interval = start3CirclesTicking(11, "svg1");
+                interval = start3CirclesTicking(ticksPerSec, "svg1");
             });
 
 
@@ -425,7 +434,7 @@
                 clearInterval(interval);
                 //interval = startTicking3porjections(11, "svg1");
 
-                interval = start3CircCrossingAllOut(11, "svg1");
+                interval = start3CircCrossingAllOut(ticksPerSec, "svg1");
             });
 
 
