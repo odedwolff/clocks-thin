@@ -2,6 +2,8 @@
     <link rel="stylesheet" href="p1.css">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="elm_rendrers.js"></script>
+    <script src="displace_funcs.js"></script>
+
 </head>
 <body>
     <div id = svgCont>
@@ -16,36 +18,61 @@
         var svgNS = svg.namespaceURI;
 
 
-        
+
         /**
          * projects a displacemnet math function on a linear array of elements 
          * **/
-        
+
         function projectDispFuncLinear(func) {
             var elmContext = {
-                color : "white", 
-                radius : 2
+                color: "white",
+                radius: 2
             };
             var circleRendrer = fElmConstant.bind(elmContext);
             var circle;
-            for (var x = - 1 * this.xRange / 2 ; x < this.xRange / 2 ; x += this.xRange / this.numOfElms){
+            var y;
+            for (var x = -1 * this.xRange / 2; x < this.xRange / 2; x += this.xRange / this.numOfElms) {
                 circle = circleRendrer(null, null);
+                ///circle.setAttribute('cx', x + 400);
                 circle.setAttribute('cx', x + 400);
-                circle.setAttribute('cy', 0 + 400);
+                y = func(x) * -1;
+                circle.setAttribute('cy', y + 400);
                 $("#svg1").append(circle);
             }
         }
-        
-        var context = {
+
+        var contextProjectLinear = {
             xRange: 700,
-            numOfElms: 40
+            numOfElms: 70
         };
-        function testPorjectDispEmpty(){
-            projectDispFuncLinear.bind(context)();
+        function testPorjectDispEmpty() {
+            projectDispFuncLinear.bind(contextProjectLinear)(null);
+        }
+
+
+        function testSquareBump() {
+            var context = {
+                width: 90,
+                height: 30
+            };
+            fDisp = squareBump.bind(context);
+            projectDispFuncLinear.bind(contextProjectLinear)(fDisp);
         }
         
-        testPorjectDispEmpty();
-        
+        function testPiramidBump(){
+            var context = {
+                width: 90,
+                height: 70
+            };
+            fDisp = pyramidBump.bind(context);
+            projectDispFuncLinear.bind(contextProjectLinear)(fDisp);
+            
+        }
+
+        //testPorjectDispEmpty();
+        //testSquareBump();
+        testPiramidBump();
+
 
     </script>
 </body>

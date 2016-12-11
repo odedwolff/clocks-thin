@@ -12,7 +12,7 @@ params = {
  * parameters x,y expected to be ´bound through context 
  * **/
 function squareBump(x){
-    if(x > this.width/2 || x > -1 * this.width/2){
+    if(x > this.width/2 || x < -1 * this.width/2){
         return 0;
     }
     return this.height;
@@ -27,10 +27,11 @@ params = {
 };
 
 function pyramidBump (x){
-    if(x > this.width/2 || x > -1 * this.width/2){
+    if(x > this.width/2 || x < -1 * this.width/2){
         return 0;
     }
-    var y =  this.height - Math.abs(x/this.width);
+    //var y =  this.height - Math.abs(x/this.width);
+    var y = this.height / 2 +  -1 * this.height * Math.abs(x/this.width);
     return y;
 }
 
