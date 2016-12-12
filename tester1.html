@@ -59,21 +59,103 @@
             fDisp = squareBump.bind(context);
             projectDispFuncLinear.bind(contextProjectLinear)(fDisp);
         }
-        
-        function testPiramidBump(){
+
+        function testPiramidBump() {
             var context = {
                 width: 90,
                 height: 70
             };
             fDisp = pyramidBump.bind(context);
             projectDispFuncLinear.bind(contextProjectLinear)(fDisp);
-            
         }
+
+        function testPorjctPiramidRound() {
+            var context = {
+                width: 4,
+                height: 22
+            };
+            fDisp = pyramidBump.bind(context);
+            //parameters for Hour elment rendering  
+            var dsnParmasHr = {
+                color: "#FFFFFF",
+                radius: 1
+            };
+            //function fer rendering hour elements 
+            var fElmGeneratorHr = fElmConstant.bind(dsnParmasHr);
+
+            pojectFunctionOnRadCrd(/*panelName */"svg1", /*center */[450, 400],
+                    /*numSections*/ 250, /*outerRadius*/ 78, /*projected fnc*/fDisp,
+                    /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI / 2,
+                    /*circElmFnc*/fElmGeneratorHr, /*time*/ null);
+
+        }
+
+
+        function testPorjctSqrBmpRound() {
+            var context = {
+                width: 4,
+                height: 7
+            };
+            fDisp = squareBump.bind(context);
+            //parameters for Hour elment rendering  
+            var dsnParmasHr = {
+                color: "#FFFFFF",
+                radius: 1
+            };
+            //function fer rendering hour elements 
+            var fElmGeneratorHr = fElmConstant.bind(dsnParmasHr);
+
+            pojectFunctionOnRadCrd(/*panelName */"svg1", /*center */[450, 400],
+                    /*numSections*/ 250, /*outerRadius*/ 78, /*projected fnc*/fDisp,
+                    /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI / 2,
+                    /*circElmFnc*/fElmGeneratorHr, /*time*/ null);
+
+        }
+
+        function testMultiProject() {
+            //pyramid displamement function 
+            var context = {
+                width: 4,
+                height: 22
+            };
+            fDispPyr = pyramidBump.bind(context);
+
+            //square bump displacemnt function 
+            context = {
+                width: 4,
+                height: 7
+            };
+            fDispSqBmp = squareBump.bind(context);
+            
+            var funcs = [fDispPyr, fDispSqBmp];
+            var offsets = [2*Math.PI * 0.25, 2*Math.PI * 0.3];
+            
+            //element rendrer
+            context = {
+                color: "#FFFFFF",
+                radius: 1
+            };
+            //function fer rendering hour elements 
+            var fElmGenerator = fElmConstant.bind(context);
+            
+            
+            pojectMultFunctionsOnRadCrd(/*panelName */"svg1", /*center */[450, 400],
+                    /*numSections*/ 250, /*outerRadius*/ 78, /*projected fnc*/funcs,
+                    /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ offsets,
+                    /*circElmFnc*/fElmGenerator, /*time*/ null);
+            
+
+        }
+
+
+
 
         //testPorjectDispEmpty();
         //testSquareBump();
-        testPiramidBump();
-
+        //testPiramidBump();
+        //testPorjctPiramidRound();
+        //testPorjctSqrBmpRound();
+        testMultiProject();
 
     </script>
 </body>

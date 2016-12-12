@@ -23,6 +23,43 @@ function pojectFunctionOnRadCrd(panelName, center, numSections, outerRadius, f, 
 }
 
 
+
+/**
+ * recieves an array of functions with respective array of angels. sums them all up. 
+ * **/
+function pojectMultFunctionsOnRadCrd(panelName, center, numSections, outerRadius, funcs, zoomX, zoomY, offsets, circElmFnc, currentTime) {
+    colorsPointer = 0;
+    var angle = 0;
+    for (var i = 0; i < numSections; i++) {
+         
+        //sum up funtions outputs for angle
+        var addedRadSum = 0;
+        for(var j=0 ; j<funcs.length ; j++){  
+            //the angular distance of currently rendered angle from the offset (offset is the center of the projected
+            //function) 
+            //var angDist = sharpAngel(angle - offsetAngleRad) * zoomX;
+            var angDist = sharpAngel(angle - offsets[j]) * zoomX;
+            //var addedRad = f(angDist);
+            var addedRad = funcs[j](angDist);
+            addedRadSum += addedRad;
+        }
+//        var x = center[0] + Math.cos(angle) * outerRadius * (1 + zoomY * addedRad);
+//        var y = center[1] + Math.sin(angle) * outerRadius * (1 + zoomY * addedRad);
+        var x = center[0] + Math.cos(angle) * outerRadius * (1 + zoomY * addedRadSum);
+        var y = center[1] + Math.sin(angle) * outerRadius * (1 + zoomY * addedRadSum);
+        
+        angle += 2 * Math.PI / numSections;
+        var circle = circElmFnc(angle, currentTime);
+        circle.setAttribute('cx', x);
+        circle.setAttribute('cy', y);
+        $("#" + panelName).append(circle);
+    }
+}
+
+
+
+
+
 function sharpAngel(angle) {
 
     angle = angle % (2 * Math.PI);
