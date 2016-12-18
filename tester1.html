@@ -111,6 +111,41 @@
                     /*circElmFnc*/fElmGeneratorHr, /*time*/ null);
 
         }
+        
+        function testPorjctGausBmpRound() {
+            var context = {
+                width: .5,
+                height: -20
+            };
+            fDisp = gausianBump.bind(context);
+            //parameters for Hour elment rendering  
+            var dsnParmasHr = {
+                color: "#FFFFFF",
+                radius: 1
+            };
+            //function fer rendering hour elements 
+            var fElmGeneratorHr = fElmConstant.bind(dsnParmasHr);
+
+            pojectFunctionOnRadCrd(/*panelName */"svg1", /*center */[450, 400],
+                    /*numSections*/ 250, /*outerRadius*/ 78, /*projected fnc*/fDisp,
+                    /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI / 2,
+                    /*circElmFnc*/fElmGeneratorHr, /*time*/ null);
+
+        }
+        
+        
+        function testGausBump() {
+            var context = {
+                width: 20,
+                height: 60
+            };
+            fDisp = gausianBump.bind(context);
+            projectDispFuncLinear.bind(contextProjectLinear)(fDisp);
+        }
+        
+        
+        
+        
 
         function testMultiProject() {
             //pyramid displamement function 
@@ -128,7 +163,7 @@
             fDispSqBmp = squareBump.bind(context);
             
             var funcs = [fDispPyr, fDispSqBmp];
-            var offsets = [2*Math.PI * 0.25, 2*Math.PI * 0.3];
+            var offsets = [2*Math.PI * 0.0, 2*Math.PI * 0.5];
             
             //element rendrer
             context = {
@@ -155,7 +190,9 @@
         //testPiramidBump();
         //testPorjctPiramidRound();
         //testPorjctSqrBmpRound();
-        testMultiProject();
+        //testMultiProject();
+        testPorjctGausBmpRound();
+        //testGausBump();
 
     </script>
 </body>
