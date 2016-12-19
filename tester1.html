@@ -144,9 +144,7 @@
         }
         
         
-        
-        
-
+       
         function testMultiProject() {
             //pyramid displamement function 
             var context = {
@@ -162,9 +160,37 @@
             };
             fDispSqBmp = squareBump.bind(context);
             
-            var funcs = [fDispPyr, fDispSqBmp];
-            var offsets = [2*Math.PI * 0.0, 2*Math.PI * 0.5];
+           
             
+            //gaus1
+            var context = {
+                width: 1.1,
+                height: 20
+            };
+            fDispGaus1 = gausianBump.bind(context);
+            
+            //gaus2
+            var context = {
+                width: .5,
+                height: -40
+            };
+            fDispGaus2 = gausianBump.bind(context);
+            
+            
+            //gaus3
+            var context = {
+                width: .5,
+                height: -20
+            };
+            fDispGaus3 = gausianBump.bind(context);
+            
+            
+            var funcs = [fDispGaus1, fDispGaus2, fDispGaus3];
+            var offsets = [2*Math.PI * 0.0, 2*Math.PI * 0.5, 2*Math.PI * 0.1];
+            
+            
+            
+          
             //element rendrer
             context = {
                 color: "#FFFFFF",
@@ -190,8 +216,8 @@
         //testPiramidBump();
         //testPorjctPiramidRound();
         //testPorjctSqrBmpRound();
-        //testMultiProject();
-        testPorjctGausBmpRound();
+        testMultiProject();
+        //testPorjctGausBmpRound();
         //testGausBump();
 
     </script>

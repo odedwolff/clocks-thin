@@ -19,6 +19,7 @@
 
         <script src="elm_rendrers.js"></script>
         <script src="projectors.js"></script>
+        <script src="displace_funcs.js"></script>
         <!--[if lt IE 9]>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
               
@@ -36,7 +37,8 @@
                 <button id=stop	 class="controlButton">stop</button>
                 <button id=next class="controlButton">next</button>
                 <button id=prev	 class="controlButton">prev</button>
-
+                <button id=g3go class="controlButton">3gs go</button>
+               
             </div>
 
             <div id = svgCont>
@@ -96,7 +98,7 @@
             }
 
 
-            
+
 
 
             function startTickingFCst1CheckClock(numPracitalPerSecond, panelName) {
@@ -190,7 +192,7 @@
 
                 };
 
-                
+
                 //seconds element parameters
                 var dsnParmatsSec = {
                     radiusNormal: 2,
@@ -198,7 +200,7 @@
                     dfltClr: "#FFFFFF"
                 };
                 //seconds element rendering function 
-                
+
                 fElmGeneratorSec = fCircElmNoColorHrSec.bind(dsnParmatsSec);
                 var fRenderSec = function (dateTimeInfo) {
 
@@ -284,6 +286,62 @@
 
             }
 
+
+            function startTicking3GsOn2(numPracitalPerSecond, panelName) {
+
+                var step = function () {
+                    var dateTimeInfo = new Date();
+                    var currentMinProp = dateTimeInfo.getMinutes() / 60;
+                    var currentHRProp = dateTimeInfo.getHours() / 12 + currentMinProp / 12;
+                    var curruentSecProp = (dateTimeInfo.getTime() % msIn1Min) / msIn1Min;
+                    //gaus1
+                    var context1 = {
+                        width: 1.1,
+                        height: 20
+                    };
+                    fDispGaus1 = gausianBump.bind(context1);
+
+                    //gaus2
+                    var context2 = {
+                        width: .5,
+                        height: -40
+                    };
+                    fDispGaus2 = gausianBump.bind(context2);
+
+
+                    //gaus3
+                    var context3 = {
+                        width: .5,
+                        height: -20
+                    };
+                    fDispGaus3 = gausianBump.bind(context3);
+                    
+                    var funcs = [fDispGaus1, fDispGaus2, fDispGaus3];
+                    var correctOffset = -Math.PI / 2;
+                    var offsets = [2 * Math.PI * currentMinProp + correctOffset, 2 * Math.PI * currentHRProp + correctOffset, 2 * Math.PI * curruentSecProp + correctOffset];
+
+
+                    //element rendrer
+                    context = {
+                        color: "#FFFFFF",
+                        radius: 1
+                    };
+                    //function fer rendering hour elements 
+                    var fElmGenerator = fElmConstant.bind(context);
+
+                    $("#" + panelName).empty();
+                    pojectMultFunctionsOnRadCrd(/*panelName */"svg1", /*center */[450, 400],
+                            /*numSections*/ 250, /*outerRadius*/ 78, /*projected fnc*/funcs,
+                            /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ offsets,
+                            /*circElmFnc*/fElmGenerator, /*time*/ null);
+                };
+                
+                return setInterval(step, 1000 / numPracitalPerSecond);
+
+
+            }
+
+
             $("#start").click(function () {
                 clearInterval(interval);
                 interval = startTickingFCst1CheckClock(ticksPerSec, "svg1");
@@ -303,6 +361,17 @@
 
                 interval = start3CircCrossingAllOut(ticksPerSec, "svg1");
             });
+            
+            $("#g3go").click(function () {
+                clearInterval(interval);
+                //interval = startTicking3porjections(11, "svg1");
+
+                interval = startTicking3GsOn2(ticksPerSec, "svg1");
+            });
+            
+            
+            
+            
 
 
 
