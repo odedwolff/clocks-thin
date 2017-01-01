@@ -27,7 +27,9 @@
         </svg>
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="1900" width="100%">
             <g fill-rule="evenodd" fill="red" stroke="black" stroke-width="1">
-                <path id=pathRay1 d= "M50,50 100,100,20,87 z" fill="red"/>
+                <path id=pathRaySec d= "M50,50 100,100,20,87 z" fill="red"/>
+                <path id=pathRayMin d= "M100,50 100,100,20,87 z" fill="red"/>
+                <path id=pathRayHr d= "M150,50 100,100,20,87 z" fill="red"/>
             </g>
         </svg>
 
@@ -35,8 +37,14 @@
     <button id="button1" onClick="manipulate1();">
         do
     </button>
+    <button id="stop" onClick="stopInterval();">
+        stop
+    </button>
 
     <script>
+        
+        var interval;
+        
         function manipulate1() {
             var path = document.getElementById('maskElm1');
             var newPath = "M150,150 h50 v250z";
@@ -76,9 +84,54 @@
         function testAddVectors(){
             console.log(add2DVector([1,2], [2,1]));
         }
+        
+        var RAY_HR_WIDTH = Math.PI * 2 * 0.04;
+        var RAY_MIN_WIDTH = Math.PI * 2 * 0.02;
+        var RAY_SEC_WIDTH = Math.PI * 2 * 0.01;
+        
+        var CORRECT_OFFSET = 0.25;
+        
+        function startTicking(){
+            function tick(){
+                var d = new Date();
+                var curruentSecProp;
+                var time;
+                dt = new Date();
+                time = dt.getTime();
+                var curruntSecProp = (time % (1000 * 60)) / (1000 * 60);
+                var currentMinProp = d.getMinutes() / 60;
+                var currentHrProp = d.getHours() / 12;
+                
+                //set seconds ray 
+                var d= pathOfRay(Math.PI * 2 * (curruntSecProp - CORRECT_OFFSET) , RAY_SEC_WIDTH, 400, 300, [300,300]);
+                var path = document.getElementById('pathRaySec');
+                path.setAttribute("d", d);
+                
+                //set minutes ray 
+                d= pathOfRay(Math.PI * 2 * (currentMinProp - CORRECT_OFFSET), RAY_MIN_WIDTH, 400, 300, [300,300]);
+                path = document.getElementById('pathRayMin');
+                path.setAttribute("d", d);
+                
+                //set hours ray 
+                d= pathOfRay(Math.PI * 2 * (currentHrProp - CORRECT_OFFSET), RAY_HR_WIDTH, 400, 300, [300,300]);
+                path = document.getElementById('pathRayHr');
+                path.setAttribute("d", d);
+                
+            }
+            
+            interval = setInterval(tick, 1000);
+            
+        }
+        
+        function stopInterval(){
+            clearInterval(interval);
+        }
+        
         //testPathOfRay();
-        testRenderRay();
+        //testRenderRay();
         //testAddVectors();
+        
+        startTicking();
     </script>
 
 
