@@ -20,6 +20,7 @@
         <script src="elm_rendrers.js"></script>
         <script src="projectors.js"></script>
         <script src="displace_funcs.js"></script>
+        <script src="masks_ticker.js"></script>
         <!--[if lt IE 9]>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
               
@@ -38,7 +39,10 @@
                 <button id=next class="controlButton">next</button>
                 <button id=prev	 class="controlButton">prev</button>
                 <button id=g3go class="controlButton">3gs go</button>
-               
+                
+                <button id=startMasks class="controlButton">startMasks</button>
+                <button id=stopMasks class="controlButton">stopMasks</button>
+
             </div>
 
             <div id = svgCont>
@@ -47,6 +51,31 @@
                     </svg>
                 </div>
             </div>
+
+
+            <div id = masksContainer>
+                <div id = panel5	class = panelCls>
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="1900" width="100%">
+                        <g fill-rule="evenodd" fill="red" stroke="black" stroke-width="1">
+                            <defs>
+                                <mask id="clockMask">
+                                    <rect width="100%" height="100%" fill="#fff" />
+                                    <path id=pathRaySec d= "M50,50 100,100,20,87 z" fill="#000"/>
+                                    <path id=pathRayMin d= "M100,50 100,100,20,87 z" fill="#000"/>
+                                    <path id=pathRayHr d= "M150,50 100,100,20,87 z" fill="#000"/>
+                                </mask>
+                            </defs> 
+
+                            <rect id = "backRectClk" x="50" y="50" width="600" height="900"  fill="red" />
+                            <rect id = "baseRectClk" x="100" y="100" width="400" height="250"  fill="blue" mask="url(#clockMask)"/>
+                        </g>
+
+                    </svg>
+                </div>
+            </div>
+
+
+
         </div>
 
 
@@ -315,7 +344,7 @@
                         height: -20
                     };
                     fDispGaus3 = gausianBump.bind(context3);
-                    
+
                     var funcs = [fDispGaus1, fDispGaus2, fDispGaus3];
                     var correctOffset = -Math.PI / 2;
                     var offsets = [2 * Math.PI * currentMinProp + correctOffset, 2 * Math.PI * currentHRProp + correctOffset, 2 * Math.PI * curruentSecProp + correctOffset];
@@ -335,11 +364,28 @@
                             /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ offsets,
                             /*circElmFnc*/fElmGenerator, /*time*/ null);
                 };
-                
+
                 return setInterval(step, 1000 / numPracitalPerSecond);
 
 
             }
+            
+            function startMasksClock(){
+               $("#svgCont").hide(); 
+               $("#masksContainer").show(); 
+                
+            }
+            
+            function stopMasksClock(){
+                $("#svgCont").show(); 
+                $("#masksContainer").hide(); 
+                
+            }
+            
+            $("#startMasks").click(startMasksClock);
+            
+            $("#stopMasks").click(stopMasksClock);  
+            
 
 
             $("#start").click(function () {
@@ -361,17 +407,17 @@
 
                 interval = start3CircCrossingAllOut(ticksPerSec, "svg1");
             });
-            
+
             $("#g3go").click(function () {
                 clearInterval(interval);
                 //interval = startTicking3porjections(11, "svg1");
 
                 interval = startTicking3GsOn2(ticksPerSec, "svg1");
             });
-            
-            
-            
-            
+
+
+
+
 
 
 
@@ -379,6 +425,9 @@
             $("#stop").click(function () {
                 clearInterval(interval);
             });
+            
+            
+            startMaskTicking(); 
 
 
         </script>
