@@ -70,4 +70,8 @@ div#root {
     background: #000000;
 }
 
+div#masksContainer{
+    display: none;
+}
+
 

@@ -1,4 +1,4 @@
-var intervalMask;
+//var intervalMask;
         
         function manipulate1() {
             var path = document.getElementById('maskElm1');
@@ -47,6 +47,7 @@ var intervalMask;
         var CORRECT_OFFSET = 0.25;
         
         function startMaskTicking(){
+            var interval; 
             function tick(){
                 var d = new Date();
                 var curruentSecProp;
@@ -76,10 +77,11 @@ var intervalMask;
                 
             }
             
-            intervalMask = setInterval(tick, 1000);
+            interval = setInterval(tick, 1000);
+            return interval;
             
         }
         
-        function stopInterval(){
-            clearInterval(intervalMask);
-        }
+//        function stopMaskTicking(){
+//            clearInterval(intervalMask);
+//        }

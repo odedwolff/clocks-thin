@@ -32,16 +32,20 @@
 
         <div id = root>
             <div id = buttonsPanel1>
-                <button id=start class="controlButton">start</button>
-                <button id=start2 class="controlButton">start2</button>
-                <button id=startCrossAllOut class="controlButton">cross all out</button>
+                <div>
+                    <button id=btnSingeRing class="controlButton">single Ring</button>
+                    <button id=btn3Rings class="controlButton">3 rings</button>
+                    <button id=btnRingCrossing class="controlButton">rings crossing</button>
+
+    <!--                <button id=next class="controlButton">next</button>
+                    <button id=prev	 class="controlButton">prev</button>-->
+                    <button id=btnAccumalator class="controlButton">accumalator</button>
+                    <button id=btnMasks class="controlButton">masks</button>
+                <div>
                 <button id=stop	 class="controlButton">stop</button>
-                <button id=next class="controlButton">next</button>
-                <button id=prev	 class="controlButton">prev</button>
-                <button id=g3go class="controlButton">3gs go</button>
                 
-                <button id=startMasks class="controlButton">startMasks</button>
-                <button id=stopMasks class="controlButton">stopMasks</button>
+<!--                <button id=startMasks class="controlButton">startMasks</button>
+                <button id=stopMasks class="controlButton">stopMasks</button>-->
 
             </div>
 
@@ -370,30 +374,42 @@
 
             }
             
-            function startMasksClock(){
+            
+            //switch active view to masks container 
+            function masksPanelOn(){
                $("#svgCont").hide(); 
                $("#masksContainer").show(); 
                 
             }
             
-            function stopMasksClock(){
+            //switch active view to normal svg containter 
+            function masksPanelOff(){
                 $("#svgCont").show(); 
                 $("#masksContainer").hide(); 
                 
             }
             
-            $("#startMasks").click(startMasksClock);
             
-            $("#stopMasks").click(stopMasksClock);  
+            function startMasksClock(){
+                clearInterval(interval);
+                masksPanelOn();
+                interval = startMaskTicking(); 
+            }
+            
+           
+    
+            $("#btnMasks").click(startMasksClock);
+            
             
 
-
-            $("#start").click(function () {
+            $("#btnSingeRing").click(function () {
+                masksPanelOff();
                 clearInterval(interval);
                 interval = startTickingFCst1CheckClock(ticksPerSec, "svg1");
             });
 
-            $("#start2").click(function () {
+            $("#btn3Rings").click(function () {
+                masksPanelOff();
                 clearInterval(interval);
                 //interval = startTicking3porjections(11, "svg1");
 
@@ -401,14 +417,16 @@
             });
 
 
-            $("#startCrossAllOut").click(function () {
+            $("#btnRingCrossing").click(function () {
+                masksPanelOff();
                 clearInterval(interval);
                 //interval = startTicking3porjections(11, "svg1");
 
                 interval = start3CircCrossingAllOut(ticksPerSec, "svg1");
             });
 
-            $("#g3go").click(function () {
+            $("#btnAccumalator").click(function () {
+                masksPanelOff();
                 clearInterval(interval);
                 //interval = startTicking3porjections(11, "svg1");
 
@@ -418,16 +436,12 @@
 
 
 
-
-
-
-
             $("#stop").click(function () {
                 clearInterval(interval);
             });
             
             
-            startMaskTicking(); 
+           
 
 
         </script>
