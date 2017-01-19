@@ -1,77 +1,113 @@
 
 /*
 #svg1{
-	width:200px;
-	height:500px;
-	background-color:pink;
+        width:200px;
+        height:500px;
+        background-color:pink;
 }
 */
 
+//base rgb for scheme: #021633
+
 .gridCell1{
-	width:500px;
-	height:700px;
-	background-color: #01001B;
-	margin-left: 15%;
+    width:500px;
+    height:700px;
+    background-color: #01001B;
+    margin-left: 15%;
     margin-top: 4%;
-	color:yellow;
+    color:yellow;
 }
 
 
+
+body{
+    background-color: #021633;
+}
 #avcd{
-  fill: #ace63c;
-  stroke: blue;  
+    fill: #ace63c;
+    stroke: blue;  
 }
 #avcd:hover {
-  fill: none;
-  stroke: red;  
+    fill: none;
+    stroke: red;  
 }
 
 
 #label1{
-  //fill: #ace63c;
-  color: green;  
+    //fill: #ace63c;
+    color: green;  
 
 }
 
 #label1:hover {
-  //fill: #ace63c;
-  color: red;  
+    //fill: #ace63c;
+    color: red;  
 }
 
 .c1{
-	stroke: blue;  	
+    stroke: blue;  	
 }
 
 .controlButton{
-	background-color:red;
-	color:yellow;
+    background-color:#0C4EB0;
+    //color:yellow;
+    border-style: none;
+    color: #021633;
+    width:80%;
+    
+    height: 31px;
+    font-size: 21px;
+    margin-top: 3px
 }
 
 .panelCls{
-	//background:gray;
-	color:yellow;
-	
-	margin-left: 15%;
+    //background:gray;
+    color:yellow;	
+    margin-left: 15%;
     margin-top: 4%;
     padding-left: 10%;
     width: 50%;
+    //background-color: #022C6B;
+    //background-color: #213B62;
+    background-color:#022C6B;
+    border-radius: 25px;
 }
 
 #buttonsPanel1{
-	width: 80%;
-	height: 10%;
+    width: 12%;
+    height: 10%;
+    float:left;
+    margin-top: 15px;
+    margin-left: 22px;
+    
+
 }
 
 div#svgCont {
-    background: #000000;
+    background-color: #021633;
+    //background: #000000;
+    //float:none; 
+    width:70%;
+    margin-left: 55px;
 }
 
 div#root {
-    background: #000000;
+    background-color: #021633;
+    //background: #000000;
+    height: 1000px;
+    width: 80%;
+    //background-color: red;
 }
 
 div#masksContainer{
+    background-color: #021633;
     display: none;
+    width:70%;
+}
+
+div#mainHorz{
+    //float:left;
+    background-color: #021633;
 }
 
 

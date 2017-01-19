@@ -31,50 +31,42 @@
         <!--  <script src="js/scripts.js"></script>  -->
 
         <div id = root>
-            <div id = buttonsPanel1>
-                <div>
-                    <button id=btnSingeRing class="controlButton">single Ring</button>
-                    <button id=btn3Rings class="controlButton">3 rings</button>
-                    <button id=btnRingCrossing class="controlButton">rings crossing</button>
-
-    <!--                <button id=next class="controlButton">next</button>
-                    <button id=prev	 class="controlButton">prev</button>-->
-                    <button id=btnAccumalator class="controlButton">accumalator</button>
-                    <button id=btnMasks class="controlButton">masks</button>
-                <div>
-                <button id=stop	 class="controlButton">stop</button>
-                
-<!--                <button id=startMasks class="controlButton">startMasks</button>
-                <button id=stopMasks class="controlButton">stopMasks</button>-->
-
-            </div>
-
-            <div id = svgCont>
-                <div id = panel4	class = panelCls>
-                    <svg id=svg1 class="gridCell1" viewBox="0 0 800 800" preserveAspectRatio="none">
-                    </svg>
+            <div id = mainHorz>
+                <div id = buttonsPanel1>
+                        <button id=btnSingeRing class="controlButton">single Ring</button>
+                        <button id=btn3Rings class="controlButton">3 rings</button>
+                        <button id=btnRingCrossing class="controlButton">rings crossing</button>
+                        <button id=btnAccumalator class="controlButton">accumalator</button>
+                        <button id=btnMasks class="controlButton">masks</button>
+                        <button id=stop	 class="controlButton">stop</button>
                 </div>
-            </div>
+                    
+                <div id = svgCont>
+                    <div id = panel4	class = panelCls>
+                        <svg id=svg1 class="gridCell1" viewBox="0 0 800 800" preserveAspectRatio="none">
+                        </svg>
+                    </div>
+                </div>
 
+                <div id = masksContainer>
+                    <div id = panel5	class = panelCls>
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="1900" width="100%">
+                            <g fill-rule="evenodd" fill="red" stroke="black" stroke-width="1">
+                                <defs>
+                                    <mask id="clockMask">
+                                        <rect width="100%" height="100%" fill="#fff" />
+                                        <path id=pathRaySec d= "M50,50 100,100,20,87 z" fill="#000"/>
+                                        <path id=pathRayMin d= "M100,50 100,100,20,87 z" fill="#000"/>
+                                        <path id=pathRayHr d= "M150,50 100,100,20,87 z" fill="#000"/>
+                                    </mask>
+                                </defs> 
 
-            <div id = masksContainer>
-                <div id = panel5	class = panelCls>
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="1900" width="100%">
-                        <g fill-rule="evenodd" fill="red" stroke="black" stroke-width="1">
-                            <defs>
-                                <mask id="clockMask">
-                                    <rect width="100%" height="100%" fill="#fff" />
-                                    <path id=pathRaySec d= "M50,50 100,100,20,87 z" fill="#000"/>
-                                    <path id=pathRayMin d= "M100,50 100,100,20,87 z" fill="#000"/>
-                                    <path id=pathRayHr d= "M150,50 100,100,20,87 z" fill="#000"/>
-                                </mask>
-                            </defs> 
+                                <rect id = "backRectClk" x="50" y="50" width="600" height="900"  fill="red" />
+                                <rect id = "baseRectClk" x="100" y="100" width="400" height="250"  fill="blue" mask="url(#clockMask)"/>
+                            </g>
 
-                            <rect id = "backRectClk" x="50" y="50" width="600" height="900"  fill="red" />
-                            <rect id = "baseRectClk" x="100" y="100" width="400" height="250"  fill="blue" mask="url(#clockMask)"/>
-                        </g>
-
-                    </svg>
+                        </svg>
+                    </div>
                 </div>
             </div>
 
