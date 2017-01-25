@@ -70,9 +70,14 @@ body{
 }
 
 #buttonsPanel1{ 
-    width: 15%;
+/*    width: 15%;
     margin-top: 3%;
-    float:left;
+    float:left;*/
+    
+    width: 16%;
+    margin-top: 3%;
+    float: left;
+    margin-left: 4%;
     
 }
 
@@ -81,9 +86,11 @@ div#svgCont {
     margin-top: 3%;
     margin-left: 2%;*/
     
+   
+    
     width: 80%;
     margin-top: 3%;
-    margin-left: 14%;
+    margin-left: 21%;
 }
 
 div#root {
@@ -100,7 +107,7 @@ div#masksContainer{
 
 div#mainHorz{
     background-color: #021633;
-    margin-left: 5%;
+    margin-left: 2%;
     
 }
 
