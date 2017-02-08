@@ -116,18 +116,7 @@
             rect.setAttribute('fill', 'red');
 
 
-            function testAddCirclesArray(startLoc, spacing, radius, numInstances) {
-                for (var i = 0; i < numInstances; i++) {
-                    var circle = document.createElementNS(svgNS, 'circle');
-                    circle.setAttribute('cx', startLoc[0] + i * spacing);
-                    circle.setAttribute('cy', startLoc[1]);
-                    circle.setAttribute('fill', 'red');
-                    circle.setAttribute('r', radius);
-
-                }
-            }
-
-
+         
             //cos(​t)*​1/​(6+​(t/​2)^​2)
             //decay must be integer !!
             function fCustom1(scaleX, scaleY, decay) {
@@ -139,15 +128,6 @@
                 }
                 return f;
             }
-
-
-            //return white regardless of angle 	
-            function constantWhite(angle, currentTimeMilli) {
-                return "red";
-            }
-
-
-
 
 
             function startTickingFCst1CheckClock(numPracitalPerSecond, panelName) {
@@ -173,8 +153,8 @@
                     fElmGenerator = fCircElmColorHrSec.bind(dsnParmats);
 
                     //pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
-                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 300],
-                            /*numSections*/ 250, /*outerRadius*/250, /*projected fnc*/f,
+                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 250],
+                            /*numSections*/ 250, /*outerRadius*/200, /*projected fnc*/f,
                             /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * curruentSecProp - Math.PI / 2,
                             /*circElmFnc*/fElmGenerator, /*time*/ d);
 
