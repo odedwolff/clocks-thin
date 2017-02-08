@@ -102,7 +102,7 @@
         <script>
 
             var interval;
-            var ticksPerSec = 11;
+            var ticksPerSec = 8;
             var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
             var svgNS = svg.namespaceURI;
 
@@ -180,12 +180,14 @@
 
             function start3CirclesTicking(numPracitalPerSecond, panelName) {
 
+                var center = [450, 250];
 
                 //parameters for Hour elment rendering  
                 var dsnParmasHr = {
                     color: "#FFFFFF",
-                    radius: 1
+                    radius: 2
                 };
+                
                 //function fer rendering hour elements 
                 var fElmGeneratorHr = fElmConstant.bind(dsnParmasHr);
 
@@ -195,9 +197,9 @@
                     var currentHRProp = dateTimeInfo.getHours() / 12 + currentMinProp / 12;
                     var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
 
-                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
-                            /*numSections*/ 250, /*outerRadius*/ 78, /*projected fnc*/f,
-                            /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * currentHRProp - Math.PI / 2,
+                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */center,
+                            /*numSections*/ 120, /*outerRadius*/ 86, /*projected fnc*/f,
+                            /*zoomX*/3.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * currentHRProp - Math.PI / 2,
                             /*circElmFnc*/fElmGeneratorHr, /*time*/ dateTimeInfo);
 
                 };
@@ -215,9 +217,9 @@
                     var currentMinProp = dateTimeInfo.getMinutes() / 60;
                     var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
 
-                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
-                            /*numSections*/ 250, /*outerRadius*/ 150, /*projected fnc*/f,
-                            /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * currentMinProp - Math.PI / 2,
+                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */center,
+                            /*numSections*/ 200, /*outerRadius*/ 150, /*projected fnc*/f,
+                            /*zoomX*/6.0, /*zoomY*/ 0.015, /*offsetAngleRad*/ Math.PI * 2 * currentMinProp - Math.PI / 2,
                             /*circElmFnc*/fElmGeneratorMin, /*time*/ dateTimeInfo);
 
                 };
@@ -237,8 +239,8 @@
                     var curruentSecProp = (dateTimeInfo.getTime() % msIn1Min) / msIn1Min;
                     var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
 
-                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
-                            /*numSections*/ 250, /*outerRadius*/ 250, /*projected fnc*/f,
+                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */center,
+                            /*numSections*/ 250, /*outerRadius*/ 220, /*projected fnc*/f,
                             /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * curruentSecProp - Math.PI / 2,
                             /*circElmFnc*/fElmGeneratorSec, /*time*/ dateTimeInfo);
 
