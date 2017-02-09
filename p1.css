@@ -77,16 +77,17 @@ body{
     margin-left: 17%;
 }
 
-div#svgCont {
-/*    width: 95%;
+div#svgCont {    
+/*    width: 80%;
     margin-top: 3%;
-    margin-left: 2%;*/
-    
-   
-    
+    margin-left: 21%;*/
+}
+
+.themeContainer{
     width: 80%;
     margin-top: 3%;
     margin-left: 21%;
+    
 }
 
 div#root {
@@ -140,6 +141,10 @@ div#leftSideBar {
 
 div#divTitle1 {
     //width: 20%;
+}
+
+#baseRectClk{
+    stroke-width: 0; 
 }
 
 
