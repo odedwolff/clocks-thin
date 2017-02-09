@@ -102,7 +102,7 @@
         <script>
 
             var interval;
-            var ticksPerSec = 8;
+            var ticksPerSec = 5;
             var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
             var svgNS = svg.namespaceURI;
 
@@ -256,23 +256,32 @@
              all are pointing out 
              * **/
             function start3CircCrossingAllOut(numPracitalPerSecond, panelName) {
+                var center = [450, 250];
 
                 var dsnParmatsHr = {
-                    radiusNormal: 2,
+                    //radiusNormal: 2,
+                    radiusNormal: 1.125,
                     radiusFullHr: 4,
-                    dfltClr: "#FFFFFF"
+                    dfltClr: "#FFFFFF",
+                    dfltClr:"#000000"
                 };
                 var fHrElm = fCircElmNoColorHrSec.bind(dsnParmatsHr);
 
                 var prmsMin = {
-                    color: "red",
-                    radius: 2
+                    //color: "red",
+                    radius: 1.5,
+                    dfltClr: "#d2dbd5", 
+                    //color:"#d2dbd5"
+                    color:"#000000"
                 };
                 var fMinElm = fElmConstant.bind(prmsMin);
 
                 var prmsSec = {
-                    color: "yellow",
-                    radius: 2
+                    //color: "yellow",
+                    //radius: 1.125,
+                    radius: 2,
+                    dfltClr: "#FFFFFF",
+                    color:"#000000"
                 };
                 var fSecElm = fElmConstant.bind(prmsSec);
 
@@ -282,7 +291,7 @@
                     var currentHRProp = dateTimeInfo.getHours() / 12 + currentMinProp / 12;
                     var f = fCustom1(/*scaleX*/3.0, /*scaleY*/17.0, /*decay*/ 2);
 
-                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
+                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */center,
                             /*numSections*/ 250, /*outerRadius*/ 230, /*projected fnc*/f,
                             /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * currentHRProp - Math.PI / 2,
                             /*circElmFnc*/fHrElm, /*time*/ dateTimeInfo);
@@ -294,7 +303,7 @@
                     var currentMinProp = dateTimeInfo.getMinutes() / 60;
                     var f = fCustom1(/*scaleX*/4.0, /*scaleY*/50.0, /*decay*/ 2);
 
-                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
+                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */center,
                             /*numSections*/ 250, /*outerRadius*/ 215, /*projected fnc*/f,
                             /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * currentMinProp - Math.PI / 2,
                             /*circElmFnc*/fMinElm, /*time*/ dateTimeInfo);
@@ -306,7 +315,7 @@
                     var curruentSecProp = (dateTimeInfo.getTime() % msIn1Min) / msIn1Min;
                     var f = fCustom1(/*scaleX*/4.0, /*scaleY*/100.0, /*decay*/ 2);
 
-                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
+                    pojectFunctionOnRadCrd(/*panelName */panelName, /*center */center,
                             /*numSections*/ 250, /*outerRadius*/ 200, /*projected fnc*/f,
                             /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * curruentSecProp - Math.PI / 2,
                             /*circElmFnc*/fSecElm, /*time*/ dateTimeInfo);
