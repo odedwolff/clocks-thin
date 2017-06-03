@@ -1,5 +1,13 @@
 //var intervalMask;
         
+        
+        var RAY_HR_WIDTH = Math.PI * 2 * 0.04;
+        var RAY_MIN_WIDTH = Math.PI * 2 * 0.02;
+        var RAY_SEC_WIDTH = Math.PI * 2 * 0.01;
+        var CORRECT_OFFSET = 0.25;
+        
+        var origin = [400, 250];
+        
         function manipulate1() {
             var path = document.getElementById('maskElm1');
             var newPath = "M150,150 h50 v250z";
@@ -40,11 +48,7 @@
             console.log(add2DVector([1,2], [2,1]));
         }
         
-        var RAY_HR_WIDTH = Math.PI * 2 * 0.04;
-        var RAY_MIN_WIDTH = Math.PI * 2 * 0.02;
-        var RAY_SEC_WIDTH = Math.PI * 2 * 0.01;
         
-        var CORRECT_OFFSET = 0.25;
         
         function startMaskTicking(){
             var interval; 
@@ -61,17 +65,17 @@
                 var currentHrProp = d.getHours() / 12 + currentMinProp / 12;
                 
                 //set seconds ray 
-                var d= pathOfRay(Math.PI * 2 * (curruntSecProp - CORRECT_OFFSET) , RAY_SEC_WIDTH, 400, 300, [300,300]);
+                var d= pathOfRay(Math.PI * 2 * (curruntSecProp - CORRECT_OFFSET) , RAY_SEC_WIDTH, 400, 300, origin);
                 var path = document.getElementById('pathRaySec');
                 path.setAttribute("d", d);
                 
                 //set minutes ray 
-                d= pathOfRay(Math.PI * 2 * (currentMinProp - CORRECT_OFFSET), RAY_MIN_WIDTH, 400, 300, [300,300]);
+                d= pathOfRay(Math.PI * 2 * (currentMinProp - CORRECT_OFFSET), RAY_MIN_WIDTH, 400, 300, origin);
                 path = document.getElementById('pathRayMin');
                 path.setAttribute("d", d);
                 
                 //set hours ray 
-                d= pathOfRay(Math.PI * 2 * (currentHrProp - CORRECT_OFFSET), RAY_HR_WIDTH, 400, 300, [300,300]);
+                d= pathOfRay(Math.PI * 2 * (currentHrProp - CORRECT_OFFSET), RAY_HR_WIDTH, 400, 300, origin);
                 path = document.getElementById('pathRayHr');
                 path.setAttribute("d", d);
                 
