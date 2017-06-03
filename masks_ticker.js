@@ -16,7 +16,8 @@
 
         //returns a string for a ray in given angel 
         function pathOfRay(angeRad, rayWidthRad, boardWidth, boardHeight, origin) {
-            var radius = Math.max(boardHeight, boardWidth) / 2;
+            //var radius = Math.max(boardHeight, boardWidth) / 2;
+            var radius = Math.max(boardHeight, boardWidth) * 2;
             var varUpVector = [Math.cos(angeRad + rayWidthRad) * radius, Math.sin(angeRad + rayWidthRad) * radius];
             varUpVector = add2DVector(varUpVector, origin);
             var varDownVector = [Math.cos(angeRad - rayWidthRad) * radius, Math.sin(angeRad - rayWidthRad) * radius];
@@ -38,7 +39,7 @@
             console.log(out);
         }
         function testRenderRay(){
-                var d = pathOfRay(Math.PI * 2 * 0.25, Math.PI * 2 / 80, 400, 300, [300,300]);
+                var d = pathOfRay(Math.PI * 2 * 0.25, Math.PI * 2 / 80, 400, 300, origin);
 //                var path= "<path id=maskElm2 d=" + d +  fill="red"/>;
                 var path = document.getElementById('pathRay1');
                 path.setAttribute("d", d);
