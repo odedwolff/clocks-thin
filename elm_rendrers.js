@@ -50,7 +50,7 @@
                 //pointed by minutes hand
                 if (shouldColorHrMin && Math.abs(diffMinAng) < thrshMin) {
                     //circle.setAttribute('fill', mnClr);
-                    circle.setAttribute('class', "clsCircElmDflt");
+                    circle.setAttribute('class', "clsCircElmActiveMin");
                     circle.setAttribute('r', radiusFullHr);
                     return circle;
                 }
@@ -58,7 +58,7 @@
                 //pointed by hour hand
                 if (shouldColorHrMin && Math.abs(diffHrAngle) < thrshHr) {
                     //circle.setAttribute('fill', hrClr);
-                    circle.setAttribute('class', "clsCircElmDflt");
+                    circle.setAttribute('class', "clsCircElmActiveHr");
                     circle.setAttribute('r', radiusFullHr);
                     return circle;
                 }
