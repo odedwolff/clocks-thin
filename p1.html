@@ -32,13 +32,13 @@
                         </h1>
                     </div>
                     <div id = buttonsPanel1>
-                            <button id=btnSingeRing class="controlButton">single Ring</button>
-                            <button id=btn3Rings class="controlButton">3 rings</button>
-                            <button id=btnRingCrossing class="controlButton">rings crossing</button>
-                            <button id=btnAccumalator class="controlButton">accumalator</button>
-                            <button id=btnMasks class="controlButton">masks</button>
-                            <button id=stop	 class="controlButton">stop</button>
-                            <button id=btnAbout	 class="controlButton">about</button>
+                        <button id=btnSingeRing class="controlButton">single Ring</button>
+                        <button id=btn3Rings class="controlButton">3 rings</button>
+                        <button id=btnRingCrossing class="controlButton">rings crossing</button>
+                        <button id=btnAccumalator class="controlButton">accumalator</button>
+                        <button id=btnMasks class="controlButton">masks</button>
+                        <button id=stop	 class="controlButton">stop</button>
+                        <button id=btnAbout	 class="controlButton">about</button>
                     </div>
                     <div id = aboutContent>
                         a demonstration of a bunch of design ideas for 
@@ -48,7 +48,7 @@
                         <a href="mailto:odedwolff@gmail.com">odedwolff@gmail.com</a>
                     </div>
                 </div>
-                
+
                 <!--svg container for different clocks --> 
                 <div id = svgCont class = themeContainer>
                     <div id = panel4	class = panelCls>
@@ -57,41 +57,41 @@
                     </div>
                 </div>
 
-                
+
                 <!--svg container for the MASKS clock -->
                 <div id = masksContainer class = themeContainer>
                     <div id = panel5	class = panelCls>
                         <svg class="gridCell1" viewBox="0 0 800 500" preserveAspectRatio="none">
-                            <!--a static background hidden by dynamic mask - a plane that covers 
-                            the whole background, but has holed in it - rays that are oriented 
-                            by a clock dials, through which the background is visible--> 
-                            <g fill-rule="evenodd" fill="red" stroke="black" stroke-width="1">
-                                <defs>
-                                    <mask id="clockMask">
-                                        <rect width="100%" height="100%" fill="#fff" />
-                                        <path id=pathRaySec d= "M50,50 100,100,20,87 z" fill="#000"/>
-                                        <path id=pathRayMin d= "M100,50 100,100,20,87 z" fill="#000"/>
-                                        <path id=pathRayHr d= "M150,50 100,100,20,87 z" fill="#000"/>
-                                    </mask>
-                                </defs> 
- 
- 
-                                <!--the background elemnt--> 
-                                 <g transform="scale(0.8, 0.9)" > 
-                                    <use xlink:href="balkon.svg#3030"></use>
-                                </g>
-                                
-                                <!--the mask the covers the subject image, from which the dials are subtracting-->
-                                <rect id = "baseRectClk" x="0" y="0" width="100%" height="100%"  fill="red" rx="25" ry="25" mask="url(#clockMask)"/>
-                          
-                            </g>
+                        <!--a static background hidden by dynamic mask - a plane that covers 
+                        the whole background, but has holed in it - rays that are oriented 
+                        by a clock dials, through which the background is visible--> 
+                        <g fill-rule="evenodd" fill="red" stroke="black" stroke-width="1">
+                        <defs>
+                        <mask id="clockMask">
+                            <rect width="100%" height="100%" fill="#fff" />
+                            <path id=pathRaySec d= "M50,50 100,100,20,87 z" fill="#000"/>
+                            <path id=pathRayMin d= "M100,50 100,100,20,87 z" fill="#000"/>
+                            <path id=pathRayHr d= "M150,50 100,100,20,87 z" fill="#000"/>
+                        </mask>
+                        </defs> 
+
+
+                        <!--the background elemnt--> 
+                        <g transform="scale(0.8, 0.9)" > 
+                        <use xlink:href="balkon.svg#3030"></use>
+                        </g>
+
+                        <!--the mask the covers the subject image, from which the dials are subtracting-->
+                        <rect id = "baseRectClk" x="0" y="0" width="100%" height="100%"  fill="red" rx="25" ry="25" mask="url(#clockMask)"/>
+
+                        </g>
 
                         </svg>
                     </div>
                 </div>
             </div>
-            
-            
+
+
 
 
         </div>
@@ -104,22 +104,12 @@
             var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
             var svgNS = svg.namespaceURI;
             var msIn1Min = 1000 * 60;
-            
-            
-
-            //a surface function: cos(​t)*​1/​(6+​(t/​2)^​2)
-            //decay must be integer !!
-//            function fCustom1(scaleX, scaleY, decay) {
-//                var f = function (x) {
-//                    x = x * scaleX;
-//                    //x = Math.abs(x);
-//                    return scaleY * Math.cos(x) / (6 + Math.pow(x / 2, decay));
-//                    //return scaleY * Math.cos(x) / (6  + (Math.pow(x/2, decay))); 
-//                };
-//                return f;
-//            }
+            var aboutContentShown = false;
 
 
+            /**
+             * starts the single ring clock
+             * **/
             function startTickingFCst1CheckClock(numPracitalPerSecond, panelName) {
 
                 var tick = function () {
@@ -130,8 +120,12 @@
                     time = d.getTime();
                     curruentSecProp = (time % (1000 * 60)) / (1000 * 60);
                     $("#" + panelName).empty();
+                    
+                    //the displacement function to be projected on the face of the circle 
                     var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
 
+                    
+                    //parameters for the peripherial elements 
                     var dsnParmats = {
                         radiusNormal: 2,
                         radiusFullHr: 4,
@@ -139,10 +133,12 @@
                         hrClr: "#830000",
                         dfltClr: "#FFFFFF"
                     };
-
+                    
+                    //create factory for peripherial elements 
                     fElmGenerator = fCircElmColorHrSec.bind(dsnParmats);
 
-                    //pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 400],
+                    //project the displacenement function on the circle with proper phase to 
+                    //current time 
                     pojectFunctionOnRadCrd(/*panelName */panelName, /*center */[450, 250],
                             /*numSections*/ 250, /*outerRadius*/200, /*projected fnc*/f,
                             /*zoomX*/8.0, /*zoomY*/ 0.02, /*offsetAngleRad*/ Math.PI * 2 * curruentSecProp - Math.PI / 2,
@@ -152,7 +148,12 @@
                 return setInterval(tick, 1000 / numPracitalPerSecond);
             }
 
-
+            
+            //projects 3 given functions for rendering seconds, minutes with peroper 
+            //diplacement according to current time, so that the bump created by 
+            //the displacement functino projected on the circle points at current 
+            //value of the clock 
+            
             function startTicking3porjections(numPracitalPerSecond, panelName,
                     fRenderHr, fRenderMin, fRenderSec) {
 
@@ -168,6 +169,14 @@
                 return setInterval(tick, 1000 / numPracitalPerSecond);
             }
 
+            
+            /**
+             * starting the 3 circles clock 
+             * 
+             * defining 3 functions of time, for rendering a circle for seconds, minutes, hours 
+             * accordingly 
+             * **/
+            
             function start3CirclesTicking(numPracitalPerSecond, panelName) {
 
                 var center = [450, 250];
@@ -177,7 +186,7 @@
                     color: "#FFFFFF",
                     radius: 2
                 };
-                
+
                 //function fer rendering hour elements 
                 var fElmGeneratorHr = fElmConstant.bind(dsnParmasHr);
 
@@ -241,9 +250,14 @@
 
             }
 
+
             /**
+             * starts a clock with mutually crossing circles
              seconds dial at center and longest, and corsses 2 others. etc. 
              all are pointing out 
+    
+             functions of time are definned for seconds, minutes, hours, for prperly 
+             render a corresponding circle with diplacement bump 
              * **/
             function start3CircCrossingAllOut(numPracitalPerSecond, panelName) {
                 var center = [450, 250];
@@ -260,9 +274,9 @@
                 var prmsMin = {
                     //color: "red",
                     radius: 1.5,
-                    dfltClr: "#d2dbd5", 
+                    dfltClr: "#d2dbd5",
                     //color:"#d2dbd5"
-                    color:"#000000"
+                    color: "#000000"
                 };
                 var fMinElm = fElmConstant.bind(prmsMin);
 
@@ -271,7 +285,7 @@
                     //radius: 1.125,
                     radius: 2,
                     dfltClr: "#FFFFFF",
-                    color:"#000000"
+                    color: "#000000"
                 };
                 var fSecElm = fElmConstant.bind(prmsSec);
 
@@ -317,9 +331,13 @@
 
             }
 
-
+            /**
+             * starts a clock made of 3 gaussians rotating on a common circle pointing at current 
+             * second, minute, hour. when overlapping, the displacement functions are summed 
+             * (the may be pointing in same of differnet direction - to or from center) 
+             * **/
             function startTicking3GsOn2(numPracitalPerSecond, panelName) {
-                
+
                 var center = [450, 250];
                 var step = function () {
                     var dateTimeInfo = new Date();
@@ -339,7 +357,7 @@
                         width: .5,
                         height: -40
                     };
-                    
+
                     //a gaussian for the minutes
                     fMin = gausianBump.bind(context2);
 
@@ -349,11 +367,11 @@
                         width: .5,
                         height: -20
                     };
-                    
+
                     //a gaussian for the seconds 
                     fSec = gausianBump.bind(context3);
-                    
-                    
+
+
                     //both funcions and offsets array are in the order: hour, minute, second
                     var funcs = [fHr, fMin, fSec];
                     var correctOffset = -Math.PI / 2;
@@ -379,66 +397,58 @@
 
 
             }
-            
-            
+
+
             //switch active view to masks container 
-            function masksPanelOn(){
-               $("#svgCont").hide(); 
-               $("#masksContainer").show(); 
-                
+            function masksPanelOn() {
+                $("#svgCont").hide();
+                $("#masksContainer").show();
+
             }
-            
+
             //switch active view to normal svg containter 
-            function masksPanelOff(){
-                $("#svgCont").show(); 
-                $("#masksContainer").hide(); 
-                
+            function masksPanelOff() {
+                $("#svgCont").show();
+                $("#masksContainer").hide();
+
             }
-            
-            
-            function startMasksClock(){
+
+
+            function startMasksClock() {
                 clearInterval(interval);
                 masksPanelOn();
-                interval = startMaskTicking(); 
+                interval = startMaskTicking();
             }
+
+
             
-            
-            var aboutContentShown = false; 
-            function showAboutContent(){
-               // $("#aboutContent").css({display:"block"});
-               $("#aboutContent").show(400);
+            function showAboutContent() {
+                // $("#aboutContent").css({display:"block"});
+                $("#aboutContent").show(400);
             }
-            function hideAboutContent(){
+            function hideAboutContent() {
                 //$("#aboutContent").animate({display:"none"}, 300);
                 $("#aboutContent").hide(400);
-                
+
             }
-            function toggleAboutContentShow(){
-                if(aboutContentShown){
+            function toggleAboutContentShow() {
+                if (aboutContentShown) {
                     hideAboutContent();
                     aboutContentShown = false;
-                }else{
+                } else {
                     showAboutContent();
                     aboutContentShown = true;
-                    
+
                 }
             }
-            
-           
-    
-    
-            $("#btnAbout").click(toggleAboutContentShow);
-            
-            $("#btnMasks").click(startMasksClock);
-            
-            
 
+            $("#btnAbout").click(toggleAboutContentShow);
+            $("#btnMasks").click(startMasksClock);
             $("#btnSingeRing").click(function () {
                 masksPanelOff();
                 clearInterval(interval);
                 interval = startTickingFCst1CheckClock(ticksPerSec, "svg1");
             });
-
             $("#btn3Rings").click(function () {
                 masksPanelOff();
                 clearInterval(interval);
@@ -446,8 +456,6 @@
 
                 interval = start3CirclesTicking(ticksPerSec, "svg1");
             });
-
-
             $("#btnRingCrossing").click(function () {
                 masksPanelOff();
                 clearInterval(interval);
@@ -455,7 +463,6 @@
 
                 interval = start3CircCrossingAllOut(ticksPerSec, "svg1");
             });
-
             $("#btnAccumalator").click(function () {
                 masksPanelOff();
                 clearInterval(interval);
@@ -463,18 +470,9 @@
 
                 interval = startTicking3GsOn2(ticksPerSec, "svg1");
             });
-
-
-
-
             $("#stop").click(function () {
                 clearInterval(interval);
             });
-            
-            
-            
-            
-           
 
 
         </script>
