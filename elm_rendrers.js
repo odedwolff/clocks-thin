@@ -10,7 +10,9 @@
 
                 var circle = document.createElementNS(svgNS, 'circle');
                 circle.setAttribute('r', radius);
-                circle.setAttribute('fill', color);
+                //circle.setAttribute('fill', color);
+                //circle.className = "clsTest1";
+                circle.setAttribute('class', "clsCircElmDflt");
                 return circle;
             }
 
@@ -47,27 +49,31 @@
 
                 //pointed by minutes hand
                 if (shouldColorHrMin && Math.abs(diffMinAng) < thrshMin) {
-                    circle.setAttribute('fill', mnClr);
+                    //circle.setAttribute('fill', mnClr);
+                    circle.setAttribute('class', "clsCircElmDflt");
                     circle.setAttribute('r', radiusFullHr);
                     return circle;
                 }
 
                 //pointed by hour hand
                 if (shouldColorHrMin && Math.abs(diffHrAngle) < thrshHr) {
-                    circle.setAttribute('fill', hrClr);
+                    //circle.setAttribute('fill', hrClr);
+                    circle.setAttribute('class', "clsCircElmDflt");
                     circle.setAttribute('r', radiusFullHr);
                     return circle;
                 }
 
                 //match for hour mark
                 if (angleCloeToHrMark(angle)) {
-                    circle.setAttribute('fill', dfltClr);
+                    //circle.setAttribute('fill', dfltClr);
+                    circle.setAttribute('class', "clsCircElmDflt");
                     circle.setAttribute('r', radiusFullHr);
                     return circle;
                 }
 
                 //the default element 
-                circle.setAttribute('fill', dfltClr);
+                //circle.setAttribute('fill', dfltClr);
+                circle.setAttribute('class', "clsCircElmDflt");
                 circle.setAttribute('r', radiusNormal);
                 return circle;
             }
