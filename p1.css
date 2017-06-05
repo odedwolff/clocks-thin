@@ -1,6 +1,5 @@
 
-
-//base rgb for scheme: #021633
+//Apperance of this style is brown-yellow-red  
 
 .gridCell1{
     width:500px;
@@ -10,8 +9,6 @@
     margin-top: 4%;
     color:yellow;
 }
-
-
 
 body{
     background-color:  #8b1a00;
@@ -24,7 +21,6 @@ body{
     fill: none;
     stroke: red;  
 }
-
 
 #label1{
     color: green;  
@@ -39,20 +35,6 @@ body{
     stroke: blue;  	
 }
 
-/**
-.controlButton{
-    background-color:#0e172f;
-    border-style: none;
-    color: #114a6b;
-    width:80%;
-
-    height: 31px;
-    font-size: 21px;
-    margin-top: 3px
-}
-
-**/
-
 .controlButton {
     background-color: #5e1403;
     border-style: none;
@@ -61,30 +43,16 @@ body{
     height: 31px;
     font-size: 21px;
     margin-top: 3px;
-    
     cursor: pointer;
 }
 
-
 .controlButton:hover{
     color:#3F51B5;
-    
 }
 
 button:focus {outline:0;}
 
 .panelCls{
-    
-    /*
-    color:yellow;	
-    margin-left: 15%;
-    margin-top: 4%;
-    padding-left: 10%;
-    width: 50%;
-    background-color:#022C6B;
-    border-radius: 25px;
-    */
-    
     color: yellow;
     margin-top: 4%;
     width: 95%;
@@ -92,18 +60,11 @@ button:focus {outline:0;}
     border-radius: 25px;
 }
 
-
 #buttonsPanel1 {
     width: 81%;
     margin-top: 3%;
     float: left;
     margin-left: 17%;
-}
-
-div#svgCont {    
-/*    width: 80%;
-    margin-top: 3%;
-    margin-left: 21%;*/
 }
 
 .themeContainer{
@@ -114,7 +75,6 @@ div#svgCont {
 }
 
 div#root {
-    //background-color: #021633;
     height: 1000px;
     width: 100%;
 }
@@ -126,14 +86,10 @@ div#masksContainer{
 }
 
 div#mainHorz{
-    //background-color: #021633;
     margin-left: 2%;
-    
 }
 
-
 h1#h1text {
-    
     color: #286f73;
     display: inline;
     padding-left: 38%;
@@ -142,7 +98,6 @@ h1#h1text {
 }
 
 h1#h1text1 {
-    /* width: 80%; */
     font-size: 30px;
     text-align: center;
     margin-left: 22px;
@@ -175,17 +130,14 @@ div#divTitle1 {
 
 .clsCircElmDflt{
     fill:#712210;
-    //r:11;
 }
 
 .clsCircElmActiveMin{
-    fill:blue;
-    //r:11;
+    fill:blue;  
 }
 
 .clsCircElmActiveHr{
     fill:red;
-    //r:11;
 }
 
 #aboutContent{
@@ -195,8 +147,6 @@ div#divTitle1 {
 a{
    color: #8b7070;
 }
-
-
 
 
 
