@@ -1,8 +1,5 @@
 
 
-
-
-
 <!doctype html>
 
 <html lang="en">
@@ -28,23 +25,11 @@
     </head>
 
     <body>
-        <!--  <script src="js/scripts.js"></script>  -->
-
-        <div id = root>
-<!--            <div id = divTitle>
-                <h1 id=h1text>
-                    A Bunch of Clock Designs 
-                </h1>
-            </div>-->
-            
-            <div id = aboutContent>
-                
-            </div>
-            
+        
+        <div id = root>            
             
             
             <div id = mainHorz>
-                
                 
                 <div id="leftSideBar">
                     <div id = divTitle1>
@@ -60,6 +45,15 @@
                             <button id=btnMasks class="controlButton">masks</button>
                             <button id=stop	 class="controlButton">stop</button>
                             <button id=btnAbout	 class="controlButton">about</button>
+                    </div>
+                    <div id = aboutContent>
+                        about contenct 
+                        about contenct
+                        about contenct
+                        about contenct
+                        about contenct
+                        about contenct
+                        about contenct
                     </div>
                 </div>
                 
@@ -128,7 +122,7 @@
             rect.setAttribute('height', 40);
             rect.setAttribute('fill', 'red');
 
-
+            
          
             //cos(​t)*​1/​(6+​(t/​2)^​2)
             //decay must be integer !!
@@ -425,8 +419,33 @@
                 interval = startMaskTicking(); 
             }
             
+            
+            var aboutContentShown = false; 
+            function showAboutContent(){
+               // $("#aboutContent").css({display:"block"});
+               $("#aboutContent").show(400);
+            }
+            function hideAboutContent(){
+                //$("#aboutContent").animate({display:"none"}, 300);
+                $("#aboutContent").hide(400);
+                
+            }
+            function toggleAboutContentShow(){
+                if(aboutContentShown){
+                    hideAboutContent();
+                    aboutContentShown = false;
+                }else{
+                    showAboutContent();
+                    aboutContentShown = true;
+                    
+                }
+            }
+            
            
     
+    
+            $("#btnAbout").click(toggleAboutContentShow);
+            
             $("#btnMasks").click(startMasksClock);
             
             
@@ -468,6 +487,8 @@
             $("#stop").click(function () {
                 clearInterval(interval);
             });
+            
+            
             
             
            
