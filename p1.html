@@ -5,14 +5,12 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-
         <title>timers</title>
         <meta name="description" content="The HTML5 Herald">
         <meta name="author" content="SitePoint">
 
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <link rel="stylesheet" href="p1.css">
-
 
         <script src="elm_rendrers.js"></script>
         <script src="projectors.js"></script>
@@ -25,12 +23,8 @@
     </head>
 
     <body>
-        
         <div id = root>            
-            
-            
-            <div id = mainHorz>
-                
+            <div id = mainHorz> 
                 <div id="leftSideBar">
                     <div id = divTitle1>
                         <h1 id=h1text1>
@@ -47,17 +41,15 @@
                             <button id=btnAbout	 class="controlButton">about</button>
                     </div>
                     <div id = aboutContent>
-                        about contenct 
-                        about contenct
-                        about contenct
-                        about contenct
-                        about contenct
-                        about contenct
-                        about contenct
+                        a demonstration of a bunch of design ideas for 
+                        clocks, implmented in HTML5, SVG. 
+                        by oded wolff, 2017. 
+                        your feeback is welcome
+                        <a href="mailto:odedwolff@gmail.com">odedwolff@gmail.com</a>
                     </div>
                 </div>
                 
-                
+                <!--svg container for different clocks --> 
                 <div id = svgCont class = themeContainer>
                     <div id = panel4	class = panelCls>
                         <svg id=svg1 class="gridCell1" viewBox="0 0 800 500" preserveAspectRatio="none">
@@ -65,10 +57,14 @@
                     </div>
                 </div>
 
+                
+                <!--svg container for the MASKS clock -->
                 <div id = masksContainer class = themeContainer>
                     <div id = panel5	class = panelCls>
-<!--                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="1900" width="100%">-->
                         <svg class="gridCell1" viewBox="0 0 800 500" preserveAspectRatio="none">
+                            <!--a static background hidden by dynamic mask - a plane that covers 
+                            the whole background, but has holed in it - rays that are oriented 
+                            by a clock dials, through which the background is visible--> 
                             <g fill-rule="evenodd" fill="red" stroke="black" stroke-width="1">
                                 <defs>
                                     <mask id="clockMask">
@@ -78,14 +74,9 @@
                                         <path id=pathRayHr d= "M150,50 100,100,20,87 z" fill="#000"/>
                                     </mask>
                                 </defs> 
-
-                                
+ 
+ 
                                 <!--the background elemnt--> 
-<!--                                <svg viewBox="0 0 1600 500" class="cl1"> 
-                                    <use xlink:href="balkon.svg#3030"></use>
-                                </svg>-->
-                                
-                                
                                  <g transform="scale(0.8, 0.9)" > 
                                     <use xlink:href="balkon.svg#3030"></use>
                                 </g>
@@ -112,29 +103,21 @@
             var ticksPerSec = 5;
             var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
             var svgNS = svg.namespaceURI;
-
             var msIn1Min = 1000 * 60;
-
-            var rect = document.createElementNS(svgNS, 'rect');
-            rect.setAttribute('x', 5);
-            rect.setAttribute('y', 30);
-            rect.setAttribute('width', 70);
-            rect.setAttribute('height', 40);
-            rect.setAttribute('fill', 'red');
-
             
-         
-            //cos(​t)*​1/​(6+​(t/​2)^​2)
+            
+
+            //a surface function: cos(​t)*​1/​(6+​(t/​2)^​2)
             //decay must be integer !!
-            function fCustom1(scaleX, scaleY, decay) {
-                var f = function (x) {
-                    x = x * scaleX;
-                    //x = Math.abs(x);
-                    return scaleY * Math.cos(x) / (6 + Math.pow(x / 2, decay));
-                    //return scaleY * Math.cos(x) / (6  + (Math.pow(x/2, decay))); 
-                }
-                return f;
-            }
+//            function fCustom1(scaleX, scaleY, decay) {
+//                var f = function (x) {
+//                    x = x * scaleX;
+//                    //x = Math.abs(x);
+//                    return scaleY * Math.cos(x) / (6 + Math.pow(x / 2, decay));
+//                    //return scaleY * Math.cos(x) / (6  + (Math.pow(x/2, decay))); 
+//                };
+//                return f;
+//            }
 
 
             function startTickingFCst1CheckClock(numPracitalPerSecond, panelName) {

@@ -64,3 +64,15 @@ function gausianMaker(a, b, c) {
 
 //------------------------------------------------------------------------------------------------
 
+//a surface function: cos(?t)*?1/?(6+?(t/?2)^?2)
+//decay must be integer !!
+function fCustom1(scaleX, scaleY, decay) {
+    var f = function (x) {
+        x = x * scaleX;
+        //x = Math.abs(x);
+        return scaleY * Math.cos(x) / (6 + Math.pow(x / 2, decay));
+        //return scaleY * Math.cos(x) / (6  + (Math.pow(x/2, decay))); 
+    }
+    ;
+    return f;
+}         
