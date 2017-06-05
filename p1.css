@@ -52,6 +52,15 @@ button:focus {outline:0;}
     border-radius: 25px;
 }
 
+.panelClsSqr{
+    color: yellow;
+    margin-top: 4%;
+    width: 95%;
+    background-color: #ebaf2c;
+}
+
+
+
 #buttonsPanel1 {
     width: 81%;
     margin-top: 3%;
@@ -72,7 +81,7 @@ div#root {
 }
 
 div#masksContainer{
-    background-color: #021633;
+    //background-color: #021633;
     display: none;
     width:70%;
 }
