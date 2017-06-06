@@ -10,9 +10,11 @@
 
                 var circle = document.createElementNS(svgNS, 'circle');
                 circle.setAttribute('r', radius);
-                //circle.setAttribute('fill', color);
-                //circle.className = "clsTest1";
-                circle.setAttribute('class', "clsCircElmDflt");
+                var cssClass = this.cssClass;
+                if(typeof(cssClass) === 'undefined' || cssClass == null){
+                    cssClass = "clsCircElmDflt";
+                }
+                circle.setAttribute('class', cssClass);
                 return circle;
             }
 
@@ -46,6 +48,8 @@
                 var diffMinAng = sharpAngel((angle + Math.PI / 2) - mntAngle);
                 var hrAngle = (time.getHours() / 12) * Math.PI * 2 + mntAngle / 12;
                 var diffHrAngle = sharpAngel((angle + Math.PI / 2) - hrAngle);
+                
+               
 
                 //pointed by minutes hand
                 if (shouldColorHrMin && Math.abs(diffMinAng) < thrshMin) {
@@ -70,12 +74,17 @@
                     circle.setAttribute('r', radiusFullHr);
                     return circle;
                 }
-
-                //the default element 
-                //circle.setAttribute('fill', dfltClr);
-                circle.setAttribute('class', "clsCircElmDflt");
+                
+                //an element that is normal and not pointed by any dial 
+                //if there is also a default class, keep it, else assign a global default 
+                var cssClassDefault = this.cssClass;
+                if(typeof(cssClassDefault) === 'undefined' || cssClassDefault == null){
+                    cssClassDefault = "clsCircElmDflt";
+                }
+                circle.setAttribute('class', cssClassDefault);
                 circle.setAttribute('r', radiusNormal);
                 return circle;
+                
             }
 
 

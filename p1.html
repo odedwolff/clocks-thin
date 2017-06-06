@@ -271,8 +271,9 @@
                     //radiusNormal: 2,
                     radiusNormal: 1.125,
                     radiusFullHr: 4,
-                    dfltClr: "#FFFFFF",
-                    dfltClr:"#000000"
+                    //dfltClr: "#FFFFFF",
+                    dfltClr:"#000000", 
+                    cssClass:"cls3CrossingHr"
                 };
                 var fHrElm = fCircElmNoColorHrSec.bind(dsnParmatsHr);
 
@@ -281,7 +282,8 @@
                     radius: 1.5,
                     dfltClr: "#d2dbd5",
                     //color:"#d2dbd5"
-                    color: "#000000"
+                    color: "#000000", 
+                    cssClass:"cls3CrossingMin"
                 };
                 var fMinElm = fElmConstant.bind(prmsMin);
 
@@ -290,7 +292,8 @@
                     //radius: 1.125,
                     radius: 2,
                     dfltClr: "#FFFFFF",
-                    color: "#000000"
+                    color: "#000000", 
+                    cssClass:"cls3CrossingSec"
                 };
                 var fSecElm = fElmConstant.bind(prmsSec);
 
@@ -386,7 +389,7 @@
                     //element rendrer
                     context = {
                         color: "#FFFFFF",
-                        radius: 1
+                        radius: 2
                     };
                     //function fer rendering hour elements 
                     var fElmGenerator = fElmConstant.bind(context);

@@ -170,3 +170,14 @@ a{
 .clsSvgMasks{
     background-color: #ebaf2c;
 }
+
+
+.cls3CrossingHr{
+    fill:blue;
+}
+.cls3CrossingMin{
+    fill:white;
+}
+.cls3CrossingSec{
+    fill:green;
+}
