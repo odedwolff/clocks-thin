@@ -81,7 +81,8 @@
                 path.setAttribute("d", d);
                 
             }
-            
+            //render first time to avoid delay at openning the window 
+            tick();
             interval = setInterval(tick, 1000);
             return interval;
             
