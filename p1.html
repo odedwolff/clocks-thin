@@ -62,16 +62,17 @@
                 <div id = masksContainer class = themeContainer>
                     <div id = panel5	class = panelClsSqr>
                         <!--<svg class="gridCell1" viewBox="0 0 800 500" preserveAspectRatio="none">-->
-                        <svg class="gridCell1"  viewBox="0 0 900 600" preserveAspectRatio="none">   
+                        <svg  class="clsSvgMasks" width="800" height="500"  viewBox="0 0 800 500" preserveAspectRatio="none">   
                         
                         <!--a static background hidden by dynamic mask - a plane that covers 
                             the whole background, but has holed in it - rays that are oriented 
                             by a clock dials, through which the background is visible--> 
-                            <!--<g fill-rule="evenodd" fill="red" stroke="black" stroke-width="1">-->
                             <g id = "gMask" fill-rule="evenodd" fill="#8b1a00" stroke="black" stroke-width="0">
+                                
+                                <!--the mask definition--> 
                                 <defs>
                                     <mask id="clockMask">
-                                        <rect id="rectSubt" width="100%" height="100%" fill="#fff" />
+                                        <rect id="rectSubt" width="800" height="500" fill="#fff" />
                                         <path id=pathRaySec d= "M50,50 100,100,20,87 z" fill="#000"/>
                                         <path id=pathRayMin d= "M100,50 100,100,20,87 z" fill="#000"/>
                                         <path id=pathRayHr d= "M150,50 100,100,20,87 z" fill="#000"/>
@@ -80,15 +81,12 @@
 
 
                                 <!--the background elemnt--> 
-                                <g transform="scale(0.8, 0.9)" > 
+                                <g transform="scale(0.835, 0.95)" > 
                                      <use xlink:href="balkon.svg#3030"></use>
                                 </g>
-
-                                <!--the mask the covers the subject image, from which the dials are subtracting-->
-                                <!--<rect id = "baseRectClk" x="0" y="0" width="100%" height="100%"  fill="red" rx="25" ry="25" mask="url(#clockMask)"/>-->
-                                <!--<rect  id = "baseRectClk" x="0" y="0" width="100%" height="100%"  rx="25" ry="25" mask="url(#clockMask)"/>-->
-                                <!--<rect  id = "baseRectClk" x="0" y="0" width="100%" height="100%"  rx="40" ry="40" mask="url(#clockMask)"/>-->
-                                 <rect  id = "baseRectClk" x="0" y="0"  width="100%" height="100%"   mask="url(#clockMask)"/>
+                                
+                                <!--the mask the covers the subject image, from which the dials are subtracting-->  
+                                <rect  id = "baseRectClk" y="-10" width="800" height="550"   mask="url(#clockMask)"/>
                         
                                 
                             </g>
