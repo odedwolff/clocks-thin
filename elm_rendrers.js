@@ -1,6 +1,12 @@
- /*
-             * returns constant color and ardius element, regardless of time and location
-             *              
+            
+     /**
+      * handels creationg of different peripherial SVG circle elements
+      * **/       
+            
+            
+            
+            /*
+             * returns constant color and ardius element, regardless of time and location             
              */
             function fElmConstant(angle, time) {
 
@@ -18,13 +24,14 @@
                 return circle;
             }
 
-
+            //returns a factory of color element
             function fCircElmColorHrSec(angle, time) {
                 var elmGenerator = fCircElm.bind(this);
                 return elmGenerator(angle, time, true);
 
             }
-
+            
+            //returns a factory of colorless element
             function fCircElmNoColorHrSec(angle, time) {
                 var elmGenerator = fCircElm.bind(this);
                 return elmGenerator(angle, time, false);
@@ -32,7 +39,7 @@
 
 
 
-            //returns proper circling element 
+            //returns proper circling element to to given time and angular position  
             function fCircElm(angle, time, shouldColorHrMin) {
 
                 //TODO - a defualt to support usage without binded context? 

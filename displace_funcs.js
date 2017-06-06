@@ -1,6 +1,11 @@
 
-
-//--------------------------------------------------------------------------------------------------
+/**
+ * R1 -> R1 funtions, that shape elevetion of surface, having a visible "centre" to be used as a clock dial
+ * 
+ * **/
+//-------a function with square elevation (constant). 'params' (like example bellow)
+//should be bound to funtion on invokation 
+//------------------------------------------------------------------------------------
 //sample for params context 
 params = {
     width: 5,
@@ -9,6 +14,7 @@ params = {
 
 
 /**
+ *  
  * parameters x,y expected to be ´bound through context 
  * **/
 function squareBump(x) {
@@ -19,7 +25,8 @@ function squareBump(x) {
 }
 
 //--------------------------------------------------------------------------------------------------
-
+//-------a function with triangle / pyriamid elevation (constant). 'params' (like example bellow)
+//should be bound to funtion on invokation 
 //sample for params context 
 params = {
     width: 5,
@@ -37,6 +44,8 @@ function pyramidBump(x) {
 
 
 //------------------------------------------------------------------------------------------------
+//-------a function with qaussian shape (constant). 'params' (like example bellow)
+//should be bound to funtion on invokation 
 
 params = {
     width: 30,
@@ -54,7 +63,7 @@ function gausianBump(x) {
 
 
 
-//returns a gausian function of x
+//returns a gausian function of x - a,b,c are the normal gaussia parameters 
 function gausianMaker(a, b, c) {
     var f = function (x) {
         return 1.0 * a * Math.exp(-1.0 * Math.pow((x - b), 2)) / (2 * Math.pow(c, 2));
@@ -63,6 +72,7 @@ function gausianMaker(a, b, c) {
 }
 
 //------------------------------------------------------------------------------------------------
+//   a function i thought would look nice as clock dial 
 
 //a surface function: cos(?t)*?1/?(6+?(t/?2)^?2)
 //decay must be integer !!

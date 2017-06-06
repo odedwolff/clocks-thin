@@ -1,5 +1,6 @@
-//var intervalMask;
-        
+/**
+ * handels functionallity of the Masks clock 
+ * **/        
         
         var RAY_HR_WIDTH = Math.PI * 2 * 0.04;
         var RAY_MIN_WIDTH = Math.PI * 2 * 0.02;
@@ -14,7 +15,7 @@
             path.setAttribute("d", newPath);
         }
 
-        //returns a string for a ray in given angel 
+        //returns an SVG path string for a ray in given angel 
         function pathOfRay(angeRad, rayWidthRad, boardWidth, boardHeight, origin) {
             //var radius = Math.max(boardHeight, boardWidth) / 2;
             var radius = Math.max(boardHeight, boardWidth) * 2;
@@ -34,22 +35,6 @@
             return out;
         }
 
-        function testPathOfRay() {
-            out = pathOfRay(Math.PI * 2 * 1 / 3, Math.PI * 2 / 20, 400, 300, [0, 0]);
-            console.log(out);
-        }
-        function testRenderRay(){
-                var d = pathOfRay(Math.PI * 2 * 0.25, Math.PI * 2 / 80, 400, 300, origin);
-//                var path= "<path id=maskElm2 d=" + d +  fill="red"/>;
-                var path = document.getElementById('pathRay1');
-                path.setAttribute("d", d);
-        
-        }
-        function testAddVectors(){
-            console.log(add2DVector([1,2], [2,1]));
-        }
-        
-        
         
         function startMaskTicking(){
             var interval; 
@@ -88,6 +73,3 @@
             
         }
         
-//        function stopMaskTicking(){
-//            clearInterval(intervalMask);
-//        }
