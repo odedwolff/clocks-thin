@@ -171,13 +171,12 @@ a{
     background-color: #ebaf2c;
 }
 
-
 .cls3CrossingHr{
-    fill:blue;
+    fill:#eeeeee;
 }
 .cls3CrossingMin{
-    fill:white;
+    fill:#643f02;
 }
 .cls3CrossingSec{
-    fill:green;
+    fill:#000000;
 }
