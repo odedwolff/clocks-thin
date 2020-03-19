@@ -6,3 +6,4 @@ what:
 
 status: 
   16.11.2016 - 1st design has basic functionality
+  19.03.2020 - 
