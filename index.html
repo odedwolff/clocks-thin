@@ -47,6 +47,12 @@
                         your feeback is welcome
                         <a href="mailto:odedwolff@gmail.com">odedwolff@gmail.com</a>
                     </div>
+                        <h1>Frames Per numPracitalPerSecond/h1>
+                        <label for="vol">(2-20)</label>
+                        <input type="range" id="fpsSlide" name="fpsSlide"  onchange="fpsSlideChange()" min="2" max="20">
+                    <div id=fpsSlider>
+
+                    </div>
                 </div>
 
                 <!--svg container for different clocks --> 
@@ -106,6 +112,7 @@
 
             var interval;
             var ticksPerSec = 5;
+            var currentIntervalFunc; 
             var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
             var svgNS = svg.namespaceURI;
             var msIn1Min = 1000 * 60;
@@ -150,6 +157,7 @@
                             /*circElmFnc*/fElmGenerator, /*time*/ d);
 
                 };
+                currentIntervalFunc=tick;
                 return setInterval(tick, 1000 / numPracitalPerSecond);
             }
 
@@ -171,6 +179,7 @@
 
 
                 };
+                currentIntervalFunc=tick;
                 return setInterval(tick, 1000 / numPracitalPerSecond);
             }
 
@@ -400,6 +409,7 @@
                             /*circElmFnc*/fElmGenerator, /*time*/ null);
                 };
 
+                currentIntervalFunc=step;
                 return setInterval(step, 1000 / numPracitalPerSecond);
 
 
@@ -480,6 +490,17 @@
             $("#stop").click(function () {
                 clearInterval(interval);
             });
+
+
+            //slider event handler 
+            function fpsSlideChange(){
+                val = document.getElementById("fpsSlide").value;
+                console.log("slider change, val=" + val );
+                //change interval speed 
+                clearInterval(interval);
+                ticksPerSec=val;
+                interval=setInterval(currentIntervalFunc, 1000/val);
+            }
 
 
         </script>
