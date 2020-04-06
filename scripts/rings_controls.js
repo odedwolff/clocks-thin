@@ -22,16 +22,17 @@ var controllerContexts = {
         offsetY:100
     },
     contDialtop:{
-        pivX:300,
-        pivY:302,
-        rad:220,
+        pivX:138,
+        pivY:194,
+        rad:120,
         containerId:"divSprite2",
         dialId:"svgDialRing2",
         dragging:false,   /*runtime state, init to false*/
         isDescrete:false,
         stopsDeg:[90, 135, 180, 225, 270],
-        offsetX:50,
-        offsetY:50,
+        /**change pivot location within moving dial */
+        offsetX:45,
+        offsetY:45,
         postMouseRepositionfunc:move3gears    
     }
 
