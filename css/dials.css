@@ -133,3 +133,13 @@
     transform: rotate(0deg)
 }
 
+
+#div3RingsStaticBG {
+    position: absolute;
+    width: 250px;
+    height: 257px;
+    left: 7px;
+    top: 8px;
+}
+
+
