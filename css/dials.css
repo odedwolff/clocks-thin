@@ -1,0 +1,135 @@
+#divSprite{
+    /* position: absolute; */
+    width: 800px;
+    height:400px;
+    left:200px;
+    top:30px;
+    background-color: rgba(50, 157, 114, 0.667);
+}
+
+
+#divSprite2 {
+    position: relative;
+    margin-top: 50px;
+    /* width: 600px; */
+    height: 400px;
+    /* left: 222px; */
+    /* top: 20px; */
+    background-color: rgba(50, 157, 114, 0.667);
+}
+
+
+
+#svgDialRing{
+    position: absolute;
+    left:400px;
+    top:100px;
+}
+#svgButton1{
+    position: absolute;
+    left:400px;
+    top:400px;
+}
+#divGuide{
+    position: absolute;
+    background: rgb(8, 86, 8);
+    width: 10px;
+    height: 10px;
+    left:300px; 
+    top:200px;
+    
+}
+
+#divGuide2{
+    position: absolute;
+    background: rgb(192, 202, 192);
+    width: 10px;
+    height: 10px;
+    left: 138px;
+    top: 194px;
+    
+}
+#dialsContainer{
+    position: relative;
+    width: 800px;
+    height:400px;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+#guideCentrDialTop{
+    position: absolute;
+    top:150px;
+    left:140px;
+    width:6px;
+    height: 6px;
+    background: yellow;
+}
+
+#svgCarryPointer1{
+    position: absolute;
+    left:140px;
+    top:150px;
+}
+
+
+#circleDial2 {
+    fill: #1b2a8066;
+    left: 150px;
+    top: 140px;
+    stroke: #f0ffff00;
+}
+
+#svgDialRing2{
+    position: absolute;
+   /*  background: yellow;    */
+    width:100px;
+    height:100px;
+}
+
+
+
+#svg3RingRoot {
+    transform: scale(0.85) translate(6px, 74px);
+    position: absolute;
+    /* top: 72px; */
+    /* left: 18px; */
+}
+
+
+
+/* 
+.rings3Elm {
+    position: absolute;
+    width: 200px;
+    height: 195px;
+    left: 195px;
+    top: 90px;
+    transform: scale(3.3);
+}
+ */
+.rings3Elm {
+    position: absolute;
+    width: 200px;
+    height: 312px;
+    left: 36px;
+    top: 90px;
+    transform: scale(2);
+}
+
+#pathInner{
+    transform-origin: 52% 43%;
+    transform: rotate(0deg)
+
+}
+ 
+#pathMid{
+    transform-origin: 51% 43%;
+    transform: rotate(0deg)
+
+}
+ 
+#pathOuter{
+    transform-origin: 51% 43%;
+    transform: rotate(0deg)
+}
+
