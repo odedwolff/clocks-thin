@@ -18,6 +18,16 @@
     background-color: rgba(50, 157, 114, 0.667);
 }
 
+#divRingsOutOfPhase{
+    position: relative;
+    margin-top: 50px;
+    /* width: 600px; */
+    height: 400px;
+    /* left: 222px; */
+    /* top: 20px; */
+    background-color: rgba(50, 157, 114, 0.667);
+}
+
 
 
 #svgDialRing{
