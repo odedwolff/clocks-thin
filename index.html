@@ -27,9 +27,12 @@
     </head>
 
     <body>
-        <div id = root>            
+        <div id = root>         
             <div id = mainHorz> 
                 <div id="leftSideBar">
+                    <div id=divSwitchUI>
+                        <button id=btnSwitchDesign onclick="switchUiDesign()">switch design </button>
+                    </div>   
                     <div id = divTitle1>
                         <h1 id=h1text1>
                             a bunch<br/>of<br/> clock designs 
@@ -51,11 +54,10 @@
                         your feeback is welcome
                         <a href="mailto:odedwolff@gmail.com">odedwolff@gmail.com</a>
                     </div>
+                    <div id=fpsSlider>
                         <h1>Frames Per numPracitalPerSecond</h1>
                         <label for="vol">(2-60)</label>
                         <input type="range" id="fpsSlide" name="fpsSlide"  onchange="fpsSlideChange()" min="2" max="60">
-                    <div id=fpsSlider>
-
                     </div>
 
                     <div id=div3Rings>
@@ -154,7 +156,38 @@
             var svgNS = svg.namespaceURI;
             var msIn1Min = 1000 * 60;
             var aboutContentShown = false;
+            
+            var uiConfig = {
+                //0 for simple, 1 for fency 
+                currnentMode:0,
+                simpleUIElmIDs:['buttonsPanel1','fpsSlider'],
+                fenccyUIElmIDs:['div3Rings']
+            }
 
+            function switchUiDesign(){
+                console.log("switchUiDesign()");
+                uiConfig.currnentMode =  (uiConfig.currnentMode + 1) % 2;
+                //mode simple
+                if(uiConfig.currnentMode == 0){
+                    for(i in uiConfig.simpleUIElmIDs){
+                        document.getElementById(uiConfig.simpleUIElmIDs[i]).style.display="block";
+                    }
+                    for(i in uiConfig.fenccyUIElmIDs){
+                        document.getElementById(uiConfig.fenccyUIElmIDs[i]).style.display="none";
+                    }
+                }
+                //mode fency 
+                else{
+                    for(i in uiConfig.simpleUIElmIDs){
+                        document.getElementById(uiConfig.simpleUIElmIDs[i]).style.display="none";
+                    }
+                    for(i in uiConfig.fenccyUIElmIDs){
+                        document.getElementById(uiConfig.fenccyUIElmIDs[i]).style.display="block";
+                    }
+
+                }
+                
+            }
 
             /**
              * starts the single ring clock

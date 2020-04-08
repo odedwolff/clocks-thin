@@ -1,5 +1,14 @@
 
-//Apperance of this style is brown-yellow-red  
+/*Apperance of this style is brown-yellow-red  */
+
+
+
+#btnSwitchDesign{
+    background: black;
+    color: rgb(158, 198, 78);
+    border-width: 0;
+}
+
 
 .gridCell1{
     width:500px;
