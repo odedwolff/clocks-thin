@@ -231,9 +231,15 @@ function documentByContainer(containerName){
 /**continer specific handlers **/
 
 function move3gears(angle){
-    document.getElementById("pathOuter").style.transform="rotate(" + angle * -0.5 + "deg)"
-    document.getElementById("pathMid").style.transform="rotate(" + angle * 1 + "deg)"
-    document.getElementById("pathInner").style.transform="rotate(" + angle * -1 + "deg)"
+    document.getElementById("pathOuter").style.transform="rotate(" + angle * -0.5 + "deg)";
+    document.getElementById("pathMid").style.transform="rotate(" + angle * 1 + "deg)";
+    document.getElementById("pathInner").style.transform="rotate(" + angle * -1 + "deg)";
+}
+
+function move3OOPWheels(angle){
+    document.getElementById("pathOOPRingOuter").style.transform="rotate(" + angle * -0.7 + "deg)";
+    document.getElementById("pathOOPRingMid").style.transform="rotate(" + angle * 1.5 + "deg)";
+    document.getElementById("pathOOPRingInnder").style.transform="rotate(" + angle * -1 + "deg)";
 }
 
 

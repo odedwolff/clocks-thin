@@ -15,7 +15,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="2 dials 1120.svg"
+   sodipodi:docname="2 dials 1120 - Copy.svg"
    inkscape:export-filename="C:\projects\software\clocks\clocks-thin\design\screen style 1019.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
@@ -28,13 +28,13 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="1661.983"
-     inkscape:cy="829.72906"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="1437.0103"
+     inkscape:cy="717.51265"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer6"
+     inkscape:current-layer="layer2"
      showgrid="false"
-     inkscape:window-width="1771"
+     inkscape:window-width="1782"
      inkscape:window-height="1051"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -237,7 +237,8 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="screen 4:3"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <rect
        style="fill:#b3ff9e;fill-opacity:1;fill-rule:evenodd;stroke-width:0.26458332"
        id="rect857"

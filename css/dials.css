@@ -116,6 +116,16 @@
     transform: scale(2);
 }
 
+
+.svgOverPathOOP{
+    position: absolute;
+    width: auto;
+    height: auto;
+   /*  left: 36px; */
+   /*  top: 90px; */
+    /* transform: scale(2); */
+}
+
 #pathInner{
     transform-origin: 52% 43%;
     transform: rotate(0deg)
@@ -141,5 +151,89 @@
     left: 7px;
     top: 8px;
 }
+
+
+path#pathOOPRingOuter {
+   /*  transform: translate(-12px, 3px) rotate(29deg);
+    transform-origin: 51% 32%; */
+    stroke: #f7ff1d74;
+}
+    
+
+
+path#pathOOPRingMid {
+  /*   transform: translate(7px, 3px) rotate(-188deg);
+    transform-origin: 42% 32%; */
+    stroke: #c73a0080;
+}
+
+
+path#pathOOPRingInnder {
+    /* transform: rotate(-97deg);
+    transform-origin: 49% 34%; */
+    stroke: #fbff8a80;
+}
+
+
+
+.divPathOOP {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+   /*  top: 100px;
+    left: 71px; */
+   /*  transform: scale(2); */
+}
+
+
+
+
+div#divPathOOPMidr {
+    left: 95px;
+    top: 80px;
+    transform: scale(3) rotate(0deg);
+    transform-origin: 34% 49%;
+}
+div#divPathOOPOuter {
+    left: 74px;
+    top: 80px;
+    transform: scale(3) rotate(0deg);
+    transform-origin: 50% 50%;
+}
+
+
+div#divPathOOPInner {
+    left: 75px;
+    top: 82px;
+    transform: scale(3) rotate(358deg);
+    transform-origin: 51% 51%;
+}
+
+.clsPivotGuide{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    /* background: rgb(231, 157, 19); */
+}
+
+#divPivotGuideOuter{
+    left: 50%;
+    top:50%;
+    visibility: visible;
+    background:yellow;
+}
+#divPivotGuideMid{
+    left: 50%;
+    top:50%;
+    visibility: visible;
+    background: brown;
+}
+#divPivotGuideInner{
+    left: 50%;
+    top:50%;
+    visibility: visible;
+    background: white;
+}
+
 
 
