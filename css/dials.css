@@ -187,18 +187,19 @@ path#pathOOPRingInnder {
 
 
 
-
 div#divPathOOPMidr {
-    left: 95px;
-    top: 80px;
-    transform: scale(3) rotate(0deg);
-    transform-origin: 34% 49%;
+    left: 93.2px;
+    top: 82px;
+    transform: scale(3) rotate(378deg);
+    transform-origin: 34.6% 49.7%;
 }
+
+
 div#divPathOOPOuter {
-    left: 74px;
-    top: 80px;
-    transform: scale(3) rotate(0deg);
-    transform-origin: 50% 50%;
+    left: 76px;
+    top: 81px;
+    transform: scale(3) rotate(239deg);
+    transform-origin: 52.3% 50.2%;
 }
 
 
@@ -206,7 +207,7 @@ div#divPathOOPInner {
     left: 75px;
     top: 82px;
     transform: scale(3) rotate(358deg);
-    transform-origin: 51% 51%;
+    transform-origin: 53% 50%;
 }
 
 .clsPivotGuide{
@@ -216,22 +217,29 @@ div#divPathOOPInner {
     /* background: rgb(231, 157, 19); */
 }
 
-#divPivotGuideOuter{
-    left: 50%;
-    top:50%;
-    visibility: visible;
-    background:yellow;
+
+#divPivotGuideOuter {
+    left: 52.3%;
+    top: 50.2%;
+    visibility: hidden;
+    background: yellow;
 }
-#divPivotGuideMid{
-    left: 50%;
-    top:50%;
-    visibility: visible;
+
+
+
+#divPivotGuideMid {
+    left: 34.6%;
+    top: 49.7%;
+    visibility: hidden;
     background: brown;
 }
+
+
+
 #divPivotGuideInner{
-    left: 50%;
+    left: 53%;
     top:50%;
-    visibility: visible;
+    visibility: hidden;
     background: white;
 }
 
