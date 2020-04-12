@@ -8,19 +8,6 @@ var globalSettings = {
 }
 
 var controllerContexts = {
-    cont1:{
-        pivX:300,
-        pivY:200,
-        rad:100,
-        containerId:"divSprite",
-        dialId:"svgDialRing",
-        dragging:false,   /*runtime state, init to false*/
-        isDescrete:false,
-        stopsDeg:[90, 135, 180, 225, 270],
-        /*use offsets to ajdust  pivot of moving object*/
-        offsetX:100,
-        offsetY:100
-    },
     contDialtop:{
         pivX:138,
         pivY:194,
@@ -34,7 +21,22 @@ var controllerContexts = {
         offsetX:45,
         offsetY:45,
         postMouseRepositionfunc:move3gears    
-    }
+    },
+    contOOPRings:{
+        pivX:138,
+        pivY:194,
+        rad:120,
+        containerId:"divRingsOutOfPhase",
+        dialId:"svgDialRingOOP",
+        dragging:false,   /*runtime state, init to false*/
+        isDescrete:false,
+        stopsDeg:[90, 135, 180, 225, 270],
+        /**change pivot location within moving dial */
+        offsetX:45,
+        offsetY:45,
+        postMouseRepositionfunc:null    
+    },
+
 
 }
 
@@ -253,11 +255,18 @@ function docLoadHandler(){
     //setUpListeners();
 }
 
+
+
+
 function setUpListeners(){
     
     document.getElementById('circleDial2').addEventListener('mousedown', mouseDownInDial.bind(null, 'contDialtop'));
     document.getElementById('divSprite2').addEventListener('mousemove', mouseMoveHandler.bind(null, 'contDialtop'));
     document.getElementById('divSprite2').addEventListener('mouseup', mouseUpInContainer.bind(null, 'contDialtop'));
+
+    document.getElementById('circleDialOOP').addEventListener('mousedown', mouseDownInDial.bind(null, 'contOOPRings'));
+    document.getElementById('divRingsOutOfPhase').addEventListener('mousemove', mouseMoveHandler.bind(null, 'contOOPRings'));
+    document.getElementById('divRingsOutOfPhase').addEventListener('mouseup', mouseUpInContainer.bind(null, 'contOOPRings'))
 }
 
 window.addEventListener("load", setUpListeners);

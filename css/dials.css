@@ -35,6 +35,15 @@
     left:400px;
     top:100px;
 }
+
+#svgDialRingOOP
+{
+    position: absolute;
+    left:100px;
+    top:100px;   
+}
+
+
 #svgButton1{
     position: absolute;
     left:400px;
