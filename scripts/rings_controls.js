@@ -23,9 +23,9 @@ var controllerContexts = {
         postMouseRepositionfunc:move3gears    
     },
     contOOPRings:{
-        pivX:138,
-        pivY:194,
-        rad:120,
+        pivX:123,
+        pivY:128,
+        rad:90,
         containerId:"divRingsOutOfPhase",
         dialId:"svgDialRingOOP",
         dragging:false,   /*runtime state, init to false*/

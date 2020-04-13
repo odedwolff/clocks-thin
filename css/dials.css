@@ -252,5 +252,14 @@ div#divPathOOPInner {
     background: white;
 }
 
+#divGuideOOP{
+    width:10px;
+    height: 10px;
+    background: orchid;
+    left: 123px;
+    top: 128px;
+    position: absolute;
+}
+
 
 
