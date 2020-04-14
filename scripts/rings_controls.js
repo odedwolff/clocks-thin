@@ -34,7 +34,7 @@ var controllerContexts = {
         /**change pivot location within moving dial */
         offsetX:45,
         offsetY:45,
-        postMouseRepositionfunc:null    
+        postMouseRepositionfunc:move3OOPWheels.bind(null,3.0)  
     },
 
 
@@ -230,6 +230,15 @@ function documentByContainer(containerName){
 }
 
 
+//read current string from Style field 
+/* function currentScale(transformStr){
+    var i = transformStr.indexOf("scale");
+    for(;transformStr[i]!='(';i++){}
+    for(;)
+}
+ */
+
+
 /**continer specific handlers **/
 
 function move3gears(angle){
@@ -238,10 +247,10 @@ function move3gears(angle){
     document.getElementById("pathInner").style.transform="rotate(" + angle * -1 + "deg)";
 }
 
-function move3OOPWheels(angle){
-    document.getElementById("pathOOPRingOuter").style.transform="rotate(" + angle * -0.7 + "deg)";
-    document.getElementById("pathOOPRingMid").style.transform="rotate(" + angle * 1.5 + "deg)";
-    document.getElementById("pathOOPRingInnder").style.transform="rotate(" + angle * -1 + "deg)";
+function move3OOPWheels(scale, angle){
+    document.getElementById("divPathOOPOuter").style.transform="scale(" + scale + ") rotate(" + angle * -0.7 + "deg)";
+    document.getElementById("divPathOOPMidr").style.transform="scale(" + scale + ") rotate(" + angle * 1.5 + "deg)";
+    document.getElementById("divPathOOPInner").style.transform="scale(" + scale + ") rotate(" + angle * -1 + "deg)";
 }
 
 
