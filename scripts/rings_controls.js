@@ -17,6 +17,7 @@ var controllerContexts = {
         dragging:false,   /*runtime state, init to false*/
         isDescrete:false,
         stopsDeg:[90, 135, 180, 225, 270],
+        fDescValSelectHandler:null,
         /**change pivot location within moving dial */
         offsetX:45,
         offsetY:45,
@@ -33,6 +34,7 @@ var controllerContexts = {
         isDescrete:true,
         /* 0deg is....*/
         stopsDeg:[70, 106, 143, 180, 206, 253, 290],
+        fDescValSelectHandler:(x)=>{console.log("selected stop no " + x)},
         //stopsDeg:[-120,-80, -40, 0, 40, 80, 120],
         //stopTexts:["single", "3 rings", "rings", "accuomlator", "masks", "stop","about"],
         stopTexts:["1", "2", "3", "4", "5", "6","7"],
@@ -176,7 +178,7 @@ function positionDial(angle, containerName, atCloseststop){
         + Math.sin((angle/360) * 2 * Math.PI) * controllerContexts[containerName].rad;
 
     
-    console.log("positioning lef,top:" + left,top);
+    //console.log("positioning lef,top:" + left,top);
     dialElm.style.left=left - controllerContexts[containerName].offsetX;
     dialElm.style.top=top - controllerContexts[containerName].offsetY;
 
@@ -191,10 +193,16 @@ function positionDial(angle, containerName, atCloseststop){
 function findClosestStop(angle, containerName){
     var stops = controllerContexts[containerName].stopsDeg
     var closestAngle = 10000;
+    var closestIdx = -1;
     for (i in stops){
         if(Math.abs(stops[i]  + 90 - angle) < Math.abs(closestAngle - angle)){
             closestAngle = stops[i] + 90;
+            closestIdx=i;
         }
+    }
+    fDescValSelectHandler = controllerContexts[containerName].fDescValSelectHandler;
+    if(fDescValSelectHandler){
+        fDescValSelectHandler(closestIdx);
     }
     return closestAngle;
 }
@@ -222,7 +230,7 @@ function mouseMoveHandler(containerName, e){
     if(!controllerContexts[containerName].dragging){
         return;
     }
-    console.log(e.pageX, e.pageY);
+    //console.log(e.pageX, e.pageY);
     positionDialByMouse(containerName, e, false);
 }
 
