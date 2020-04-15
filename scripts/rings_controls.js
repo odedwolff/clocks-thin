@@ -20,7 +20,8 @@ var controllerContexts = {
         /**change pivot location within moving dial */
         offsetX:45,
         offsetY:45,
-        postMouseRepositionfunc:move3gears    
+        postMouseRepositionfunc:move3gears,
+        onload:null  
     },
     contOOPRings:{
         pivX:123,
@@ -29,15 +30,37 @@ var controllerContexts = {
         containerId:"divRingsOutOfPhase",
         dialId:"svgDialRingOOP",
         dragging:false,   /*runtime state, init to false*/
-        isDescrete:false,
-        stopsDeg:[90, 135, 180, 225, 270],
+        isDescrete:true,
+        stopsDeg:[70, 106, 143, 180, 206, 253, 290],
+        stopTexts:["single", "3 rings", "rings", "accuomlator", "masks", "stop","about"],
         /**change pivot location within moving dial */
         offsetX:45,
         offsetY:45,
-        postMouseRepositionfunc:move3OOPWheels.bind(null,3.0)  
+        postMouseRepositionfunc:move3OOPWheels.bind(null,/*scale*/3.0),
+        onload:setupLabels.bind(null, 'contOOPRings', 100, 'divRingsOutOfPhase')
     },
 
 
+}
+
+function setupLabels(containerName, lblRAd, divParnetId){
+    var texts = controllerContexts[containerName].stopTexts;
+    var angles = controllerContexts[containerName].stopsDeg;
+    //arrays are assumed to be the same length, Nth is coresponding to Nth
+    for (i in texts){
+        var angel = [i];
+        var id="divRotLabel_" + containerName + "_" + i;
+        //var newElmStr = "<div id=" + id + "style='position:absolute'>" + texts[i] + "</div>"; 
+        //var newElm =  document.createElement(newElmStr); 
+        var newElm = document.createElement("div");
+        newElm.id=id;
+        newElm.innerHTML= texts[i];
+        newElm.style='position:absolute';
+        document.getElementById(divParnetId).appendChild(newElm);
+        newElm.style.top=controllerContexts[containerName].pivX + lblRAd * Math.cos(angles[i]) + 'px';
+        newElm.style.left=controllerContexts[containerName].pivY + lblRAd * Math.sin(angles[i]) + 'px'; 
+        
+    }
 }
 
 
@@ -278,4 +301,18 @@ function setUpListeners(){
     document.getElementById('divRingsOutOfPhase').addEventListener('mouseup', mouseUpInContainer.bind(null, 'contOOPRings'))
 }
 
-window.addEventListener("load", setUpListeners);
+//TODO - should move to main insex.html script ?
+function onLoad(){
+    setUpListeners();
+    const keys = Object.keys(controllerContexts);
+    //invoke onLoad functions of containers 
+    for (i in keys){
+        var onLoadF =  controllerContexts[keys[i]].onload;
+        if(onLoadF){
+            onLoadF();
+        }
+    }
+}
+
+
+window.addEventListener("load", onLoad);
