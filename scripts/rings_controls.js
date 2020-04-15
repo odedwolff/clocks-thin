@@ -31,8 +31,11 @@ var controllerContexts = {
         dialId:"svgDialRingOOP",
         dragging:false,   /*runtime state, init to false*/
         isDescrete:true,
+        /* 0deg is....*/
         stopsDeg:[70, 106, 143, 180, 206, 253, 290],
-        stopTexts:["single", "3 rings", "rings", "accuomlator", "masks", "stop","about"],
+        //stopsDeg:[-120,-80, -40, 0, 40, 80, 120],
+        //stopTexts:["single", "3 rings", "rings", "accuomlator", "masks", "stop","about"],
+        stopTexts:["1", "2", "3", "4", "5", "6","7"],
         /**change pivot location within moving dial */
         offsetX:45,
         offsetY:45,
@@ -57,8 +60,9 @@ function setupLabels(containerName, lblRAd, divParnetId){
         newElm.innerHTML= texts[i];
         newElm.style='position:absolute';
         document.getElementById(divParnetId).appendChild(newElm);
-        newElm.style.top=controllerContexts[containerName].pivX + lblRAd * Math.cos(angles[i]) + 'px';
-        newElm.style.left=controllerContexts[containerName].pivY + lblRAd * Math.sin(angles[i]) + 'px'; 
+        //0 deg is DOWN
+        newElm.style.top=controllerContexts[containerName].pivX + lblRAd * Math.cos(angles[i]/360 * 2* Math.PI) + 'px';
+        newElm.style.left=controllerContexts[containerName].pivY - lblRAd * Math.sin(angles[i]/360 * 2* Math.PI) + 'px'; 
         
     }
 }
