@@ -282,6 +282,7 @@ div#divPathOOPInner {
     transform: scale(0.45);
     left: 200px;
     top: -553px;
+    opacity: 0.6;
 }
 
 #objSineSmooth{
@@ -297,6 +298,11 @@ div#divPathOOPInner {
 
 .objTradeOffSymbol{
     position: absolute;
+   /*  visibility: hidden; */
+}
+
+#divTradOffSymbols{
+    left:200px;
 }
 
 
