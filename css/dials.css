@@ -261,5 +261,44 @@ div#divPathOOPInner {
     position: absolute;
 }
 
+.clsTradeOffSymbols{
+    position: absolute;
+    width: 100px;
+    height: 150px;
+   /*  background: pink; */
+}
+
+#divSymbolFeather{
+    left:240px;
+}
+
+#objWeights{
+    transform: scale(0.45);
+    left: -115px;
+    top: -527px;
+}
+
+#objFeather{
+    transform: scale(0.45);
+    left: 200px;
+    top: -553px;
+}
+
+#objSineSmooth{
+    transform: scale(0.45);
+    left: 200px;
+    top: -353px;
+}
+#objSineDesc{
+    transform: scale(0.45);
+    left: -115px;
+    top: -353px;
+}
+
+.objTradeOffSymbol{
+    position: absolute;
+}
+
+
 
 
