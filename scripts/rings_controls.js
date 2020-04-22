@@ -21,8 +21,12 @@ var controllerContexts = {
         /**change pivot location within moving dial */
         offsetX:45,
         offsetY:45,
+        //handler specific to container, to be invoked from the common handler 
         postMouseRepositionfunc:move3gears,
-        onload:null  
+        startDraggingFunc:()=>{showTradeOffSymbols(false)},
+        stopDraggingFunc:()=>{showTradeOffSymbols(true)},
+        onload:null 
+
     },
     contOOPRings:{
         pivX:123,
@@ -42,6 +46,8 @@ var controllerContexts = {
         offsetX:45,
         offsetY:45,
         postMouseRepositionfunc:move3OOPWheels.bind(null,/*scale*/3.0),
+        startDraggingFunc:null,
+        stopDraggingFunc:null,
         onload:setupLabels.bind(null, 'contOOPRings', 100, 'divRingsOutOfPhase')
     },
 
@@ -127,6 +133,19 @@ function roatateAroundExtStep(elm, pvtX, pvtY, rad, curRot, dDegPerSec, framesRe
       
 }
 
+function handleContainerStartDragging(contName){
+    var func= controllerContexts[contName].startDraggingFunc;
+    if(func){
+        func();
+    }
+}
+
+function handleContainerStopDragging(contName){
+    var func= controllerContexts[contName].stopDraggingFunc;
+    if(func){
+        func();
+    }
+}
 
 
 function angleFromPivot(containerElm, pvtXLoc, pvtYLoc, xMouseAbs, yMouseAbs, containerName){
@@ -148,11 +167,13 @@ function angleFromPivot(containerElm, pvtXLoc, pvtYLoc, xMouseAbs, yMouseAbs, co
     var offsetedAngle =  (angleToOffsetDeg + 90) % 360;          
     if(offsetedAngle<globalSettings.meanAngle){
         controllerContexts[containerName].dragging=false;
+        handleContainerStopDragging(containerName);
         offsetedAngle=globalSettings.meanAngle + config.limitBackBounceDeg;
     }
     if(offsetedAngle>globalSettings.maxAngle){
         offsetedAngle=globalSettings.maxAngle - config.limitBackBounceDeg;
         controllerContexts[containerName].dragging=false;
+        handleContainerStopDragging(containerName);
     }
     return offsetedAngle;
 }
@@ -223,10 +244,12 @@ function posInDoc(el) {
 function mouseDownInDial(containerName, e){
     console.log("started traking"); 
     controllerContexts[containerName].dragging=true; 
+    handleContainerStartDragging(containerName);
 }
 
 
 function mouseMoveHandler(containerName, e){
+    //if mouse is moving in the context of dragging, that is while pressing left click, etc
     if(!controllerContexts[containerName].dragging){
         return;
     }
@@ -237,6 +260,7 @@ function mouseMoveHandler(containerName, e){
 function mouseUpInContainer(containerName, e){
     console.log("stopped traking"); 
     controllerContexts[containerName].dragging=false; 
+    handleContainerStopDragging(containerName);
     //if descrete, hop to closest stop 
     if(controllerContexts[containerName].isDescrete){
         positionDialByMouse(containerName, e, true);
@@ -325,6 +349,19 @@ function onLoad(){
         }
     }
 }
+
+
+function showTradeOffSymbols(flag){
+    var items = document.querySelectorAll(".objTradeOffSymbol");
+    for (i in items){
+        if(flag){
+            items[i].style.visibility="hidden";
+        }else{
+            items[i].style.visibility="visible";
+        }
+    }
+}
+
 
 
 window.addEventListener("load", onLoad);
