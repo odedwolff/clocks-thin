@@ -3,7 +3,7 @@ const config={
     limitBackBounceDeg:20
 }
 var globalSettings = {
-    meanAngle:45, 
+    minAngle:45, 
     maxAngle:315
 }
 
@@ -50,9 +50,55 @@ var controllerContexts = {
         stopDraggingFunc:null,
         onload:setupLabels.bind(null, 'contOOPRings', 100, 'divRingsOutOfPhase')
     },
+}
 
+
+var fpsAnimationConfig = {
+    elmsInfos:{
+        objWeights : {
+            minScale:0.16,
+            maxScale:0.6,
+            isGrowingClockwise:true
+        },
+        objFeather : {
+            minScale:0.16,
+            maxScale:0.6,
+            isGrowingClockwise:false
+        },
+        objSineSmooth:{
+            minScale:0.16,
+            maxScale:0.6,
+            isGrowingClockwise:true
+        },
+        objSineDesc : {
+            minScale:0.16,
+            maxScale:0.6,
+            isGrowingClockwise:false
+        }
+    }
+}
+
+
+function applyFPSScales(/**in range (0-1)**/scaleVal){
+    var keys=Object.keys(fpsAnimationConfig.elmsInfos);
+    var i;
+    for (i in keys){
+        if(!keys[i]){
+            continue;
+        }
+        var elm=fpsAnimationConfig.elmsInfos[keys[i]];
+        if(!elm){
+            continue;
+        }
+        var localScale = elm.isGrowingClockwise? scaleVal : 1-scaleVal;
+        var shouldSCale = (elm.maxScale - elm.minScale) * localScale + elm.minScale;
+        document.getElementById(keys[i]).style.transform = "scale(" + shouldSCale + ")";
+    }
 
 }
+
+
+
 
 function setupLabels(containerName, lblRAd, divParnetId){
     var texts = controllerContexts[containerName].stopTexts;
@@ -165,10 +211,10 @@ function angleFromPivot(containerElm, pvtXLoc, pvtYLoc, xMouseAbs, yMouseAbs, co
     if (offsetFromPivot.x < 0  && offsetFromPivot.y >  0) angleToOffsetDeg=angleToOffsetDeg + 360;
 
     var offsetedAngle =  (angleToOffsetDeg + 90) % 360;          
-    if(offsetedAngle<globalSettings.meanAngle){
+    if(offsetedAngle<globalSettings.minAngle){
         controllerContexts[containerName].dragging=false;
         handleContainerStopDragging(containerName);
-        offsetedAngle=globalSettings.meanAngle + config.limitBackBounceDeg;
+        offsetedAngle=globalSettings.minAngle + config.limitBackBounceDeg;
     }
     if(offsetedAngle>globalSettings.maxAngle){
         offsetedAngle=globalSettings.maxAngle - config.limitBackBounceDeg;
@@ -304,6 +350,9 @@ function move3gears(angle){
     document.getElementById("pathOuter").style.transform="rotate(" + angle * -0.5 + "deg)";
     document.getElementById("pathMid").style.transform="rotate(" + angle * 1 + "deg)";
     document.getElementById("pathInner").style.transform="rotate(" + angle * -1 + "deg)";
+
+    var normScale = (angle - globalSettings.minAngle) / (globalSettings.maxAngle - globalSettings.minAngle);
+    applyFPSScales(normScale);
 }
 
 function move3OOPWheels(scale, angle){
@@ -353,7 +402,11 @@ function onLoad(){
 
 function showTradeOffSymbols(flag){
     var items = document.querySelectorAll(".objTradeOffSymbol");
+    var i;
     for (i in items){
+        if(!items[i] || !items[i].style){
+            continue;
+        }
         if(flag){
             items[i].style.visibility="hidden";
         }else{
@@ -365,3 +418,6 @@ function showTradeOffSymbols(flag){
 
 
 window.addEventListener("load", onLoad);
+
+
+
