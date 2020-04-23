@@ -31,7 +31,7 @@ var controllerContexts = {
     contOOPRings:{
         pivX:123,
         pivY:128,
-        rad:90,
+        rad:105,
         containerId:"divRingsOutOfPhase",
         dialId:"svgDialRingOOP",
         dragging:false,   /*runtime state, init to false*/
