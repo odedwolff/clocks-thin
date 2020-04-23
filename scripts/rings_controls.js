@@ -37,11 +37,11 @@ var controllerContexts = {
         dragging:false,   /*runtime state, init to false*/
         isDescrete:true,
         /* 0deg is....*/
-        stopsDeg:[70, 106, 143, 180, 206, 253, 290],
+        stopsDeg:[60, 100, 140, 180, 220, 260, 300],
         fDescValSelectHandler:(x)=>{console.log("selected stop no " + x)},
         //stopsDeg:[-120,-80, -40, 0, 40, 80, 120],
-        //stopTexts:["single", "3 rings", "rings", "accuomlator", "masks", "stop","about"],
-        stopTexts:["1", "2", "3", "4", "5", "6","7"],
+        stopTexts:["1 ring", "3 rings", "crossing", "accuomlator", "masks", "stop","about"],
+        //stopTexts:["1", "2", "3", "4", "5", "6","7"],
         /**change pivot location within moving dial */
         offsetX:45,
         offsetY:45,
@@ -107,8 +107,6 @@ function setupLabels(containerName, lblRAd, divParnetId){
     for (i in texts){
         var angel = [i];
         var id="divRotLabel_" + containerName + "_" + i;
-        //var newElmStr = "<div id=" + id + "style='position:absolute'>" + texts[i] + "</div>"; 
-        //var newElm =  document.createElement(newElmStr); 
         var newElm = document.createElement("div");
         newElm.id=id;
         newElm.innerHTML= texts[i];
@@ -116,8 +114,9 @@ function setupLabels(containerName, lblRAd, divParnetId){
         document.getElementById(divParnetId).appendChild(newElm);
         //0 deg is DOWN
         newElm.style.top=controllerContexts[containerName].pivX + lblRAd * Math.cos(angles[i]/360 * 2* Math.PI) + 'px';
-        newElm.style.left=controllerContexts[containerName].pivY - lblRAd * Math.sin(angles[i]/360 * 2* Math.PI) + 'px'; 
-        
+        //if the label is ont left side correct x position so that it aligns to the right edge of the text (push it left)
+        var xCorrection = angles[i] < 180 ? newElm.getBoundingClientRect().width : 0;
+        newElm.style.left=controllerContexts[containerName].pivY - lblRAd * Math.sin(angles[i]/360 * 2* Math.PI) - xCorrection + 'px'; 
     }
 }
 
