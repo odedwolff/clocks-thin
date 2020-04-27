@@ -580,32 +580,12 @@
 
             $("#btnAbout").click(toggleAboutContentShow);
             $("#btnMasks").click(startMasksClock);
-            $("#btnSingeRing").click(function () {
-                masksPanelOff();
-                clearInterval(interval);
-                interval = startTickingFCst1CheckClock(ticksPerSec, "svg1");
-            });
-            $("#btn3Rings").click(function () {
-                masksPanelOff();
-                clearInterval(interval);
-                //interval = startTicking3porjections(11, "svg1");
+            $("#btnSingeRing").click(switchTosingleRing);
+            $("#btn3Rings").click(switchTo3Rings);
+            $("#btnRingCrossing").click(switchToRingsCrossing);
+            $("#btnAccumalator").click(switchToAccumulator);
 
-                interval = start3CirclesTicking(ticksPerSec, "svg1");
-            });
-            $("#btnRingCrossing").click(function () {
-                masksPanelOff();
-                clearInterval(interval);
-                //interval = startTicking3porjections(11, "svg1");
 
-                interval = start3CircCrossingAllOut(ticksPerSec, "svg1");
-            });
-            $("#btnAccumalator").click(function () {
-                masksPanelOff();
-                clearInterval(interval);
-                //interval = startTicking3porjections(11, "svg1");
-
-                interval = startTicking3GsOn2(ticksPerSec, "svg1");
-            });
             $("#stop").click(function () {
                 clearInterval(interval);
             });
@@ -619,6 +599,29 @@
                 clearInterval(interval);
                 ticksPerSec=val;
                 interval=setInterval(currentIntervalFunc, 1000/val);
+            }
+
+
+            function switchToAccumulator(){
+                masksPanelOff();
+                clearInterval(interval);
+                interval = startTicking3GsOn2(ticksPerSec, "svg1");
+            }
+
+            function switchToRingsCrossing(){
+                masksPanelOff();
+                clearInterval(interval);
+                interval = start3CircCrossingAllOut(ticksPerSec, "svg1");
+            }
+            function switchTo3Rings(){
+                masksPanelOff();
+                clearInterval(interval);
+                interval = start3CirclesTicking(ticksPerSec, "svg1");
+            }
+            function switchTosingleRing(){
+                masksPanelOff();
+                clearInterval(interval);
+                interval = startTickingFCst1CheckClock(ticksPerSec, "svg1");
             }
 
 
