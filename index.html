@@ -13,6 +13,12 @@
         <link rel="stylesheet" href="css/p1.css">
         <link rel="stylesheet" href="css/dials.css">
 
+        <script>
+           /*  global scope vars */
+            /*  button control funcitons */
+          // var switchTosingleRing, switchTo3Rings, switchToRingsCrossing, switchToAccumulator,  startMasksClock, stopTick, toggleAboutContentShow;
+          var expFuncs={};
+        </script>
 
         <script src="scripts/elm_rendrers.js"></script>
         <script src="scripts/projectors.js"></script>
@@ -550,11 +556,7 @@
             }
 
 
-            function startMasksClock() {
-                clearInterval(interval);
-                masksPanelOn();
-                interval = startMaskTicking();
-            }
+           
 
 
             
@@ -567,16 +569,7 @@
                 $("#aboutContent").hide(400);
 
             }
-            function toggleAboutContentShow() {
-                if (aboutContentShown) {
-                    hideAboutContent();
-                    aboutContentShown = false;
-                } else {
-                    showAboutContent();
-                    aboutContentShown = true;
-
-                }
-            }
+           
 
             $("#btnAbout").click(toggleAboutContentShow);
             $("#btnMasks").click(startMasksClock);
@@ -584,11 +577,7 @@
             $("#btn3Rings").click(switchTo3Rings);
             $("#btnRingCrossing").click(switchToRingsCrossing);
             $("#btnAccumalator").click(switchToAccumulator);
-
-
-            $("#stop").click(function () {
-                clearInterval(interval);
-            });
+            $("#stop").click(stopTick);
 
 
             //slider event handler 
@@ -600,30 +589,60 @@
                 ticksPerSec=val;
                 interval=setInterval(currentIntervalFunc, 1000/val);
             }
-
-
+            expFuncs.fpsSlideChange = fpsSlideChange;
+            
             function switchToAccumulator(){
                 masksPanelOff();
                 clearInterval(interval);
                 interval = startTicking3GsOn2(ticksPerSec, "svg1");
             }
+            expFuncs.switchToAccumulator = switchToAccumulator;
 
             function switchToRingsCrossing(){
                 masksPanelOff();
                 clearInterval(interval);
                 interval = start3CircCrossingAllOut(ticksPerSec, "svg1");
             }
+            expFuncs.switchToRingsCrossing = switchToRingsCrossing;
+
             function switchTo3Rings(){
                 masksPanelOff();
                 clearInterval(interval);
                 interval = start3CirclesTicking(ticksPerSec, "svg1");
             }
+            expFuncs.switchTo3Rings = switchTo3Rings;
+
             function switchTosingleRing(){
                 masksPanelOff();
                 clearInterval(interval);
                 interval = startTickingFCst1CheckClock(ticksPerSec, "svg1");
             }
+            expFuncs.switchTosingleRing = switchTosingleRing;
 
+            function stopTick(){
+                clearInterval(interval);
+            }
+            expFuncs.stop = stopTick;
+
+            function toggleAboutContentShow() {
+                if (aboutContentShown) {
+                    hideAboutContent();
+                    aboutContentShown = false;
+                } else {
+                    showAboutContent();
+                    aboutContentShown = true;
+
+                }
+            }
+            expFuncs.toggleAboutContentShow = toggleAboutContentShow;
+
+            function startMasksClock() {
+                clearInterval(interval);
+                masksPanelOn();
+                interval = startMaskTicking();
+            }
+            expFuncs.startMasksClock = startMasksClock;
+            
 
         </script>
 
