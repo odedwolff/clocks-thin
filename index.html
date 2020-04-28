@@ -214,16 +214,24 @@
             
             var uiConfig = {
                 //0 for simple, 1 for fency 
-                currnentMode:0,
+                currnentMode:1,
                 simpleUIElmIDs:['buttonsPanel1','fpsSlider'],
                 fenccyUIElmIDs:['div3Rings', 'divRingsOOP']
             }
 
+
+           
+
             function switchUiDesign(){
                 console.log("switchUiDesign()");
                 uiConfig.currnentMode =  (uiConfig.currnentMode + 1) % 2;
+                applyUiMode( uiConfig.currnentMode);
+            }
+
+
+            function applyUiMode(mode){
                 //mode simple
-                if(uiConfig.currnentMode == 0){
+                if(mode == 0){
                     for(i in uiConfig.simpleUIElmIDs){
                         document.getElementById(uiConfig.simpleUIElmIDs[i]).style.display="block";
                     }
@@ -241,7 +249,6 @@
                     }
 
                 }
-                
             }
 
             /**
@@ -642,8 +649,13 @@
                 interval = startMaskTicking();
             }
             expFuncs.startMasksClock = startMasksClock;
-            
 
+
+            window.addEventListener("load", onLoad);
+            function onLoad(){
+                applyUiMode(uiConfig.currnentMode);
+                onLoad_ringsControl();
+            }
         </script>
 
     </body>

@@ -56,6 +56,7 @@ var controllerContexts = {
 //knobSwitchFuncs = [switchTosingleRing, switchTo3Rings, switchToRingsCrossing, switchToAccumulator,  startMasksClock, stopTick, toggleAboutContentShow ];
        
 knobSwitchFuncNamesOrdered= ['switchTosingleRing', 'switchTo3Rings', 'switchToRingsCrossing', 'switchToAccumulator',  'startMasksClock', 'stop', 'toggleAboutContentShow' ];
+
 function invokeSwitchFunc(i){
     var key = knobSwitchFuncNamesOrdered[i];
     expFuncs[key]();
@@ -398,7 +399,7 @@ function setUpListeners(){
 }
 
 //TODO - should move to main insex.html script ?
-function onLoad(){
+function onLoad_ringsControl(){
     setUpListeners();
     const keys = Object.keys(controllerContexts);
     //invoke onLoad functions of containers 
@@ -428,7 +429,7 @@ function showTradeOffSymbols(flag){
 
 
 
-window.addEventListener("load", onLoad);
+//window.addEventListener("load", onLoad);
 
 
 

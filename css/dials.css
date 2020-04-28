@@ -301,7 +301,7 @@ div#divPathOOPInner {
 
 .objTradeOffSymbol{
     position: absolute;
-   /*  visibility: hidden; */
+    visibility: hidden;
 }
 
 #divTradOffSymbols{
