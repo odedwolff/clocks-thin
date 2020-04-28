@@ -317,4 +317,17 @@ circle#circleDialOOP {
 }
 
 
+.clsLabelRadFps{
+    position: absolute;
+    z-index: 10;
+}
 
+#labelMinRadFps{
+    left: 15px;
+    top: 242px;
+}
+
+#labelMaxRadFps{
+    left: 234px;
+    top: 246px;
+}
