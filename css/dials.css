@@ -279,6 +279,7 @@ div#divPathOOPInner {
     transform: scale(0.45);
     left: -115px;
     top: -527px;
+    opacity: 0.5;
 }
 
 #objFeather{

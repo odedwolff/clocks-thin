@@ -69,8 +69,8 @@ function invokeSwitchFunc(i){
 var fpsAnimationConfig = {
     elmsInfos:{
         objWeights : {
-            minScale:0.16,
-            maxScale:0.6,
+            minScale:0.03,
+            maxScale:0.27,
             isGrowingClockwise:true
         },
         objFeather : {
@@ -80,7 +80,7 @@ var fpsAnimationConfig = {
         },
         objSineSmooth:{
             minScale:0.16,
-            maxScale:0.6,
+            maxScale:0.45,
             isGrowingClockwise:true
         },
         objSineDesc : {
