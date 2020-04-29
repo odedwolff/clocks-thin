@@ -57,6 +57,8 @@ var controllerContexts = {
        
 knobSwitchFuncNamesOrdered= ['switchTosingleRing', 'switchTo3Rings', 'switchToRingsCrossing', 'switchToAccumulator',  'startMasksClock', 'stop', 'toggleAboutContentShow' ];
 
+
+
 function invokeSwitchFunc(i){
     var key = knobSwitchFuncNamesOrdered[i];
     expFuncs[key]();
@@ -408,6 +410,16 @@ function onLoad_ringsControl(){
         if(onLoadF){
             onLoadF();
         }
+    }
+
+    initDials();
+}
+
+//setst initial position of dials at 180deg (up)
+function initDials(){
+    var continerNames= Object.keys(controllerContexts);
+    for (var i in continerNames){
+        positionDial(180 , continerNames[i], false);
     }
 }
 
