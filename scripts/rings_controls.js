@@ -126,6 +126,7 @@ function setupLabels(containerName, lblRAd, divParnetId){
         newElm.id=id;
         newElm.innerHTML= texts[i];
         newElm.style='position:absolute';
+        newElm.classList='clsOOPDialLabel';
         document.getElementById(divParnetId).appendChild(newElm);
         //0 deg is DOWN
         newElm.style.top=controllerContexts[containerName].pivX + lblRAd * Math.cos(angles[i]/360 * 2* Math.PI) + 'px';

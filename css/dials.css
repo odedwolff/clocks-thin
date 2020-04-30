@@ -7,25 +7,26 @@
     background-color: rgba(50, 157, 114, 0.667);
 }
 
-
 #divSprite2 {
     position: relative;
-    margin-top: 50px;
+    margin-top: 20px;
     /* width: 600px; */
-    height: 400px;
+    height: 358px;
     /* left: 222px; */
     /* top: 20px; */
-    background-color: rgba(50, 157, 114, 0.667);
+    background-color: rgb(0, 0, 0);
 }
+
+
 
 #divRingsOutOfPhase{
     position: relative;
     margin-top: 50px;
     /* width: 600px; */
-    height: 400px;
+    height: 254px;
     /* left: 222px; */
     /* top: 20px; */
-    background-color: rgba(50, 157, 114, 0.667);
+    background-color: rgb(0, 0, 0);
 }
 
 
@@ -92,8 +93,9 @@
 }
 
 
+
 #circleDial2 {
-    fill: #1c181866;
+    fill: #fccfcf66;
     left: 150px;
     top: 140px;
     stroke: none;
@@ -314,13 +316,14 @@ div#divPathOOPInner {
 circle#circleDialOOP {
     stroke: none;
     r: 20;
-    fill: #1c181866;
+    fill: #fccfcf66;
 }
 
 
 .clsLabelRadFps{
     position: absolute;
     z-index: 10;
+    color: gray;
 }
 
 #labelMinRadFps{
@@ -331,4 +334,8 @@ circle#circleDialOOP {
 #labelMaxRadFps{
     left: 234px;
     top: 246px;
+}
+
+.clsOOPDialLabel{
+    color:red;
 }
