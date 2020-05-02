@@ -17,7 +17,10 @@
            /*  global scope vars */
             /*  button control funcitons */
           // var switchTosingleRing, switchTo3Rings, switchToRingsCrossing, switchToAccumulator,  startMasksClock, stopTick, toggleAboutContentShow;
-          var expFuncs={};
+          var expFuncs={
+            /* showAboutContent:showAboutContent, 
+            hideAboutContent:hideAboutContent */
+          };
         </script>
 
         <script src="scripts/elm_rendrers.js"></script>
@@ -39,11 +42,6 @@
                     <div id=divSwitchUI>
                         <button id=btnSwitchDesign onclick="switchUiDesign()">switch design </button>
                     </div>   
-                    <div id = divTitle1>
-                        <h1 id=h1text1>
-                            a bunch<br/>of<br/> clock designs 
-                        </h1>
-                    </div>
                     <div id = buttonsPanel1>
                         <button id=btnSingeRing class="controlButton">single Ring</button>
                         <button id=btn3Rings class="controlButton">3 rings</button>
@@ -53,7 +51,7 @@
                         <button id=stop	 class="controlButton">stop</button>
                         <button id=btnAbout	 class="controlButton">about</button>
                     </div>
-                    <div id = aboutContent>
+                    <div id=aboutContent>
                         a demonstration of a bunch of design ideas for 
                         clocks, implmented in HTML5, SVG. 
                         by oded wolff, 2017. 
@@ -574,14 +572,17 @@
 
             
             function showAboutContent() {
-                // $("#aboutContent").css({display:"block"});
-                $("#aboutContent").show(400);
+                //$("#aboutContent").show(400);
+                $("#aboutContent").animate({opacity:0.5}, 200 );
             }
-            function hideAboutContent() {
-                //$("#aboutContent").animate({display:"none"}, 300);
-                $("#aboutContent").hide(400);
+            expFuncs.showAboutContent=showAboutContent;
 
+            function hideAboutContent() {
+                //$("#aboutContent").hide(400);
+                $("#aboutContent").animate({opacity:0}, 400 )
             }
+
+            expFuncs.hideAboutContent=hideAboutContent;
            
 
             $("#btnAbout").click(toggleAboutContentShow);
@@ -655,6 +656,8 @@
                 interval = startMaskTicking();
             }
             expFuncs.startMasksClock = startMasksClock;
+
+           
 
 
             window.addEventListener("load", onLoad);

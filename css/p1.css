@@ -184,8 +184,17 @@ div#divTitle1 {
     fill:red;
 }
 
-#aboutContent{
-    display: none;
+
+#aboutContent {
+    position: absolute;
+    z-index: 15;
+    /* display: none; */
+    opacity: 0;
+    left: 410px;
+    top: 100px;
+    background: black;
+    color: yellow;
+    padding: 10px;
 }
 
 a{

@@ -38,7 +38,8 @@ var controllerContexts = {
         isDescrete:true,
         /* 0deg is....*/
         stopsDeg:[60, 100, 140, 180, 220, 260, 300],
-        fDescValSelectHandler:(x)=>{console.log("selected stop no " + x); invokeSwitchFunc(x)},
+        //fDescValSelectHandler:(x)=>{console.log("selected stop no " + x); invokeSwitchFunc(x);},
+        fDescValSelectHandler:handleSelctionOOPDial,
         //stopsDeg:[-120,-80, -40, 0, 40, 80, 120],
         stopTexts:["1 ring", "3 rings", "crossing", "accuomlator", "masks", "stop","about"],
         //stopTexts:["1", "2", "3", "4", "5", "6","7"],
@@ -51,6 +52,17 @@ var controllerContexts = {
         onload:setupLabels.bind(null, 'contOOPRings', 100, 'divRingsOutOfPhase')
     }
 }
+
+function handleSelctionOOPDial(i){
+    console.log("selected stop no " + i); 
+    invokeSwitchFunc(i);
+    if(i==controllerContexts.contOOPRings.stopsDeg.length-1){
+        expFuncs.showAboutContent();
+    }else{
+        expFuncs.hideAboutContent();
+    }
+}
+
 
 
 //knobSwitchFuncs = [switchTosingleRing, switchTo3Rings, switchToRingsCrossing, switchToAccumulator,  startMasksClock, stopTick, toggleAboutContentShow ];
