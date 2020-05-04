@@ -37,11 +37,12 @@ var controllerContexts = {
         dragging:false,   /*runtime state, init to false*/
         isDescrete:true,
         /* 0deg is....*/
-        stopsDeg:[60, 100, 140, 180, 220, 260, 300],
+       /*  stopsDeg:[60, 100, 140, 180, 220, 260, 300], */
+        stopsDeg:[60, 94.3, 128.6, 162.85, 197.14, 231.42, 265.71, 300],
         //fDescValSelectHandler:(x)=>{console.log("selected stop no " + x); invokeSwitchFunc(x);},
         fDescValSelectHandler:handleSelctionOOPDial,
         //stopsDeg:[-120,-80, -40, 0, 40, 80, 120],
-        stopTexts:["1 ring", "3 rings", "crossing", "accuomlator", "masks", "stop","about"],
+        stopTexts:["home","1 ring", "3 rings", "crossing", "accuomlator", "masks", "stop","about"],
         //stopTexts:["1", "2", "3", "4", "5", "6","7"],
         /**change pivot location within moving dial */
         offsetX:45,
@@ -67,7 +68,7 @@ function handleSelctionOOPDial(i){
 
 //knobSwitchFuncs = [switchTosingleRing, switchTo3Rings, switchToRingsCrossing, switchToAccumulator,  startMasksClock, stopTick, toggleAboutContentShow ];
        
-knobSwitchFuncNamesOrdered= ['switchTosingleRing', 'switchTo3Rings', 'switchToRingsCrossing', 'switchToAccumulator',  'startMasksClock', 'stop', 'toggleAboutContentShow' ];
+knobSwitchFuncNamesOrdered= ['switchToHome', 'switchTosingleRing', 'switchTo3Rings', 'switchToRingsCrossing', 'switchToAccumulator',  'startMasksClock', 'stop', 'toggleAboutContentShow' ];
 
 
 

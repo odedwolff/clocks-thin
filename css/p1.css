@@ -94,6 +94,7 @@ button:focus {outline:0;}
     margin-top: 3%;
     float: left;
     margin-left: 17%;
+    display:none
 }
 
 
@@ -215,4 +216,16 @@ a{
 }
 .cls3CrossingSec{
     fill:#000000;
+}
+
+
+
+div#divHomeScreen {
+    background: white;
+    /* display: none; */
+    /* visibility: hidden; */
+}
+
+#fpsSlider{
+   
 }

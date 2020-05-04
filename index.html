@@ -153,6 +153,13 @@
 
                 </div>
 
+                
+                <div id=divHomeScreen class=themeContainer>
+                    <h1>Home</h1>
+                </div>
+                
+                
+                
                 <!--svg container for different clocks --> 
                 <div id = svgCont class = themeContainer>
                     <div id = panel4	class = panelCls>
@@ -556,6 +563,7 @@
             function masksPanelOn() {
                 $("#svgCont").hide();
                 $("#masksContainer").show();
+                
 
             }
 
@@ -606,28 +614,32 @@
             expFuncs.fpsSlideChange = fpsSlideChange;
             
             function switchToAccumulator(){
-                masksPanelOff();
+                hideAllMainPanels();
+                $("#svgCont").show();
                 clearInterval(interval);
                 interval = startTicking3GsOn2(ticksPerSec, "svg1");
             }
             expFuncs.switchToAccumulator = switchToAccumulator;
 
             function switchToRingsCrossing(){
-                masksPanelOff();
+                hideAllMainPanels();
+                $("#svgCont").show();
                 clearInterval(interval);
                 interval = start3CircCrossingAllOut(ticksPerSec, "svg1");
             }
             expFuncs.switchToRingsCrossing = switchToRingsCrossing;
 
             function switchTo3Rings(){
-                masksPanelOff();
+                hideAllMainPanels();
+                $("#svgCont").show();
                 clearInterval(interval);
                 interval = start3CirclesTicking(ticksPerSec, "svg1");
             }
             expFuncs.switchTo3Rings = switchTo3Rings;
 
             function switchTosingleRing(){
-                masksPanelOff();
+                hideAllMainPanels();
+                $("#svgCont").show();
                 clearInterval(interval);
                 interval = startTickingFCst1CheckClock(ticksPerSec, "svg1");
             }
@@ -650,19 +662,43 @@
             }
             expFuncs.toggleAboutContentShow = toggleAboutContentShow;
 
+            
+            //switchToMaks
             function startMasksClock() {
                 clearInterval(interval);
-                masksPanelOn();
+                hideAllMainPanels();
+                $("#masksContainer").show();
                 interval = startMaskTicking();
+
             }
             expFuncs.startMasksClock = startMasksClock;
 
+            function switchToHome(){
+                console.log("switchToHome()");
+                hideAllMainPanels();
+                $("#divHomeScreen").show();
+               
+                /* document.getElementById("divHosvgContmeScreen").style.display = "none";
+                document.getElementById("masksContainer").style.display = "none";  */
+                //document.getElementById("divHomeScreen").style.display = "block";
+              /*   masksPanelOff(); */
+            }
+
+
+            function hideAllMainPanels(){
+                $("#svgCont").hide();
+                $("#masksContainer").hide();
+                $("#divHomeScreen").hide();
+            }
+
+            expFuncs.switchToHome =switchToHome;
            
 
 
             window.addEventListener("load", onLoad);
             function onLoad(){
-                applyUiMode(uiConfig.currnentMode);
+                //applyUiMode(uiConfig.currnentMode);
+                switchToHome();
                 onLoad_ringsControl();
             }
         </script>
