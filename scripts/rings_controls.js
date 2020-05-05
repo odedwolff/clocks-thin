@@ -22,10 +22,10 @@ var controllerContexts = {
         offsetX:45,
         offsetY:45,
         //handler specific to container, to be invoked from the common handler 
-        postMouseRepositionfunc:move3gears,
+        postMouseRepositionfunc:handFPSChange,
         startDraggingFunc:()=>{showTradeOffSymbols(false)},
         stopDraggingFunc:()=>{showTradeOffSymbols(true)},
-        onload:null 
+        onload:null
 
     },
     contOOPRings:{
@@ -78,7 +78,10 @@ function invokeSwitchFunc(i){
 }
         
 
-
+const fpsSetup = {
+    min:2,
+    max:60
+}
 
 
 var fpsAnimationConfig = {
@@ -374,13 +377,25 @@ function documentByContainer(containerName){
 
 /**continer specific handlers **/
 
-function move3gears(angle){
+
+function handFPSChange(angle){
+    //to keep consistnent with our orientation system
+    angle = angle-90; 
+    move3gearsControls(angle);
+    var normScale = (angle - globalSettings.minAngle) / (globalSettings.maxAngle - globalSettings.minAngle);
+    applyFPSScales(normScale);
+    var newFPSVal = fpsSetup.min + (fpsSetup.max - fpsSetup.min) * normScale;
+    console.log("newFpsVal = " + newFPSVal);
+    console.log("normScale = " + normScale);
+    console.log("angle = " + angle);
+    expFuncs.changeFPS(newFPSVal);
+}
+
+
+function move3gearsControls(angle){
     document.getElementById("pathOuter").style.transform="rotate(" + angle * -0.5 + "deg)";
     document.getElementById("pathMid").style.transform="rotate(" + angle * 1 + "deg)";
     document.getElementById("pathInner").style.transform="rotate(" + angle * -1 + "deg)";
-
-    var normScale = (angle - globalSettings.minAngle) / (globalSettings.maxAngle - globalSettings.minAngle);
-    applyFPSScales(normScale);
 }
 
 function move3OOPWheels(scale, angle){

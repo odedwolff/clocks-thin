@@ -612,6 +612,16 @@
                 interval=setInterval(currentIntervalFunc, 1000/val);
             }
             expFuncs.fpsSlideChange = fpsSlideChange;
+
+            function changeFPS(val){
+                clearInterval(interval);
+                ticksPerSec=val;
+                interval=setInterval(currentIntervalFunc, 1000/val);
+            }
+            expFuncs.changeFPS=changeFPS;
+
+
+
             
             function switchToAccumulator(){
                 hideAllMainPanels();
