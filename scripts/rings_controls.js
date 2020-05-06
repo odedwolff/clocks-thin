@@ -12,6 +12,7 @@ var controllerContexts = {
         pivX:138,
         pivY:194,
         rad:120,
+        dotsRad:130,
         containerId:"divSprite2",
         dialId:"svgDialRing2",
         dragging:false,   /*runtime state, init to false*/
@@ -32,6 +33,7 @@ var controllerContexts = {
         pivX:123,
         pivY:128,
         rad:105,
+        dotsRad:90,
         containerId:"divRingsOutOfPhase",
         dialId:"svgDialRingOOP",
         dragging:false,   /*runtime state, init to false*/
@@ -150,7 +152,42 @@ function setupLabels(containerName, lblRAd, divParnetId){
         var xCorrection = angles[i] < 180 ? newElm.getBoundingClientRect().width : 0;
         newElm.style.left=controllerContexts[containerName].pivY - lblRAd * Math.sin(angles[i]/360 * 2* Math.PI) - xCorrection + 'px'; 
     }
+
+    setupCirclesArr(controllerContexts[containerName].pivX, controllerContexts[containerName].pivY, controllerContexts[containerName].dotsRad,  
+        document.getElementById(divParnetId), controllerContexts[containerName].stopsDeg);
 }
+
+
+
+function setupCirclesArr(pivX, pivY, rad, parent,angles){
+    //uses an array 
+    const offsetX=-5, offsetY=0;
+    for(i in angles){
+        var avngle=angles[i] - 90;
+        var left = pivX + Math.cos(avngle/360 * 2* Math.PI) * rad + offsetX;
+        var top = pivY - Math.sin(avngle/360 * 2* Math.PI) * rad + offsetY;
+        addNewCircle(left, top, parent);
+    }
+}
+
+
+function addNewCircle(left,top, parent){
+    var newDiv = document.createElement("div");
+    newDiv.classList="clsScleDot";
+    newDiv.innerHTML = 
+        `<svg height="20" width="20">
+            <circle cx="10" cy="10" r="5" stroke="black" stroke-width="3" fill="red" />
+        </svg>`;
+ 
+    /*     `<svg height="100" width="100">
+        <circle cx="50" cy="50" r="5" stroke="black" stroke-width="3" fill="red" />
+    </svg>`; */
+    parent.appendChild(newDiv);
+    //newDiv.style='position:absolute';
+    newDiv.style.left=left + "px";
+    newDiv.style.top=top + "px";
+}
+
 
 
 function handleMouseEnter(){
@@ -453,6 +490,8 @@ function initDials(){
 }
 
 
+
+
 function showTradeOffSymbols(flag){
     var items = document.querySelectorAll(".objTradeOffSymbol");
     var i;
@@ -471,6 +510,3 @@ function showTradeOffSymbols(flag){
 
 
 //window.addEventListener("load", onLoad);
-
-
-
