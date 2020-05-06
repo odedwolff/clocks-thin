@@ -154,14 +154,12 @@ function setupLabels(containerName, lblRAd, divParnetId){
     }
 
     setupCirclesArr(controllerContexts[containerName].pivX, controllerContexts[containerName].pivY, controllerContexts[containerName].dotsRad,  
-        document.getElementById(divParnetId), controllerContexts[containerName].stopsDeg);
+        document.getElementById(divParnetId), controllerContexts[containerName].stopsDeg, 5, 0);
 }
 
 
 
-function setupCirclesArr(pivX, pivY, rad, parent,angles){
-    //uses an array 
-    const offsetX=-5, offsetY=0;
+function setupCirclesArr(pivX, pivY, rad, parent,angles, offsetX, offsetY){
     for(i in angles){
         var avngle=angles[i] - 90;
         var left = pivX + Math.cos(avngle/360 * 2* Math.PI) * rad + offsetX;
