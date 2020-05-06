@@ -26,7 +26,7 @@ var controllerContexts = {
         postMouseRepositionfunc:handFPSChange,
         startDraggingFunc:()=>{showTradeOffSymbols(false)},
         stopDraggingFunc:()=>{showTradeOffSymbols(true)},
-        onload:null
+        onload:drawSpotDialTop
 
     },
     contOOPRings:{
@@ -154,19 +154,39 @@ function setupLabels(containerName, lblRAd, divParnetId){
     }
 
     setupCirclesArr(controllerContexts[containerName].pivX, controllerContexts[containerName].pivY, controllerContexts[containerName].dotsRad,  
-        document.getElementById(divParnetId), controllerContexts[containerName].stopsDeg, 5, 0);
+        document.getElementById(divParnetId), controllerContexts[containerName].stopsDeg, -5, 0);
 }
 
 
 
 function setupCirclesArr(pivX, pivY, rad, parent,angles, offsetX, offsetY){
     for(i in angles){
-        var avngle=angles[i] - 90;
+        var avngle=angles[i] + 90;
         var left = pivX + Math.cos(avngle/360 * 2* Math.PI) * rad + offsetX;
-        var top = pivY - Math.sin(avngle/360 * 2* Math.PI) * rad + offsetY;
+        var top = pivY + Math.sin(avngle/360 * 2* Math.PI) * rad + offsetY;
         addNewCircle(left, top, parent);
     }
 }
+
+function setupCircleRange(pivX, pivY, rad, angMin, angMax, nmSteps, offsetX, offsetY){
+    const degInStep = (angMax - angMin) / nmSteps;
+    var curAng = angMin;
+    var parent = document.getElementById(controllerContexts['contDialtop'].containerId);
+    for(var i=0; i < nmSteps; i++){
+        var locAngle = curAng + 90;
+        var left = pivX + Math.cos(locAngle/360 * 2* Math.PI) * rad + offsetX;
+        var top = pivY + Math.sin(locAngle/360 * 2* Math.PI) * rad + offsetY;
+        addNewCircle(left, top, parent);
+        curAng = curAng + degInStep;
+    }
+}
+
+function drawSpotDialTop(){
+    setupCircleRange(controllerContexts['contDialtop'].pivX, controllerContexts['contDialtop'].pivY,
+    controllerContexts['contDialtop'].dotsRad, 82, 302, 9, -10, 0);
+}
+
+
 
 
 function addNewCircle(left,top, parent){
