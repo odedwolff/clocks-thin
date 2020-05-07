@@ -170,7 +170,7 @@
 path#pathOOPRingOuter {
    /*  transform: translate(-12px, 3px) rotate(29deg);
     transform-origin: 51% 32%; */
-    stroke: #f7ff1d74;
+    stroke: #f7ff1d;
 }
     
 
@@ -178,14 +178,15 @@ path#pathOOPRingOuter {
 path#pathOOPRingMid {
   /*   transform: translate(7px, 3px) rotate(-188deg);
     transform-origin: 42% 32%; */
-    stroke: #c73a0080;
+    stroke: #c73a00ff;
+    
 }
 
 
 path#pathOOPRingInnder {
     /* transform: rotate(-97deg);
     transform-origin: 49% 34%; */
-    stroke: #fbff8a80;
+    stroke: #fbff8aff;
 }
 
 
@@ -323,7 +324,7 @@ circle#circleDialOOP {
 .clsLabelRadFps{
     position: absolute;
     z-index: 10;
-    color: gray;
+    color: #1dcdffed;
 }
 
 #labelMinRadFps{
@@ -337,10 +338,19 @@ circle#circleDialOOP {
 }
 
 .clsOOPDialLabel{
-    color:red;
+    color:#1dcdffed;
 }
 
 .clsScleDot{
     position:absolute;
+}
+
+div#divRingsOOP {
+    left: 16px;
+    position: relative;
+}
+
+.clsCircleDot{
+    fill:#1dcdffed;
 }
 

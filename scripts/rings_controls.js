@@ -193,8 +193,8 @@ function addNewCircle(left,top, parent){
     var newDiv = document.createElement("div");
     newDiv.classList="clsScleDot";
     newDiv.innerHTML = 
-        `<svg height="20" width="20">
-            <circle cx="10" cy="10" r="5" stroke="black" stroke-width="3" fill="red" />
+        `<svg height="20" width="20" >
+            <circle class="clsCircleDot" cx="10" cy="10" r="5" stroke="black" stroke-width="3" fill="red" />
         </svg>`;
  
     /*     `<svg height="100" width="100">
