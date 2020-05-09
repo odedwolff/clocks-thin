@@ -13,8 +13,9 @@
     /* width: 600px; */
     height: 358px;
     /* left: 222px; */
-    /* top: 20px; */
+    top: 20px;
     background-color: rgb(0, 0, 0);
+    /* transform: scale(0.7); */
 }
 
 
@@ -271,6 +272,7 @@ div#divPathOOPInner {
     position: absolute;
     width: 100px;
     height: 150px;
+    
    /*  background: pink; */
 }
 
@@ -308,9 +310,17 @@ div#divPathOOPInner {
     visibility: hidden;
 }
 
-#divTradOffSymbols{
+/* #divTradOffSymbols{
     left:200px;
     z-index: 30;
+} */
+
+#divTradOffSymbols {
+    left: -100px;
+    top: -150px;
+    z-index: 30;
+    transform: scale(0.5);
+    pointer-events: none;
 }
 
 
@@ -339,10 +349,26 @@ circle#circleDialOOP {
 
 .clsOOPDialLabel{
     color:#1dcdffed;
+
+     /*disable select*/
+     user-select: none; /* supported by Chrome and Opera */
+     -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+     -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
 .clsScleDot{
     position:absolute;
+
+    /*disable select*/
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+
+
 }
 
 div#divRingsOOP {
@@ -352,5 +378,13 @@ div#divRingsOOP {
 
 .clsCircleDot{
     fill:#1dcdffed;
+}
+
+.disable-select {
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
