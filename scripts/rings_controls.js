@@ -390,6 +390,10 @@ function mouseMoveHandler(containerName, e){
 }
 
 function mouseUpInContainer(containerName, e){
+    if(!controllerContexts[containerName].dragging){
+        return;
+    }
+    
     console.log("stopped traking"); 
     controllerContexts[containerName].dragging=false; 
     handleContainerStopDragging(containerName);
