@@ -316,8 +316,8 @@ div#divPathOOPInner {
 } */
 
 #divTradOffSymbols {
-    left: -100px;
-    top: -150px;
+    left: -95px;
+    top: -100px;
     z-index: 30;
     transform: scale(0.5);
     pointer-events: none;
@@ -334,7 +334,7 @@ circle#circleDialOOP {
 .clsLabelRadFps{
     position: absolute;
     z-index: 10;
-    color: #1dcdffed;
+    color: #ffffffed;
 }
 
 #labelMinRadFps{
@@ -348,7 +348,7 @@ circle#circleDialOOP {
 }
 
 .clsOOPDialLabel{
-    color:#1dcdffed;
+    color:#ffffffed;
 
      /*disable select*/
      user-select: none; /* supported by Chrome and Opera */
@@ -377,7 +377,7 @@ div#divRingsOOP {
 }
 
 .clsCircleDot{
-    fill:#1dcdffed;
+    fill:#ffffffed;
 }
 
 .disable-select {
@@ -388,3 +388,23 @@ div#divRingsOOP {
    -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
+
+
+#lblFps {
+    left: 71px;
+    top: 372px;
+}
+
+#lblMode{
+    left: 116px;
+    top: 25px;
+}
+
+.clsDialLabel{
+    position: absolute;
+    font-size: 26px;
+    color: #151010;
+    font-weight: 900;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #dada00;
+}

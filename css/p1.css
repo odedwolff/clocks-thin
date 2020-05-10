@@ -3,11 +3,33 @@
 
 
 
-#btnSwitchDesign{
+
+
+#btnSwitchDesign {
     background: black;
-    color: rgb(158, 198, 78);
-    border-width: 0;
-    display: none;
+    /* color: rgb(158, 198, 78); */
+    /* border-width: 0; */
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: #2a8215;
+    /* border-width: 2px; */
+    /* border-color: #ff0000; */
+    /* display: none; */
+}
+
+
+#lblSwitch {
+    color: #bfb7b7;
+}
+
+div#divSwitchUI {
+    position: absolute;
+    left: 137px;
+    top: 320px;
+    /* background: #9d1414; */
+    padding: 2px;
+    z-index: 60;
 }
 
 
@@ -16,15 +38,18 @@
     position: absolute;
     z-index: 30;
     /* width: 500px; */
-    width: 100%;
-    height: 700px;
+    width: 95%;
+    height: 485px;
     /* background-color: #01001b78; */
     /* margin-left: 15%; */
     /* margin-top: 4%; */
     color: yellow;
-    left: -51px;
+    left: -28px;
     top: 65px;
 }
+
+
+
 
 
 
@@ -64,13 +89,15 @@ body{
 
 button:focus {outline:0;}
 
+
+
 .panelCls {
     color: yellow;
     margin-top: 4%;
     width: 95%;
-    height: 800px;
-    background-color: #ebaf2c;
-    border-radius: 25px;
+    height: 600px;
+    background-color: #fcff8a;
+    /* border-radius: 25px; */
     position: absolute;
 }
 
@@ -229,4 +256,5 @@ div#divHomeScreen {
 
 #fpsSlider{
    display:none;
+   color:white;
 }
