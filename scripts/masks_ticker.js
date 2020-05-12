@@ -37,7 +37,7 @@
 
         
         function startMaskTicking(){
-            var interval; 
+            var interval1; 
             function tick(){
                 var d = new Date();
                 var curruentSecProp;
@@ -66,10 +66,11 @@
                 path.setAttribute("d", d);
                 
             }
+            currentIntervalFunc=tick;
             //render first time to avoid delay at openning the window 
             tick();
-            interval = setInterval(tick, 1000);
-            return interval;
+            interval1 = setInterval(tick, 1000);
+            return interval1;
             
         }
         

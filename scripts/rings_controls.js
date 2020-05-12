@@ -444,9 +444,11 @@ function handFPSChange(angle){
     var normScale = (angle - globalSettings.minAngle) / (globalSettings.maxAngle - globalSettings.minAngle);
     applyFPSScales(normScale);
     var newFPSVal = fpsSetup.min + (fpsSetup.max - fpsSetup.min) * normScale;
-    console.log("newFpsVal = " + newFPSVal);
+    
+   /*  console.log("newFpsVal = " + newFPSVal);
     console.log("normScale = " + normScale);
-    console.log("angle = " + angle);
+    console.log("angle = " + angle); */
+    
     expFuncs.changeFPS(newFPSVal);
 }
 
