@@ -258,3 +258,7 @@ div#divHomeScreen {
    display:none;
    color:white;
 }
+
+g#gMask {
+    fill: black;
+}

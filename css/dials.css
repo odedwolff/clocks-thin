@@ -284,14 +284,14 @@ div#divPathOOPInner {
     transform: scale(0.45);
     left: -115px;
     top: -527px;
-    opacity: 0.5;
+   /*  opacity: 0.5; */
 }
 
 #objFeather{
     transform: scale(0.45);
     left: 200px;
     top: -553px;
-    opacity: 0.6;
+   /*  opacity: 0.6; */
 }
 
 #objSineSmooth{
