@@ -43,7 +43,14 @@
                         <button id=btnSwitchDesign onclick="switchUiDesign()"></button>
                         <label id=lblSwitch>switch UI</label>
                     </div>   
-                    <div id = buttonsPanel1>
+                    
+
+                    
+                    <div id = buttonsPanel1 class=buttonPanelSmp>
+                        <label id=lblModeSimple class="lblSwitchTitelAlt">
+                            MODE
+                         </label>
+                        
                         <button id=btnSingeRing class="controlButton">single Ring</button>
                         <button id=btn3Rings class="controlButton">3 rings</button>
                         <button id=btnRingCrossing class="controlButton">rings crossing</button>
@@ -59,10 +66,17 @@
                         your feeback is welcome
                         <a href="mailto:odedwolff@gmail.com">odedwolff@gmail.com</a>
                     </div>
-                    <div id=fpsSlider>
-                        <h1>Frames Per numPracitalPerSecond</h1>
-                        <label for="vol">(2-60)</label>
+                    <div id=fpsSlider class=buttonPanelSmp>
+                        <label class="lblSwitchTitelAlt">FRAME RATE</label>
                         <input type="range" id="fpsSlide" name="fpsSlide"  onchange="fpsSlideChange()" min="2" max="60">
+                    </div>
+                    <div id=simpUIControls class=buttonPanelSmp>
+                        <button class=controlButton  onclick="switchUiDesign()"> 
+                            switch ui
+                        </button>
+                        <button class=controlButton>
+                            what is frame right
+                        </button>
                     </div>
 
                     

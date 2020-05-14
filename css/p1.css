@@ -23,6 +23,16 @@
     color: #bfb7b7;
 }
 
+#lblModeSimple {
+    left: 86px;
+    top: -7px;
+    position: absolute;
+    background: black;
+    width: 60px;
+    /* align-content: center; */
+    padding-left: 9px;
+}
+
 div#divSwitchUI {
     position: absolute;
     left: 137px;
@@ -104,11 +114,11 @@ button:focus {outline:0;}
 
 
 .panelClsSqr{
-    //color: yellow;
+    /* color: yellow; */
     margin-top: 4%;
     width: 95%;
-    //background-color: #ebaf2c;
-    //background-color: red;
+    /* background-color: #ebaf2c;*/
+    /* background-color: red; */
 }
 
 #gDrawing{
@@ -117,12 +127,23 @@ button:focus {outline:0;}
 
 
 
+
 #buttonsPanel1 {
-    width: 81%;
+    width: 80%;
     margin-top: 3%;
     float: left;
     margin-left: 17%;
-    display:none
+    display: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    position: absolute;
+}
+
+.buttonPanelSmp{
+    border-width: 1px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 4px;
 }
 
 
@@ -143,7 +164,7 @@ div#root {
 }
 
 div#masksContainer{
-    //background-color: #021633;
+/*     background-color: #021633;*/    
     display: none;
     width:70%;
 }
@@ -161,16 +182,23 @@ h1#h1text1 {
     font-weight: 800;
 }
 
+
+
 .controlButton {
-    background-color: #5e1403;
+    display: block;
+    background-color: #fffbfb;
     border-style: none;
     color: #000000;
-    width: 80%;
-    height: 31px;
-    font-size: 19px;
+    width: 50%;
+    height: 24px;
+    font-size: 14px;
     margin-top: 3px;
     cursor: pointer;
-    font-weight: 100;
+    /* font-weight: 100; */
+    margin-top: 10px;
+    border-radius: 7px;
+    font-family: "Josefin Sans", "Proxima Nova", Helvetica, Corbel, sans-serif;
+    margin-left: 19%;
 }
 
 #btnAbout{
@@ -257,8 +285,25 @@ div#divHomeScreen {
 #fpsSlider{
    display:none;
    color:white;
+   position: absolute;
+   top: 408px;
+   left: 100px;
 }
 
 g#gMask {
     fill: black;
+}
+
+.lblSwitchTitelAlt{
+    font-family: "Josefin Sans", "Proxima Nova", Helvetica, Corbel, sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+div#simpUIControls {
+    top: 470px;
+    left: 100px;
+    position: absolute;
+    width: 200px;
+    height: 73px;
 }
