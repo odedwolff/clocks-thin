@@ -198,7 +198,7 @@ h1#h1text1 {
     margin-top: 10px;
     border-radius: 7px;
     font-family: "Josefin Sans", "Proxima Nova", Helvetica, Corbel, sans-serif;
-    margin-left: 19%;
+    margin-left: 25%;
 }
 
 #btnAbout{
@@ -283,12 +283,52 @@ div#divHomeScreen {
 }
 
 #fpsSlider{
-   display:none;
-   color:white;
+   display: none;
+   color: white;
    position: absolute;
-   top: 408px;
-   left: 100px;
+   top: 294px;
+   left: 48px;
+   width: 247px;
+   height: 61px;
 }
+
+
+
+input#fpsSlide {
+    width: 167px;
+    height: 14px;
+    box-shadow: inset 6px 2px 6px 1px rgba(38, 154, 146, 0.9), 0px 1px 1px 0px rgba(47, 28, 131, 0.8);
+    -webkit-appearance: none;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    background: #000000;
+    cursor: pointer;
+    margin-top: 24px;
+    margin-left: 37px;
+}
+
+/*   .rangeSliderSimpleUI::-webkit-slider-thumb {
+ */   
+ 
+ .rangeSliderSimpleUI {
+    width: 151px;
+    height: 21px;
+    box-shadow: inset 8px 5px 15px 1px rgba(60, 247, 49, 0.9), 0px 1px 1px 0px rgba(47, 28, 131, 0.8);
+    border-radius: 8px;
+   
+   
+   
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+  }
+
 
 g#gMask {
     fill: black;
@@ -300,10 +340,33 @@ g#gMask {
     color: white;
 }
 
+
 div#simpUIControls {
-    top: 470px;
-    left: 100px;
+    top: 388px;
+    left: 46px;
     position: absolute;
-    width: 200px;
-    height: 73px;
+    width: 251px;
+    height: 81px;
+    display: none;
+    padding-top: 12px;
+}
+
+
+#lblFrameRateUISimp{
+    position: absolute;
+    left: 62px;
+    top: -7px;
+    background: black;
+    width: 131px;
+    padding-left: 10px;
+}
+
+
+#lblSimpleMoreControls {
+    position: absolute;
+    left: 98px;
+    top: -7px;
+    background: black;
+    width: 60px;
+    padding-left: 5px;
 }

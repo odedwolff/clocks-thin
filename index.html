@@ -67,16 +67,15 @@
                         <a href="mailto:odedwolff@gmail.com">odedwolff@gmail.com</a>
                     </div>
                     <div id=fpsSlider class=buttonPanelSmp>
-                        <label class="lblSwitchTitelAlt">FRAME RATE</label>
+                        <label id=lblFrameRateUISimp class="lblSwitchTitelAlt">FRAME RATE</label>
                         <input type="range" id="fpsSlide" name="fpsSlide"  onchange="fpsSlideChange()" min="2" max="60">
                     </div>
                     <div id=simpUIControls class=buttonPanelSmp>
+                        <label id=lblSimpleMoreControls class="lblSwitchTitelAlt">MORE</label>
                         <button class=controlButton  onclick="switchUiDesign()"> 
                             switch ui
                         </button>
-                        <button class=controlButton>
-                            what is frame right
-                        </button>
+                        <button class=controlButton>what's frame rate</button>
                     </div>
 
                     
@@ -245,8 +244,8 @@
             var uiConfig = {
                 //0 for simple, 1 for fency 
                 currnentMode:1,
-                simpleUIElmIDs:['buttonsPanel1','fpsSlider'],
-                fenccyUIElmIDs:['div3Rings', 'divRingsOOP']
+                simpleUIElmIDs:['buttonsPanel1','fpsSlider','simpUIControls'],
+                fenccyUIElmIDs:['div3Rings', 'divRingsOOP','divSwitchUI']
             }
 
 
