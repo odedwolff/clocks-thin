@@ -393,6 +393,7 @@ div#divRingsOOP {
 #lblFps {
     left: 71px;
     top: 372px;
+    filter:blur(0px);
 }
 
 #lblMode{

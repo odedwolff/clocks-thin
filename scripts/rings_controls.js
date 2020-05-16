@@ -529,6 +529,18 @@ function showTradeOffSymbols(flag){
             items[i].style.visibility="visible";
         }
     }
+
+    blurUnderTOSymbols(!flag);
+}
+
+function blurUnderTOSymbols(flag){
+    var val = flag? 2 : 0;
+    var elmIds = ["divSwitchUI", "lblFps"];
+    for (i in elmIds){
+        var elm=document.getElementById(elmIds[i]);
+        var str="blur(" + val + "px)";
+        elm.style.filter=str;
+    }
 }
 
 
