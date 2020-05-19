@@ -107,7 +107,7 @@ button:focus {outline:0;}
     margin-top: 4%;
     width: 95%;
     height: 600px;
-    background-color: #fcff8a;
+    background-color: #c3d0b5ff;
     /* border-radius: 25px; */
     position: absolute;
 }
@@ -231,7 +231,7 @@ div#divTitle1 {
 }
 
 .clsCircElmDflt{
-    fill:#712210;
+    fill:#33535d;
 }
 
 .clsCircElmActiveMin{
@@ -262,14 +262,16 @@ a{
 
 
 .clsSvgMasks{
-    background-color: #ebaf2c;
+    background-color: #ffffff;
 }
 
+
+
 .cls3CrossingHr{
-    fill:#eeeeee;
+    fill: #fefffe;
 }
 .cls3CrossingMin{
-    fill:#643f02;
+    fill: #2384a1;
 }
 .cls3CrossingSec{
     fill:#000000;

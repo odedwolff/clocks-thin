@@ -15,7 +15,7 @@
    version="1.1"
    id="svg1544"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="ui 2.svg"
+   sodipodi:docname="ui 2. v2.svg"
    inkscape:export-filename="C:\temp\ui 2 v2.png"
    inkscape:export-xdpi="300"
    inkscape:export-ydpi="300">
@@ -29,10 +29,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="-263.38805"
-     inkscape:cy="292.46887"
+     inkscape:cx="-422.58165"
+     inkscape:cy="421.87211"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer11"
+     inkscape:current-layer="layer8"
      showgrid="false"
      inkscape:snap-global="false"
      inkscape:window-width="1780"
@@ -337,7 +337,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer11"
-     inkscape:label="inncer screen">
+     inkscape:label="inncer screen"
+     sodipodi:insensitive="true">
     <rect
        style="display:inline;fill:#c3d0b5;fill-opacity:1;fill-rule:evenodd;stroke-width:0.28541839"
        id="rect2097"
@@ -349,13 +350,12 @@
   <g
      inkscape:groupmode="layer"
      id="layer8"
-     inkscape:label="waves 1"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     inkscape:label="inner"
+     style="display:inline">
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2270"
        cx="122.71543"
        cy="164.90523"
@@ -363,7 +363,7 @@
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2272"
        cx="123.42359"
        cy="137.36784"
@@ -375,11 +375,11 @@
        cy="146.11722"
        cx="124.38145"
        id="circle2274"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288" />
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2276"
        cx="123.73307"
        cy="155.21727"
@@ -391,11 +391,11 @@
        cy="129.50623"
        cx="121.64802"
        id="circle2278"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288" />
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2280"
        cx="119.97164"
        cy="122.1235"
@@ -407,7 +407,7 @@
        cy="-115.71877"
        cx="-144.80693"
        id="circle2282"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(-104.12145)" />
     <circle
        inkscape:export-ydpi="300"
@@ -416,12 +416,12 @@
        cy="-90.322037"
        cx="-113.45999"
        id="circle2284"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(-104.12145)" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2286"
        cx="-126.83993"
        cy="-112.42374"
@@ -434,12 +434,12 @@
        cy="-81.706879"
        cx="-108.17078"
        id="circle2288"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(-104.12145)" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2290"
        cx="-120.1701"
        cy="-97.589966"
@@ -452,12 +452,12 @@
        cy="-121.64976"
        cx="-135.62894"
        id="circle2292"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(-104.12145)" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2294"
        cx="161.78722"
        cy="-136.9543"
@@ -466,7 +466,7 @@
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2296"
        cx="169.8205"
        cy="-134.71658"
@@ -476,7 +476,7 @@
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(-141.79664)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2298"
        cx="-70.666229"
        cy="-178.33061"
@@ -485,7 +485,7 @@
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(-141.79664)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2300"
        cx="-59.167995"
        cy="-176.75313"
@@ -493,7 +493,7 @@
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2302"
        cx="40.87883"
        cy="61.534973"
@@ -505,7 +505,7 @@
        cy="65.326614"
        cx="59.623573"
        id="circle2304"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288" />
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
@@ -513,11 +513,11 @@
        cy="67.564423"
        cx="67.657051"
        id="circle2306"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288" />
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2308"
        cx="50.046227"
        cy="62.823002"
@@ -529,7 +529,7 @@
        cy="12.841614"
        cx="-66.900528"
        id="circle2310"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(-104.12145)" />
     <circle
        inkscape:export-ydpi="300"
@@ -538,12 +538,12 @@
        cy="-14.695875"
        cx="-66.192413"
        id="circle2312"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(-104.12145)" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2314"
        cx="-65.234489"
        cy="-5.9462872"
@@ -556,7 +556,7 @@
        cy="3.1536143"
        cx="-65.88279"
        id="circle2316"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(-104.12145)" />
     <circle
        inkscape:export-ydpi="300"
@@ -566,12 +566,12 @@
        cy="-167.73512"
        cx="169.54648"
        id="circle2318"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288" />
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(126.64149)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2320"
        cx="155.69798"
        cy="-182.61183"
@@ -584,7 +584,7 @@
        cy="-150.66225"
        cx="179.29485"
        id="circle2322"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288" />
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
@@ -593,12 +593,12 @@
        cy="-136.36378"
        cx="183.67555"
        id="circle2324"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288" />
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(126.64149)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2326"
        cx="181.99921"
        cy="-143.74643"
@@ -611,12 +611,12 @@
        cy="-156.47969"
        cx="176.25179"
        id="circle2328"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288" />
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(126.64149)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2330"
        cx="172.86513"
        cy="-162.40646"
@@ -629,12 +629,12 @@
        cy="-173.07457"
        cx="165.07568"
        id="circle2332"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288" />
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(126.64149)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2334"
        cx="160.84233"
        cy="-177.98544"
@@ -647,12 +647,12 @@
        cy="-186.96019"
        cx="150.51285"
        id="circle2336"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288" />
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(126.64149)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2338"
        cx="145.09416"
        cy="-191.19359"
@@ -661,7 +661,7 @@
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(126.64149)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2340"
        cx="102.90643"
        cy="-204.33504"
@@ -670,7 +670,7 @@
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(126.64149)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2342"
        cx="184.74294"
        cy="-100.96471"
@@ -679,7 +679,7 @@
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(126.64149)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2344"
        cx="138.80634"
        cy="-194.64368"
@@ -692,12 +692,12 @@
        cy="-200.54344"
        cx="121.65136"
        id="circle2346"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288" />
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(126.64149)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2348"
        cx="185.4511"
        cy="-128.50211"
@@ -710,12 +710,12 @@
        cy="-119.75266"
        cx="186.40904"
        id="circle2350"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288" />
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(126.64149)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2352"
        cx="185.76073"
        cy="-110.65266"
@@ -728,12 +728,12 @@
        cy="-198.30577"
        cx="129.68465"
        id="circle2354"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288" />
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(126.64149)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2356"
        cx="112.07375"
        cy="-203.04712"
@@ -745,7 +745,7 @@
        cy="-127.60448"
        cx="185.23006"
        id="circle2358"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(95.659213)" />
     <circle
        inkscape:export-ydpi="300"
@@ -755,7 +755,7 @@
        cy="-179.91385"
        cx="-95.193192"
        id="circle2360"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288" />
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
@@ -764,11 +764,11 @@
        cy="-177.95848"
        cx="-82.554611"
        id="circle2362"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288" />
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2364"
        cx="-82.097054"
        cy="-53.928802"
@@ -781,12 +781,12 @@
        cy="-68.805374"
        cx="-95.945557"
        id="circle2366"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(-104.12145)" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2368"
        cx="-72.348633"
        cy="-36.855896"
@@ -795,7 +795,7 @@
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2370"
        cx="-67.96801"
        cy="-22.557432"
@@ -808,12 +808,12 @@
        cy="-29.940153"
        cx="-69.644279"
        id="circle2372"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(-104.12145)" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2374"
        cx="-75.391701"
        cy="-42.673431"
@@ -826,12 +826,12 @@
        cy="-48.600201"
        cx="-78.778435"
        id="circle2376"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(-104.12145)" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2378"
        cx="-86.567802"
        cy="-59.268368"
@@ -844,12 +844,12 @@
        cy="-64.179047"
        cx="-90.801224"
        id="circle2380"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(-104.12145)" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2382"
        cx="-101.13069"
        cy="-73.153854"
@@ -862,11 +862,11 @@
        cy="98.134842"
        cx="107.51891"
        id="circle2384"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288" />
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2386"
        cx="76.778877"
        cy="71.226379"
@@ -874,7 +874,7 @@
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2388"
        cx="93.67028"
        cy="83.258263"
@@ -886,11 +886,11 @@
        cy="109.39021"
        cx="114.22431"
        id="circle2390"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288" />
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2392"
        cx="110.83758"
        cy="103.46346"
@@ -902,11 +902,11 @@
        cy="92.795357"
        cx="103.04821"
        id="circle2394"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288" />
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2396"
        cx="98.814583"
        cy="87.884613"
@@ -918,11 +918,11 @@
        cy="78.909828"
        cx="88.485191"
        id="circle2398"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288" />
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2400"
        cx="83.066376"
        cy="74.676468"
@@ -934,7 +934,7 @@
        cy="-131.05453"
        cx="178.94226"
        id="circle2402"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(95.659213)" />
     <circle
        inkscape:export-ydpi="300"
@@ -943,13 +943,13 @@
        cy="115.20774"
        cx="117.26722"
        id="circle2404"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288" />
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288" />
     <circle
        r="2.1552846"
        cy="164.90523"
        cx="122.71543"
        id="circle2646"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
@@ -957,11 +957,11 @@
        cy="137.36784"
        cx="123.42359"
        id="circle2648"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2650"
        cx="124.38145"
        cy="146.11722"
@@ -973,11 +973,11 @@
        cy="155.21727"
        cx="123.73307"
        id="circle2652"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2654"
        cx="121.64802"
        cy="129.50623"
@@ -989,12 +989,12 @@
        cy="122.1235"
        cx="119.97164"
        id="circle2656"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(-104.12145)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2658"
        cx="-144.80693"
        cy="-115.71877"
@@ -1003,7 +1003,7 @@
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(-104.12145)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2660"
        cx="-113.45999"
        cy="-90.322037"
@@ -1016,12 +1016,12 @@
        cy="-112.42374"
        cx="-126.83993"
        id="circle2662"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(-104.12145)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2664"
        cx="-108.17078"
        cy="-81.706879"
@@ -1034,12 +1034,12 @@
        cy="-97.589966"
        cx="-120.1701"
        id="circle2666"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(-104.12145)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2668"
        cx="-135.62894"
        cy="-121.64976"
@@ -1052,7 +1052,7 @@
        cy="-136.9543"
        cx="161.78722"
        id="circle2670"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
@@ -1061,7 +1061,7 @@
        cy="-134.71658"
        cx="169.8205"
        id="circle2672"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
@@ -1069,7 +1069,7 @@
        cy="-178.33061"
        cx="-70.666229"
        id="circle2674"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(-141.79664)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
@@ -1078,7 +1078,7 @@
        cy="-176.75313"
        cx="-59.167995"
        id="circle2676"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(-141.79664)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
@@ -1087,11 +1087,11 @@
        cy="61.534973"
        cx="40.87883"
        id="circle2678"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2680"
        cx="59.623573"
        cy="65.326614"
@@ -1099,7 +1099,7 @@
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2682"
        cx="67.657051"
        cy="67.564423"
@@ -1111,12 +1111,12 @@
        cy="62.823002"
        cx="50.046227"
        id="circle2684"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(-104.12145)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2686"
        cx="-66.900528"
        cy="12.841614"
@@ -1125,7 +1125,7 @@
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(-104.12145)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2688"
        cx="-66.192413"
        cy="-14.695875"
@@ -1138,12 +1138,12 @@
        cy="-5.9462872"
        cx="-65.234489"
        id="circle2690"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(-104.12145)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2692"
        cx="-65.88279"
        cy="3.1536143"
@@ -1151,7 +1151,7 @@
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2694"
        cx="169.54648"
        cy="-167.73512"
@@ -1164,12 +1164,12 @@
        cy="-182.61183"
        cx="155.69798"
        id="circle2696"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(126.64149)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2698"
        cx="179.29485"
        cy="-150.66225"
@@ -1178,7 +1178,7 @@
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2700"
        cx="183.67555"
        cy="-136.36378"
@@ -1191,12 +1191,12 @@
        cy="-143.74643"
        cx="181.99921"
        id="circle2702"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(126.64149)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2704"
        cx="176.25179"
        cy="-156.47969"
@@ -1209,12 +1209,12 @@
        cy="-162.40646"
        cx="172.86513"
        id="circle2706"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(126.64149)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2708"
        cx="165.07568"
        cy="-173.07457"
@@ -1227,12 +1227,12 @@
        cy="-177.98544"
        cx="160.84233"
        id="circle2710"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(126.64149)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2712"
        cx="150.51285"
        cy="-186.96019"
@@ -1245,7 +1245,7 @@
        cy="-191.19359"
        cx="145.09416"
        id="circle2714"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(126.64149)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
@@ -1254,7 +1254,7 @@
        cy="-204.33504"
        cx="102.90643"
        id="circle2716"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(126.64149)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
@@ -1263,7 +1263,7 @@
        cy="-100.96471"
        cx="184.74294"
        id="circle2718"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(126.64149)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
@@ -1272,12 +1272,12 @@
        cy="-194.64368"
        cx="138.80634"
        id="circle2720"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(126.64149)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2722"
        cx="121.65136"
        cy="-200.54344"
@@ -1290,12 +1290,12 @@
        cy="-128.50211"
        cx="185.4511"
        id="circle2724"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(126.64149)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2726"
        cx="186.40904"
        cy="-119.75266"
@@ -1308,12 +1308,12 @@
        cy="-110.65266"
        cx="185.76073"
        id="circle2728"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(126.64149)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2730"
        cx="129.68465"
        cy="-198.30577"
@@ -1326,13 +1326,13 @@
        cy="-203.04712"
        cx="112.07375"
        id="circle2732"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        transform="rotate(126.64149)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(95.659213)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2734"
        cx="185.23006"
        cy="-127.60448"
@@ -1340,7 +1340,7 @@
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2736"
        cx="-95.193192"
        cy="-179.91385"
@@ -1349,7 +1349,7 @@
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2738"
        cx="-82.554611"
        cy="-177.95848"
@@ -1363,12 +1363,12 @@
        cy="-53.928802"
        cx="-82.097054"
        id="circle2740"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(-104.12145)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2742"
        cx="-95.945557"
        cy="-68.805374"
@@ -1381,7 +1381,7 @@
        cy="-36.855896"
        cx="-72.348633"
        id="circle2744"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
@@ -1390,12 +1390,12 @@
        cy="-22.557432"
        cx="-67.96801"
        id="circle2746"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(-104.12145)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2748"
        cx="-69.644279"
        cy="-29.940153"
@@ -1408,12 +1408,12 @@
        cy="-42.673431"
        cx="-75.391701"
        id="circle2750"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(-104.12145)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2752"
        cx="-78.778435"
        cy="-48.600201"
@@ -1426,12 +1426,12 @@
        cy="-59.268368"
        cx="-86.567802"
        id="circle2754"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(-104.12145)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2756"
        cx="-90.801224"
        cy="-64.179047"
@@ -1444,11 +1444,11 @@
        cy="-73.153854"
        cx="-101.13069"
        id="circle2758"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2760"
        cx="107.51891"
        cy="98.134842"
@@ -1460,7 +1460,7 @@
        cy="71.226379"
        cx="76.778877"
        id="circle2762"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
@@ -1468,11 +1468,11 @@
        cy="83.258263"
        cx="93.67028"
        id="circle2764"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2766"
        cx="114.22431"
        cy="109.39021"
@@ -1484,11 +1484,11 @@
        cy="103.46346"
        cx="110.83758"
        id="circle2768"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2770"
        cx="103.04821"
        cy="92.795357"
@@ -1500,11 +1500,11 @@
        cy="87.884613"
        cx="98.814583"
        id="circle2772"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2774"
        cx="88.485191"
        cy="78.909828"
@@ -1516,12 +1516,12 @@
        cy="74.676468"
        cx="83.066376"
        id="circle2776"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(95.659213)"
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2778"
        cx="178.94226"
        cy="-131.05453"
@@ -1529,7 +1529,7 @@
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#241c1c;fill-rule:evenodd;stroke-width:0.67053288"
+       style="display:inline;fill:#260690;fill-opacity:1;fill-rule:evenodd;stroke-width:0.67053288"
        id="circle2780"
        cx="117.26722"
        cy="115.20774"
@@ -1540,7 +1540,9 @@
   <g
      inkscape:groupmode="layer"
      id="layer9"
-     inkscape:label="waves 2">
+     inkscape:label="outer"
+     style="display:inline"
+     sodipodi:insensitive="true">
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
@@ -1548,11 +1550,11 @@
        cy="42.989067"
        cx="41.797623"
        id="circle2418"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2420"
        cx="123.0017"
        cy="87.587708"
@@ -1564,7 +1566,7 @@
        cy="168.95053"
        cx="141.51935"
        id="circle2422"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
@@ -1572,11 +1574,11 @@
        cy="54.798485"
        cx="85.543472"
        id="circle2424"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2426"
        cx="64.639183"
        cy="47.609341"
@@ -1588,11 +1590,11 @@
        cy="62.456402"
        cx="112.83833"
        id="circle2428"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2430"
        cx="137.50687"
        cy="107.22463"
@@ -1604,11 +1606,11 @@
        cy="135.39496"
        cx="142.38228"
        id="circle2432"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2434"
        cx="143.54958"
        cy="146.0565"
@@ -1620,11 +1622,11 @@
        cy="157.14534"
        cx="142.75958"
        id="circle2436"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2438"
        cx="140.21861"
        cy="125.81516"
@@ -1636,11 +1638,11 @@
        cy="116.81907"
        cx="138.17601"
        id="circle2440"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2442"
        cx="131.17262"
        cy="101.3029"
@@ -1652,11 +1654,11 @@
        cy="99.917168"
        cx="119.75034"
        id="circle2444"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2446"
        cx="126.30834"
        cy="72.326912"
@@ -1668,11 +1670,11 @@
        cy="58.172203"
        cx="126.98594"
        id="circle2448"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2450"
        cx="99.808266"
        cy="64.161171"
@@ -1684,11 +1686,11 @@
        cy="64.255272"
        cx="89.119987"
        id="circle2452"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2454"
        cx="76.179092"
        cy="47.126297"
@@ -1700,12 +1702,12 @@
        cy="44.558594"
        cx="52.968475"
        id="circle2456"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(-104.12145)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2458"
        cx="-148.26027"
        cy="-110.28037"
@@ -1718,12 +1720,12 @@
        cy="-65.681686"
        cx="-67.056252"
        id="circle2460"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(-104.12145)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2462"
        cx="-48.538628"
        cy="15.681221"
@@ -1732,7 +1734,7 @@
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(-104.12145)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2464"
        cx="-104.5145"
        cy="-98.470963"
@@ -1745,12 +1747,12 @@
        cy="-105.66012"
        cx="-125.41874"
        id="circle2466"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(-104.12145)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2468"
        cx="-83.931313"
        cy="-83.809555"
@@ -1763,12 +1765,12 @@
        cy="-44.877537"
        cx="-55.177395"
        id="circle2470"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(-104.12145)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2472"
        cx="-47.675728"
        cy="-17.87442"
@@ -1781,12 +1783,12 @@
        cy="-7.2128906"
        cx="-46.508438"
        id="circle2474"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(-104.12145)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2476"
        cx="-47.298424"
        cy="3.8759921"
@@ -1799,12 +1801,12 @@
        cy="-27.454226"
        cx="-49.83934"
        id="circle2478"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(-104.12145)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2480"
        cx="-51.881996"
        cy="-36.450394"
@@ -1817,12 +1819,12 @@
        cy="-51.966492"
        cx="-58.885483"
        id="circle2482"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(-104.12145)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2484"
        cx="-63.012344"
        cy="-59.188522"
@@ -1835,12 +1837,12 @@
        cy="-72.188141"
        cx="-72.504089"
        id="circle2486"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(-104.12145)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2488"
        cx="-77.662682"
        cy="-78.172119"
@@ -1853,12 +1855,12 @@
        cy="-89.108292"
        cx="-90.249626"
        id="circle2490"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(-104.12145)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2492"
        cx="-96.852577"
        cy="-94.266769"
@@ -1871,12 +1873,12 @@
        cy="-102.93319"
        cx="-115.62981"
        id="circle2494"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(-104.12145)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2496"
        cx="-137.08945"
        cy="-108.71085"
@@ -1888,12 +1890,12 @@
        cy="-223.46637"
        cx="104.50799"
        id="circle2498"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(126.64149)" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2500"
        cx="185.71204"
        cy="-178.86768"
@@ -1906,7 +1908,7 @@
        cy="-97.504723"
        cx="204.22963"
        id="circle2502"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(126.64149)" />
     <circle
        inkscape:export-ydpi="300"
@@ -1915,12 +1917,12 @@
        cy="-211.65695"
        cx="148.25375"
        id="circle2504"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(126.64149)" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2506"
        cx="127.34962"
        cy="-218.84598"
@@ -1933,12 +1935,12 @@
        cy="-196.99554"
        cx="168.83694"
        id="circle2508"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(126.64149)" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2510"
        cx="197.59087"
        cy="-158.06351"
@@ -1951,12 +1953,12 @@
        cy="-131.06038"
        cx="205.09251"
        id="circle2512"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(126.64149)" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2514"
        cx="206.25983"
        cy="-120.39881"
@@ -1969,12 +1971,12 @@
        cy="-109.31001"
        cx="205.46982"
        id="circle2516"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(126.64149)" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2518"
        cx="202.92899"
        cy="-140.64009"
@@ -1987,12 +1989,12 @@
        cy="-149.63629"
        cx="200.88628"
        id="circle2520"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(126.64149)" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2522"
        cx="193.88277"
        cy="-165.15245"
@@ -2005,12 +2007,12 @@
        cy="-172.37451"
        cx="189.75591"
        id="circle2524"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(126.64149)" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2526"
        cx="180.26416"
        cy="-185.37404"
@@ -2023,12 +2025,12 @@
        cy="-191.35812"
        cx="175.10564"
        id="circle2528"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(126.64149)" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2530"
        cx="162.51865"
        cy="-202.29425"
@@ -2041,12 +2043,12 @@
        cy="-207.45274"
        cx="155.91574"
        id="circle2532"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(126.64149)" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2534"
        cx="137.1385"
        cy="-216.1192"
@@ -2059,13 +2061,13 @@
        cy="-221.89682"
        cx="115.67892"
        id="circle2536"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(126.64149)" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(95.659213)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2538"
        cx="187.00163"
        cy="-148.56523"
@@ -2078,12 +2080,12 @@
        cy="-155.7543"
        cx="166.0974"
        id="circle2540"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
        transform="rotate(95.659213)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2542"
        cx="194.66359"
        cy="-144.36105"
@@ -2096,7 +2098,7 @@
        cy="-153.02747"
        cx="175.88634"
        id="circle2544"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
@@ -2104,12 +2106,12 @@
        cy="-191.85956"
        cx="-69.007889"
        id="circle2546"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(-141.79664)" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2548"
        cx="-89.912064"
        cy="-199.04866"
@@ -2122,19 +2124,19 @@
        cy="-187.65546"
        cx="-61.345921"
        id="circle2550"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(-141.79664)" />
     <circle
        inkscape:export-ydpi="300"
        inkscape:export-xdpi="300"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2552"
        cx="-80.123123"
        cy="-196.32188"
        r="2.6263142"
        transform="rotate(-141.79664)" />
     <circle
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2802"
        cx="41.797623"
        cy="42.989067"
@@ -2146,11 +2148,11 @@
        cy="87.587708"
        cx="123.0017"
        id="circle2804"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2806"
        cx="141.51935"
        cy="168.95053"
@@ -2158,7 +2160,7 @@
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2808"
        cx="85.543472"
        cy="54.798485"
@@ -2170,11 +2172,11 @@
        cy="47.609341"
        cx="64.639183"
        id="circle2810"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2812"
        cx="112.83833"
        cy="62.456402"
@@ -2186,11 +2188,11 @@
        cy="107.22463"
        cx="137.50687"
        id="circle2814"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2816"
        cx="142.38228"
        cy="135.39496"
@@ -2202,11 +2204,11 @@
        cy="146.0565"
        cx="143.54958"
        id="circle2818"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2820"
        cx="142.75958"
        cy="157.14534"
@@ -2218,11 +2220,11 @@
        cy="125.81516"
        cx="140.21861"
        id="circle2822"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2824"
        cx="138.17601"
        cy="116.81907"
@@ -2234,11 +2236,11 @@
        cy="101.3029"
        cx="131.17262"
        id="circle2826"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2828"
        cx="119.75034"
        cy="99.917168"
@@ -2250,11 +2252,11 @@
        cy="72.326912"
        cx="126.30834"
        id="circle2830"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2832"
        cx="126.98594"
        cy="58.172203"
@@ -2266,11 +2268,11 @@
        cy="64.161171"
        cx="99.808266"
        id="circle2834"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2836"
        cx="89.119987"
        cy="64.255272"
@@ -2282,11 +2284,11 @@
        cy="47.126297"
        cx="76.179092"
        id="circle2838"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2840"
        cx="52.968475"
        cy="44.558594"
@@ -2298,12 +2300,12 @@
        cy="-110.28037"
        cx="-148.26027"
        id="circle2842"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(-104.12145)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2844"
        cx="-67.056252"
        cy="-65.681686"
@@ -2316,7 +2318,7 @@
        cy="15.681221"
        cx="-48.538628"
        id="circle2846"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(-104.12145)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
@@ -2325,12 +2327,12 @@
        cy="-98.470963"
        cx="-104.5145"
        id="circle2848"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(-104.12145)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2850"
        cx="-125.41874"
        cy="-105.66012"
@@ -2343,12 +2345,12 @@
        cy="-83.809555"
        cx="-83.931313"
        id="circle2852"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(-104.12145)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2854"
        cx="-55.177395"
        cy="-44.877537"
@@ -2361,12 +2363,12 @@
        cy="-17.87442"
        cx="-47.675728"
        id="circle2856"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(-104.12145)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2858"
        cx="-46.508438"
        cy="-7.2128906"
@@ -2379,12 +2381,12 @@
        cy="3.8759921"
        cx="-47.298424"
        id="circle2860"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(-104.12145)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2862"
        cx="-49.83934"
        cy="-27.454226"
@@ -2397,12 +2399,12 @@
        cy="-36.450394"
        cx="-51.881996"
        id="circle2864"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(-104.12145)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2866"
        cx="-58.885483"
        cy="-51.966492"
@@ -2415,12 +2417,12 @@
        cy="-59.188522"
        cx="-63.012344"
        id="circle2868"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(-104.12145)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2870"
        cx="-72.504089"
        cy="-72.188141"
@@ -2433,12 +2435,12 @@
        cy="-78.172119"
        cx="-77.662682"
        id="circle2872"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(-104.12145)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2874"
        cx="-90.249626"
        cy="-89.108292"
@@ -2451,12 +2453,12 @@
        cy="-94.266769"
        cx="-96.852577"
        id="circle2876"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(-104.12145)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2878"
        cx="-115.62981"
        cy="-102.93319"
@@ -2469,13 +2471,13 @@
        cy="-108.71085"
        cx="-137.08945"
        id="circle2880"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(-104.12145)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(126.64149)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2882"
        cx="104.50799"
        cy="-223.46637"
@@ -2488,12 +2490,12 @@
        cy="-178.86768"
        cx="185.71204"
        id="circle2884"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(126.64149)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2886"
        cx="204.22963"
        cy="-97.504723"
@@ -2502,7 +2504,7 @@
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(126.64149)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2888"
        cx="148.25375"
        cy="-211.65695"
@@ -2515,12 +2517,12 @@
        cy="-218.84598"
        cx="127.34962"
        id="circle2890"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(126.64149)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2892"
        cx="168.83694"
        cy="-196.99554"
@@ -2533,12 +2535,12 @@
        cy="-158.06351"
        cx="197.59087"
        id="circle2894"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(126.64149)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2896"
        cx="205.09251"
        cy="-131.06038"
@@ -2551,12 +2553,12 @@
        cy="-120.39881"
        cx="206.25983"
        id="circle2898"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(126.64149)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2900"
        cx="205.46982"
        cy="-109.31001"
@@ -2569,12 +2571,12 @@
        cy="-140.64009"
        cx="202.92899"
        id="circle2902"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(126.64149)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2904"
        cx="200.88628"
        cy="-149.63629"
@@ -2587,12 +2589,12 @@
        cy="-165.15245"
        cx="193.88277"
        id="circle2906"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(126.64149)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2908"
        cx="189.75591"
        cy="-172.37451"
@@ -2605,12 +2607,12 @@
        cy="-185.37404"
        cx="180.26416"
        id="circle2910"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(126.64149)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2912"
        cx="175.10564"
        cy="-191.35812"
@@ -2623,12 +2625,12 @@
        cy="-202.29425"
        cx="162.51865"
        id="circle2914"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(126.64149)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2916"
        cx="155.91574"
        cy="-207.45274"
@@ -2641,12 +2643,12 @@
        cy="-216.1192"
        cx="137.1385"
        id="circle2918"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(126.64149)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2920"
        cx="115.67892"
        cy="-221.89682"
@@ -2658,12 +2660,12 @@
        cy="-148.56523"
        cx="187.00163"
        id="circle2922"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(95.659213)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2924"
        cx="166.0974"
        cy="-155.7543"
@@ -2676,12 +2678,12 @@
        cy="-144.36105"
        cx="194.66359"
        id="circle2926"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        transform="rotate(95.659213)"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2928"
        cx="175.88634"
        cy="-153.02747"
@@ -2691,7 +2693,7 @@
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(-141.79664)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2930"
        cx="-69.007889"
        cy="-191.85956"
@@ -2704,12 +2706,12 @@
        cy="-199.04866"
        cx="-89.912064"
        id="circle2932"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <circle
        transform="rotate(-141.79664)"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        id="circle2934"
        cx="-61.345921"
        cy="-187.65546"
@@ -2722,7 +2724,7 @@
        cy="-196.32188"
        cx="-80.123123"
        id="circle2936"
-       style="display:inline;fill:#564242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
+       style="display:inline;fill:#33add2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.81707555"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
   </g>

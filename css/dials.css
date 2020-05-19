@@ -171,7 +171,7 @@
 path#pathOOPRingOuter {
    /*  transform: translate(-12px, 3px) rotate(29deg);
     transform-origin: 51% 32%; */
-    stroke: #f7ff1d;
+    stroke: #3c51f6ff;
 }
     
 
@@ -179,7 +179,7 @@ path#pathOOPRingOuter {
 path#pathOOPRingMid {
   /*   transform: translate(7px, 3px) rotate(-188deg);
     transform-origin: 42% 32%; */
-    stroke: #c73a00ff;
+    stroke: #33add2ff;
     
 }
 
@@ -187,7 +187,7 @@ path#pathOOPRingMid {
 path#pathOOPRingInnder {
     /* transform: rotate(-97deg);
     transform-origin: 49% 34%; */
-    stroke: #fbff8aff;
+    stroke: rgb(255, 255, 255);
 }
 
 
@@ -407,5 +407,20 @@ div#divRingsOOP {
     color: #151010;
     font-weight: 900;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #dada00;
+    -webkit-text-stroke-color: #8affc3ff;
+
 }
+
+
+#frStaticRingOuter{
+    fill:#3c51f6ff;
+}
+
+#frStaticRingMid{
+    fill:#8affc3ff;
+}
+
+#frStaticRingInner{
+    fill:rgb(255, 255, 255);
+}
+
