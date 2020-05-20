@@ -337,14 +337,15 @@ circle#circleDialOOP {
     color: #ffffffed;
 }
 
-#labelMinRadFps{
-    left: 15px;
-    top: 242px;
+
+#labelMinRadFps {
+    left: 10px;
+    top: 286px;
 }
 
-#labelMaxRadFps{
-    left: 234px;
-    top: 246px;
+#labelMaxRadFps {
+    left: 239px;
+    top: 286px;
 }
 
 .clsOOPDialLabel{

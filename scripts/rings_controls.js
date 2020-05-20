@@ -1,6 +1,6 @@
 const config={
-    fps:40,
-    limitBackBounceDeg:20
+    fps:5,
+    limitBackBounceDeg:7.5
 }
 var globalSettings = {
     minAngle:45, 
@@ -81,8 +81,8 @@ function invokeSwitchFunc(i){
         
 
 const fpsSetup = {
-    min:2,
-    max:60
+    min:1,
+    max:20
 }
 
 
@@ -172,7 +172,7 @@ function setupCircleRange(pivX, pivY, rad, angMin, angMax, nmSteps, offsetX, off
     const degInStep = (angMax - angMin) / nmSteps;
     var curAng = angMin;
     var parent = document.getElementById(controllerContexts['contDialtop'].containerId);
-    for(var i=0; i < nmSteps; i++){
+    for(var i=0; i <= nmSteps; i++){
         var locAngle = curAng + 90;
         var left = pivX + Math.cos(locAngle/360 * 2* Math.PI) * rad + offsetX;
         var top = pivY + Math.sin(locAngle/360 * 2* Math.PI) * rad + offsetY;
@@ -183,7 +183,8 @@ function setupCircleRange(pivX, pivY, rad, angMin, angMax, nmSteps, offsetX, off
 
 function drawSpotDialTop(){
     setupCircleRange(controllerContexts['contDialtop'].pivX, controllerContexts['contDialtop'].pivY,
-    controllerContexts['contDialtop'].dotsRad, 82, 302, 9, -10, 0);
+    //controllerContexts['contDialtop'].dotsRad, 82, 302, 9, -10, 0);
+   controllerContexts['contDialtop'].dotsRad, globalSettings.minAngle, globalSettings.maxAngle, 7, -10, 0);
 }
 
 
@@ -297,13 +298,23 @@ function angleFromPivot(containerElm, pvtXLoc, pvtYLoc, xMouseAbs, yMouseAbs, co
     if (offsetFromPivot.x < 0  && offsetFromPivot.y >  0) angleToOffsetDeg=angleToOffsetDeg + 360;
 
     var offsetedAngle =  (angleToOffsetDeg + 90) % 360;          
-    if(offsetedAngle<globalSettings.minAngle){
+    /* if(offsetedAngle<globalSettings.minAngle){
         controllerContexts[containerName].dragging=false;
         handleContainerStopDragging(containerName);
         offsetedAngle=globalSettings.minAngle + config.limitBackBounceDeg;
     }
     if(offsetedAngle>globalSettings.maxAngle){
         offsetedAngle=globalSettings.maxAngle - config.limitBackBounceDeg;
+        controllerContexts[containerName].dragging=false;
+        handleContainerStopDragging(containerName);
+    } */
+    if(offsetedAngle<globalSettings.minAngle - config.limitBackBounceDeg){
+        controllerContexts[containerName].dragging=false;
+        handleContainerStopDragging(containerName);
+        offsetedAngle=globalSettings.minAngle;
+    }
+    if(offsetedAngle>globalSettings.maxAngle + config.limitBackBounceDeg){
+        offsetedAngle=globalSettings.maxAngle;
         controllerContexts[containerName].dragging=false;
         handleContainerStopDragging(containerName);
     }
@@ -374,7 +385,7 @@ function posInDoc(el) {
 
 
 function mouseDownInDial(containerName, e){
-    console.log("started traking"); 
+    //console.log("started tracking"); 
     controllerContexts[containerName].dragging=true; 
     handleContainerStartDragging(containerName);
 }
@@ -394,7 +405,7 @@ function mouseUpInContainer(containerName, e){
         return;
     }
     
-    console.log("stopped traking"); 
+    //console.log("stopped tracking"); 
     controllerContexts[containerName].dragging=false; 
     handleContainerStopDragging(containerName);
     //if descrete, hop to closest stop 
