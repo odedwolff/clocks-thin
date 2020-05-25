@@ -1,0 +1,427 @@
+#divSprite{
+    /* position: absolute; */
+    width: 800px;
+    height:400px;
+    left:200px;
+    top:30px;
+    background-color: rgba(50, 157, 114, 0.667);
+}
+
+#divSprite2 {
+    position: relative;
+    margin-top: 20px;
+    /* width: 600px; */
+    height: 358px;
+    /* left: 222px; */
+    top: 20px;
+    background-color: rgb(0, 0, 0);
+    /* transform: scale(0.7); */
+}
+
+
+
+#divRingsOutOfPhase{
+    position: relative;
+    margin-top: 50px;
+    /* width: 600px; */
+    height: 254px;
+    /* left: 222px; */
+    /* top: 20px; */
+    background-color: rgb(0, 0, 0);
+}
+
+
+
+#svgDialRing{
+    position: absolute;
+    left:400px;
+    top:100px;
+}
+
+#svgDialRingOOP
+{
+    position: absolute;
+    left:100px;
+    top:100px;  
+    z-index: 30; 
+}
+
+
+#svgButton1{
+    position: absolute;
+    left:400px;
+    top:400px;
+}
+#divGuide{
+    position: absolute;
+    /* background: rgb(8, 86, 8); */
+    width: 10px;
+    height: 10px;
+    left:300px; 
+    top:200px;
+    
+}
+
+#divGuide2{
+    position: absolute;
+   /*  background: rgb(192, 202, 192); */
+    width: 10px;
+    height: 10px;
+    left: 138px;
+    top: 194px;
+    
+}
+#dialsContainer{
+    position: relative;
+    width: 800px;
+    height:400px;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+#guideCentrDialTop{
+    position: absolute;
+    top:150px;
+    left:140px;
+    width:6px;
+    height: 6px;
+   /*  background: yellow; */
+}
+
+#svgCarryPointer1{
+    position: absolute;
+    left:140px;
+    top:150px;
+}
+
+
+
+#circleDial2 {
+    fill: #fccfcf66;
+    left: 150px;
+    top: 140px;
+    stroke: none;
+}
+
+#svgDialRing2{
+    position: absolute;
+   /*  background: yellow;    */
+    width:100px;
+    height:100px;
+    z-index: 70;
+}
+
+
+
+#svg3RingRoot {
+    transform: scale(0.85) translate(6px, 74px);
+    position: absolute;
+    /* top: 72px; */
+    /* left: 18px; */
+}
+
+
+
+.rings3Elm {
+    position: absolute;
+    width: 200px;
+    height: 312px;
+    left: 36px;
+    top: 90px;
+    transform: scale(2);
+}
+
+
+.svgOverPathOOP{
+    position: absolute;
+    width: auto;
+    height: auto;
+   
+   /*  left: 36px; */
+   /*  top: 90px; */
+    /* transform: scale(2); */
+}
+
+#pathInner{
+    transform-origin: 52% 43%;
+    transform: rotate(0deg)
+
+}
+ 
+#pathMid{
+    transform-origin: 51% 43%;
+    transform: rotate(0deg)
+
+}
+ 
+#pathOuter{
+    transform-origin: 51% 43%;
+    transform: rotate(0deg)
+}
+
+
+#div3RingsStaticBG {
+    position: absolute;
+    width: 250px;
+    height: 257px;
+    left: 7px;
+    top: 8px;
+}
+
+
+path#pathOOPRingOuter {
+   /*  transform: translate(-12px, 3px) rotate(29deg);
+    transform-origin: 51% 32%; */
+    stroke: #3c51f6ff;
+}
+    
+
+
+path#pathOOPRingMid {
+  /*   transform: translate(7px, 3px) rotate(-188deg);
+    transform-origin: 42% 32%; */
+    stroke: #33add2ff;
+    
+}
+
+
+path#pathOOPRingInnder {
+    /* transform: rotate(-97deg);
+    transform-origin: 49% 34%; */
+    stroke: rgb(255, 255, 255);
+}
+
+
+
+.divPathOOP {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+   /*  top: 100px;
+    left: 71px; */
+   /*  transform: scale(2); */
+}
+
+
+
+div#divPathOOPMidr {
+    left: 93.2px;
+    top: 82px;
+    transform: scale(3) rotate(378deg);
+    transform-origin: 34.6% 49.7%;
+}
+
+
+div#divPathOOPOuter {
+    left: 76px;
+    top: 81px;
+    transform: scale(3) rotate(239deg);
+    transform-origin: 52.3% 50.2%;
+}
+
+
+div#divPathOOPInner {
+    left: 75px;
+    top: 82px;
+    transform: scale(3) rotate(358deg);
+    transform-origin: 53% 50%;
+}
+
+.clsPivotGuide{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    /* background: rgb(231, 157, 19); */
+}
+
+
+#divPivotGuideOuter {
+    left: 52.3%;
+    top: 50.2%;
+    visibility: hidden;
+   /*  background: yellow; */
+}
+
+
+
+#divPivotGuideMid {
+    left: 34.6%;
+    top: 49.7%;
+    visibility: hidden;
+    /* background: brown; */
+}
+
+
+
+#divPivotGuideInner{
+    left: 53%;
+    top:50%;
+    visibility: hidden;
+    /* background: white; */
+}
+
+#divGuideOOP{
+    width:10px;
+    height: 10px;
+    /* background: orchid; */
+    left: 123px;
+    top: 128px;
+    position: absolute;
+}
+
+.clsTradeOffSymbols{
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    
+   /*  background: pink; */
+}
+
+#divSymbolFeather{
+    left:240px;
+}
+
+#objWeights{
+    transform: scale(0.45);
+    left: -115px;
+    top: -527px;
+   /*  opacity: 0.5; */
+}
+
+#objFeather{
+    transform: scale(0.45);
+    left: 200px;
+    top: -553px;
+   /*  opacity: 0.6; */
+}
+
+#objSineSmooth{
+    transform: scale(0.45);
+    left: 200px;
+    top: -353px;
+}
+#objSineDesc{
+    transform: scale(0.45);
+    left: -115px;
+    top: -353px;
+}
+
+.objTradeOffSymbol{
+    position: absolute;
+    visibility: hidden;
+}
+
+/* #divTradOffSymbols{
+    left:200px;
+    z-index: 30;
+} */
+
+#divTradOffSymbols {
+    left: -95px;
+    top: -100px;
+    z-index: 30;
+    transform: scale(0.5);
+    pointer-events: none;
+}
+
+
+circle#circleDialOOP {
+    stroke: none;
+    r: 20;
+    fill: #fccfcf66;
+}
+
+
+.clsLabelRadFps{
+    position: absolute;
+    z-index: 10;
+    color: #ffffffed;
+}
+
+
+#labelMinRadFps {
+    left: 10px;
+    top: 286px;
+}
+
+#labelMaxRadFps {
+    left: 239px;
+    top: 286px;
+}
+
+.clsOOPDialLabel{
+    color:#ffffffed;
+
+     /*disable select*/
+     user-select: none; /* supported by Chrome and Opera */
+     -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+     -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.clsScleDot{
+    position:absolute;
+
+    /*disable select*/
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+
+
+}
+
+div#divRingsOOP {
+    left: 16px;
+    position: relative;
+}
+
+.clsCircleDot{
+    fill:#ffffffed;
+}
+
+.disable-select {
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+
+
+#lblFps {
+    left: 71px;
+    top: 372px;
+    filter:blur(0px);
+}
+
+#lblMode{
+    left: 116px;
+    top: 25px;
+}
+
+.clsDialLabel{
+    position: absolute;
+    font-size: 26px;
+    color: #151010;
+    font-weight: 900;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #8affc3ff;
+
+}
+
+
+#frStaticRingOuter{
+    fill:#3c51f6ff;
+}
+
+#frStaticRingMid{
+    fill:#8affc3ff;
+}
+
+#frStaticRingInner{
+    fill:rgb(255, 255, 255);
+}
+
