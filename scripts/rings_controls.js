@@ -492,14 +492,45 @@ function docLoadHandler(){
 
 function setUpListeners(){
     
+    //register mouse events 
+    
     document.getElementById('circleDial2').addEventListener('mousedown', mouseDownInDial.bind(null, 'contDialtop'));
     document.getElementById('divSprite2').addEventListener('mousemove', mouseMoveHandler.bind(null, 'contDialtop'));
     document.getElementById('divSprite2').addEventListener('mouseup', mouseUpInContainer.bind(null, 'contDialtop'));
 
     document.getElementById('circleDialOOP').addEventListener('mousedown', mouseDownInDial.bind(null, 'contOOPRings'));
     document.getElementById('divRingsOutOfPhase').addEventListener('mousemove', mouseMoveHandler.bind(null, 'contOOPRings'));
-    document.getElementById('divRingsOutOfPhase').addEventListener('mouseup', mouseUpInContainer.bind(null, 'contOOPRings'))
+    document.getElementById('divRingsOutOfPhase').addEventListener('mouseup', mouseUpInContainer.bind(null, 'contOOPRings'));
+
+    //register touch events
+    document.getElementById('circleDial2').addEventListener('touchstart', touchDownHandlerD2.bind(null, 'contDialtop'));
+    document.getElementById('divSprite2').addEventListener('touchmove', touchMoveHndlerD2.bind(null, 'contDialtop'));
+    document.getElementById('divSprite2').addEventListener('touchend', toucUpHandler.bind(null, 'contDialtop'));
+
+    document.getElementById('circleDialOOP').addEventListener('touchstart', touchDownHandlerD2.bind(null, 'contOOPRings'));
+    document.getElementById('divRingsOutOfPhase').addEventListener('touchmove', touchMoveHndlerD2.bind(null, 'contOOPRings'));
+    document.getElementById('divRingsOutOfPhase').addEventListener('touchend', toucUpHandler.bind(null, 'contOOPRings'));
 }
+
+//-----deligate touch events to mouse evetns -----
+
+function touchDownHandlerD2(containerName, eTouches){
+    if(eTouches.targetTouches && eTouches.targetTouches[0])
+        mouseDownInDial(containerName, eTouches.targetTouches[0]);
+}
+
+function touchMoveHndlerD2(containerName, eTouches){
+    if(eTouches.targetTouches && eTouches.targetTouches[0])
+         mouseMoveHandler(containerName, eTouches.targetTouches[0]);
+}
+
+function toucUpHandler(containerName, eTouches){
+    //if(eTouches.targetTouches && eTouches.targetTouches[0])
+        mouseUpInContainer(containerName, eTouches.changedTouches[0]);
+}
+
+
+
 
 //TODO - should move to main insex.html script ?
 function onLoad_ringsControl(){
