@@ -1,33 +1,33 @@
+
+
+/* 
 #divSprite{
-    /* position: absolute; */
     width: 800px;
     height:400px;
     left:200px;
     top:30px;
     background-color: rgba(50, 157, 114, 0.667);
 }
+ */
+
+
 
 #divSprite2 {
     position: relative;
-    margin-top: 20px;
-    /* width: 600px; */
     height: 358px;
-    /* left: 222px; */
-    top: 20px;
     background-color: rgb(0, 0, 0);
-    /* transform: scale(0.7); */
+    top: 5.5vh;
 }
 
 
 
-#divRingsOutOfPhase{
+
+
+#divRingsOutOfPhase {
     position: relative;
-    margin-top: 50px;
-    /* width: 600px; */
-    height: 254px;
-    /* left: 222px; */
-    /* top: 20px; */
     background-color: rgb(0, 0, 0);
+    margin-top: 7vh;
+    height: 34vh;
 }
 
 
@@ -41,17 +41,21 @@
 #svgDialRingOOP
 {
     position: absolute;
-    left:100px;
-    top:100px;  
+    /* left:100px;
+    top:100px;   */
     z-index: 30; 
 }
 
-
+/* 
 #svgButton1{
     position: absolute;
     left:400px;
     top:400px;
 }
+
+ */
+
+
 #divGuide{
     position: absolute;
     /* background: rgb(8, 86, 8); */
@@ -71,6 +75,7 @@
     top: 194px;
     
 }
+/* 
 #dialsContainer{
     position: relative;
     width: 800px;
@@ -78,36 +83,38 @@
     margin-left: 120px;
     margin-right: 120px;
 }
+
+ */
+
+
 #guideCentrDialTop{
     position: absolute;
     top:150px;
     left:140px;
     width:6px;
     height: 6px;
-   /*  background: yellow; */
 }
-
+/* 
 #svgCarryPointer1{
     position: absolute;
     left:140px;
     top:150px;
 }
 
-
+ */
 
 #circleDial2 {
     fill: #fccfcf66;
-    left: 150px;
-    top: 140px;
+   /*  left: 150px;
+    top: 140px; */
     stroke: none;
 }
 
 #svgDialRing2{
     position: absolute;
-   /*  background: yellow;    */
-    width:100px;
-    height:100px;
     z-index: 70;
+    height: 12vh;
+    width: 7vw;
 }
 
 

@@ -294,6 +294,10 @@ input#fpsSlide {
     margin-left: 2.5vw;
 }
 
+#fpsSlide::selection{
+    background: black;
+}
+
  /* 
  .rangeSliderSimpleUI {
     width: 151px;

@@ -1,0 +1,34 @@
+
+body{
+    background-color:  #000000;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+#col1 {
+    width: 30%;
+    height: 200px;
+}
+
+#col2 {
+    width: 64%;
+    height: 200px;
+    left: 35%;
+    /* left: 379px; */
+}
+
+.verCol {
+    position: absolute;
+    display: inline;
+}
+
+
+div#leftSideBar {
+    /* float: left; */
+    /* width: 20%; */
+    width: 320px;
+    position: absolute;
+    /* margin-left: 47px; */
+    /* margin-right: 40px; */
+    margin-left: 17%;
+}
