@@ -237,14 +237,15 @@ div#divTitle1 {
 
 #aboutContent {
     position: absolute;
-    z-index: 15;
-    /* display: none; */
+    z-index: 200;
+    display: none;
     opacity: 0;
-    left: 0px;
-    top: 100px;
-    background: black;
+    top: 64px;
+    left: 65px;
+    background: #1b1b1b;
     color: yellow;
     padding: 10px;
+    /* visibility: hidden; */
 }
 
 a{

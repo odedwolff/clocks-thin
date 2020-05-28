@@ -614,13 +614,20 @@
             
             function showAboutContent() {
                 //$("#aboutContent").show(400);
-                $("#aboutContent").animate({opacity:0.5}, 200 );
+                //$("#aboutContent").show();
+                /* $("#aboutContent").style.display="block" */
+                document.getElementById("aboutContent").style.display="block";
+                $("#aboutContent").animate({opacity:0.75}, 200 );
             }
             expFuncs.showAboutContent=showAboutContent;
 
             function hideAboutContent() {
                 //$("#aboutContent").hide(400);
-                $("#aboutContent").animate({opacity:0}, 400 )
+                 
+                $("#aboutContent").animate({opacity:0}, 400 );
+                /* $("#aboutContent").style.display="none" */
+                document.getElementById("aboutContent").style.display="none";
+                /* $("#aboutContent").hide(); */
             }
 
             expFuncs.hideAboutContent=hideAboutContent;
