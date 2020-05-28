@@ -240,7 +240,7 @@ div#divTitle1 {
     z-index: 15;
     /* display: none; */
     opacity: 0;
-    left: 410px;
+    left: 0px;
     top: 100px;
     background: black;
     color: yellow;

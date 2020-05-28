@@ -5,16 +5,46 @@ body{
     overflow: hidden;
 }
 
-#col1 {
-    width: 30%;
-    height: 200px;
+@media  screen and (min-width: 481px){
+    #col1 {
+        width: 30%;
+        height: 200px;
+    }
+
+    #col2 {
+        width: 64%;
+        height: 200px;
+        left: 35%;
+        /* left: 379px; */
+    }
 }
 
-#col2 {
-    width: 64%;
-    height: 200px;
-    left: 35%;
-    /* left: 379px; */
+@media  screen and (max-width: 480px) {
+    /* #col1 {
+        width: 30%;
+        height: 200px;
+    } */
+
+    #col1 {
+        width: 30%;
+        height: 200px;
+        width: 802px;
+        top: 700px;
+        left: px;
+    }
+
+   /*  #col2 {
+        width: 64%;
+        height: 200px;
+        left: 35%;
+        top:500px;
+    } */
+    
+    
+    #col2 {
+        width: 188%;
+        left: 20%
+    }
 }
 
 .verCol {
