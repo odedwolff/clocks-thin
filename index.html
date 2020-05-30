@@ -35,6 +35,8 @@
         <script src="scripts/displace_funcs.js"></script>
         <script src="scripts/masks_ticker.js"></script>
         <script src="scripts/rings_controls.js"></script>
+        <script src="scripts/waitAnim.js"></script>
+
 
         <!--[if lt IE 9]>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -59,13 +61,13 @@
                                 MODE
                              </label>
                             
-                            <button id=btnSingeRing class="controlButton">single Ring</button>
-                            <button id=btn3Rings class="controlButton">3 rings</button>
-                            <button id=btnRingCrossing class="controlButton">rings crossing</button>
-                            <button id=btnAccumalator class="controlButton">accumalator</button>
-                            <button id=btnMasks class="controlButton">masks</button>
-                            <button id=stop	 class="controlButton">stop</button>
-                            <button id=btnAbout	 class="controlButton">about</button>
+                            <button id=btnSingeRing class="controlButton" onclick="switchTosingleRing()">single Ring</button>
+                            <button id=btn3Rings class="controlButton" onclick="switchTo3Rings()">3 rings</button>
+                            <button id=btnRingCrossing class="controlButton" onclick="switchToRingsCrossing()">rings crossing</button>
+                            <button id=btnAccumalator class="controlButton" onclick="switchToAccumulator()">accumalator</button>
+                            <button id=btnMasks class="controlButton" onclick="startMasksClock()">masks</button>
+                            <button id=stop	 class="controlButton" onclick="stopTick()">stop</button>
+                            <button id=btnAbout	 class="controlButton" onclick="toggleAboutContentShow()">about</button>
                         </div>
                         <div id=aboutContent>
                             a demonstration of a bunch of design ideas for 
@@ -80,7 +82,7 @@
                         </div>
                         <div id=simpUIControls class=buttonPanelSmp>
                             <label id=lblSimpleMoreControls class="lblSwitchTitelAlt">MORE</label>
-                            <button class=controlButton  onclick="switchUiDesign()"> 
+                            <button id=btnSwitchUiFromSimple class=controlButton  onclick="switchUiDesign()"> 
                                 switch ui
                             </button>
                             <button class=controlButton>what's frame rate</button>
@@ -179,9 +181,10 @@
     
                     </div>
                 </div>
-               
-
+            
                 <div id=col2 class=verCol>
+                    
+
                     <div id=divHomeScreen class=themeContainer>
                         <h1>Home</h1>
                     </div>
@@ -237,11 +240,16 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- container for load wait animation -->                
+                <div id=divLoadingAlert>
+
+                    <div id=divLtdDisc>
+                        limited func disclaimier
+                        <button onclick="closeWaitAnimWindow()">ok</button>
+                    </div>
+                </div>
            <!--  </div> -->
-
-
-
-
         </div>
 
 
@@ -633,13 +641,15 @@
             expFuncs.hideAboutContent=hideAboutContent;
            
 
-            $("#btnAbout").click(toggleAboutContentShow);
-            $("#btnMasks").click(startMasksClock);
-            $("#btnSingeRing").click(switchTosingleRing);
-            $("#btn3Rings").click(switchTo3Rings);
-            $("#btnRingCrossing").click(switchToRingsCrossing);
-            $("#btnAccumalator").click(switchToAccumulator);
-            $("#stop").click(stopTick);
+           // $("#btnAbout").click(toggleAboutContentShow);
+            //$("#btnMasks").click(startMasksClock);
+            //$("#btnSingeRing").click(switchTosingleRing);
+            //$("#btn3Rings").click(switchTo3Rings);
+           // $("#btnRingCrossing").click(switchToRingsCrossing);
+           // $("#btnAccumalator").click(switchToAccumulator);
+           // $("#stop").click(stopTick);
+
+            
 
 
             //slider event handler 
@@ -744,8 +754,7 @@
             expFuncs.switchToHome =switchToHome;
            
 
-
-            window.addEventListener("load", onLoad);
+           
 
 
             function adjustToBrowser(){
@@ -758,18 +767,46 @@
                     isMobile = true;
                 }
                 if(isMobile || !(isOpera||isChrome)){
-                    alert("unsported platform");
+                    //alert("unsported platform");
                     switchUiDesign();
+                    disableSwitchUiFromSimple();
+                    showLimitedDisc();
+                }else{
+                    closeWaitAnimWindow();
                 }
 
             }
 
-            function onLoad(){
-                //applyUiMode(uiConfig.currnentMode);
-                adjustToBrowser();
-                switchToHome();
-                onLoad_ringsControl();
+            function disableSwitchUiFromSimple(){
+                document.getElementById("btnSwitchUiFromSimple").disabled = true;
+                document.getElementById("btnSwitchUiFromSimple").style.background="gray"
             }
+
+            function closeWaitAnimWindow(){
+                document.getElementById("divLoadingAlert").style.display="none";
+            }
+            function showLimitedDisc(){
+                document.getElementById('divLtdDisc').style.display="block";
+            }
+
+           
+
+            function onLoad(){
+                onLoad_ringsControl();
+                //applyUiMode(uiConfig.currnentMode);
+                switchToHome();
+                stopWaitAnim();
+                adjustToBrowser();
+               
+            }
+
+            function domReadyHandler(){
+                startWaitAnim();
+            }
+
+
+            document.addEventListener("DOMContentLoaded", domReadyHandler, false);
+            window.addEventListener("load", onLoad);
         </script>
 
     </body>

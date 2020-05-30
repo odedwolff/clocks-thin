@@ -3,6 +3,7 @@ body{
     background-color:  #000000;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     overflow: hidden;
+    /* margin: 0px; */
 }
 
 @media  screen and (min-width: 481px){
@@ -61,4 +62,31 @@ div#leftSideBar {
     /* margin-left: 47px; */
     /* margin-right: 40px; */
     margin-left: 17%;
+}
+
+.clsDynLetter{
+    /*  background: yellowgreen;*/
+    width:30px;
+    height:20px;
+    position: absolute;
+    color:#efefef;
+    text-align: center;
+    font-size: 32px;
+}
+
+#divLoadingAlert{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgb(34, 34, 76);
+    z-index: 90;
+    color: burlywood;
+}
+
+#divLtdDisc{
+    margin-top:600px;
+    margin-left:200px;
+    background: chocolate;
+    color: black;
+    display: none;
 }
