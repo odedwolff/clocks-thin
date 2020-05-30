@@ -1,7 +1,7 @@
 var rawText = "loading...";
 
 var waitAnimConf = {
-    textStartX:500,
+    textStartX:200,
     textStartY:320,
     letterSpacing:40,
     minScale:1.0,

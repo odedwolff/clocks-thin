@@ -245,8 +245,11 @@
                 <div id=divLoadingAlert>
 
                     <div id=divLtdDisc>
-                        limited func disclaimier
-                        <button onclick="closeWaitAnimWindow()">ok</button>
+                        <p id=discLimit>
+                            Welcome, please note that it's highly recommended to use the site with Chrome or Opera browswer on a 
+                            desktop or laptop system (non mobile). other platforms are only partially supported, to different extents 
+                        </p>
+                        <button id=btnRunAnyway onclick="closeWaitAnimWindow()">try anyway</button>
                     </div>
                 </div>
            <!--  </div> -->
@@ -768,9 +771,11 @@
                 }
                 if(isMobile || !(isOpera||isChrome)){
                     //alert("unsported platform");
-                    switchUiDesign();
-                    disableSwitchUiFromSimple();
                     showLimitedDisc();
+                    if(!(isOpera||isChrome)){
+                        switchUiDesign();
+                        disableSwitchUiFromSimple();
+                    }
                 }else{
                     closeWaitAnimWindow();
                 }
