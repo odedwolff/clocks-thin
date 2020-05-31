@@ -127,3 +127,8 @@ div#leftSideBar {
     width:70%;
 }
 
+#divHomeScreenCont{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+}
