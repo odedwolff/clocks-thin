@@ -127,8 +127,28 @@ div#leftSideBar {
     width:70%;
 }
 
-#divHomeScreenCont{
-    padding-left: 50px;
+
+#diveHomeImgCont{
+    position: absolute;
+    opacity: 0.5;
+
+}
+
+
+#divHomeScreenCont {
+    padding-left: 137px;
     padding-right: 50px;
     padding-top: 50px;
+    font-family: "Levenim MT";
+    position: absolute;
+    top: 0px;
+    color: #4ea4a7;
+}
+
+
+
+img#imgHomeBack {
+    opacity: 32%;
+    height: 100%;
+    width: 100%;
 }
