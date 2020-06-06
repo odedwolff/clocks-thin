@@ -136,19 +136,60 @@ div#leftSideBar {
 
 
 #divHomeScreenCont {
-    padding-left: 137px;
+    padding-left: 25px;
     padding-right: 50px;
     padding-top: 50px;
     font-family: "Levenim MT";
     position: absolute;
     top: 0px;
-    color: #4ea4a7;
+    /* color: #4ea4a7; */
+    color:black;
+    width: 35%;
 }
 
 
 
 img#imgHomeBack {
     opacity: 32%;
-    height: 100%;
+    background-image: url(../resources/gears.jpg);
+    /* background-color: #bbbbbb; */
+    background-size: cover;
+    object-fit: cover;
     width: 100%;
+    height: 100%;
+}
+
+
+#divHomeImge {
+    /* opacity: 32%; */
+    background-image: url(../resources/gears.jpg);
+    /* background-color: #bbbbbb; */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+
+#divHomeScreenCont > h1 {
+    font-size: 82px;
+    margin-block-start: -0.33em;
+    margin-block-end: -0.33em;
+}
+
+
+
+
+#divHomeScreenCont > h3 {
+    font-size: 25px;
+}
+
+
+
+
+#divHomeScreenCont > p {
+    font-size: 20px;
+    display: block;
+    margin-block-start: -1em;
+    margin-block-end: -1em;
 }
