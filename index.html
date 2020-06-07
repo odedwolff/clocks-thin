@@ -59,15 +59,18 @@
                         <div id = buttonsPanel1 class=buttonPanelSmp>
                             <label id=lblModeSimple class="lblSwitchTitelAlt">
                                 MODE
-                             </label>
-                            
+                            </label>
+
+                            <button id=btnAbout	 class="controlButton" onclick="switchToHome()">home</button>
                             <button id=btnSingeRing class="controlButton" onclick="switchTosingleRing()">single Ring</button>
                             <button id=btn3Rings class="controlButton" onclick="switchTo3Rings()">3 rings</button>
                             <button id=btnRingCrossing class="controlButton" onclick="switchToRingsCrossing()">rings crossing</button>
                             <button id=btnAccumalator class="controlButton" onclick="switchToAccumulator()">accumalator</button>
                             <button id=btnMasks class="controlButton" onclick="startMasksClock()">masks</button>
                             <button id=stop	 class="controlButton" onclick="stopTick()">stop</button>
-                            <button id=btnAbout	 class="controlButton" onclick="toggleAboutContentShow()">about</button>
+                            <!-- <button id=btnAbout	 class="controlButton" onclick="toggleAboutContentShow()">about</button> -->
+                            <button id=btnAbout	 class="controlButton" onclick="switchToContacts()">contacts</button>
+                            
                         </div>
                         <div id=aboutContent>
                             a demonstration of a bunch of design ideas for 
@@ -211,6 +214,35 @@
                            
                         </div>
                     </div>
+
+
+                    <div id=divContacts class=themeContainer>
+                        <div class=panelCls>
+                            
+                           <!--  <img id=imgHomeBack> -->
+                            <div id=divContactsImge>
+
+                            </div>
+                            <div id=divContactsScreenCont>
+                                <h1>timers</h1>
+                                <h3>overview</h3>
+                                <p>
+                                    this here is a demo of some clock designs 
+                                </p>
+                                <h3>frame rate</h3>
+                                <p>
+                                    higher value results in more fluent animation, but also take more computing 
+                                    resources, so you should experiment with different settings for optimal result
+                                </p>
+                                <h3>technical</h3>
+                                <p>
+                                    programming mostly vanilla javascript, with some use of jquery
+                                </p>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    
                     
                     
                     
@@ -764,17 +796,23 @@
                 hideAllMainPanels();
                 $("#divHomeScreen").show();
                
-                /* document.getElementById("divHosvgContmeScreen").style.display = "none";
-                document.getElementById("masksContainer").style.display = "none";  */
-                //document.getElementById("divHomeScreen").style.display = "block";
-              /*   masksPanelOff(); */
             }
+
+            function switchToContacts(){
+                console.log("switchToContact()");
+                hideAllMainPanels();
+                $("#divContacts").show();
+               
+            }
+
+            expFuncs.switchToContacts=switchToContacts;
 
 
             function hideAllMainPanels(){
                 $("#svgCont").hide();
                 $("#masksContainer").hide();
                 $("#divHomeScreen").hide();
+                $("#divContacts").hide();
             }
 
             expFuncs.switchToHome =switchToHome;
