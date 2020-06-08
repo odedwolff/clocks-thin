@@ -38,6 +38,26 @@ body{
         text-align: center;
         font-size: 32px;
     }
+
+    #divColHome1 {
+        left: 144px;
+        top: 4px;
+        width: 286px;
+    }
+    
+    
+    #divColHome2 {
+        left: 541px;
+        top: 38px;
+        width: 279px;
+    }
+    
+    
+    #h1Timers {
+        position: absolute;
+        top: 492px;
+        left: 591px;
+    }
     
 
 }
@@ -87,6 +107,26 @@ body{
         text-align: center;
         font-size: 32px;
         left:-600px;
+    }
+
+    #divColHome1 {
+        left: 117px;
+        top: 4px;
+        width: 263px;
+    }
+    
+    
+    #divColHome2 {
+        left: 411px;
+        top: 38px;
+        width: 255px;
+    }
+    
+    
+    #h1Timers {
+        position: absolute;
+        top: 492px;
+        left: 410px;
     }
     
 }
@@ -211,4 +251,48 @@ img#imgHomeBack {
 
 #divContacts{
     display: none;
+}
+
+
+.colHom{
+    /* display: inline; */
+    position: absolute;
+    widows: 300px;
+}
+
+#divHomeRootRelPos{
+    position: relative;
+}
+
+/* 
+#divColHome1 {
+    left: 144px;
+    top: 4px;
+    width: 286px;
+}
+
+
+#divColHome2 {
+    left: 541px;
+    top: 38px;
+    width: 279px;
+}
+
+
+#h1Timers {
+    position: absolute;
+    top: 492px;
+    left: 591px;
+}
+ */
+
+
+.colHom > h3 {
+    color: #000000;
+}
+
+
+.colHom > p {
+    color: #000000;
+    margin-block-start: -1em;
 }
