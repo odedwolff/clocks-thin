@@ -1,9 +1,8 @@
 # clocks
 
-what: 
-  more Playing aournd with / practicing  SVG. dropped paging machanisem 
-  from previous versoin, thus "thin"
+a demo containing:
 
-status: 
-  16.11.2016 - 1st design has basic functionality
-  19.03.2020 - 
+-some clock design ideas, implmented with SVG
+
+-some custom html controls ideas
+
