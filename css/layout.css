@@ -296,3 +296,116 @@ img#imgHomeBack {
     color: #000000;
     margin-block-start: -1em;
 }
+
+
+
+
+#divUIStdControlPanel {
+    display: none;
+    position: absolute;
+    top: -2vh;
+    left: -6vw;
+    width: 28vw;
+}
+
+#buttonsPanel1 {
+    display: block;
+   /*  width: 80%;
+    margin-top: 3%;
+    float: left;
+    margin-left: 17%;
+    display: none;
+    padding-top: 12px;
+    padding-bottom: 12px; */
+}
+
+#fpsSlider{
+    display: block;
+    color: white;
+   /*  top: 294px;
+    left: 48px;
+    width: 247px; */
+    /* height: 61px; */
+ }
+
+ 
+
+
+input#fpsSlide {
+    width: 154px;
+    height: 11px;
+    box-shadow: inset 7px 2px 6px 1px rgba(3, 83, 148, 0.9), 0px 1px 1px 0px rgba(47, 28, 131, 0.8);
+    -webkit-appearance: none;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    background: #000000;
+    cursor: pointer;
+    margin-top: 24px;
+    margin-left: 37px;
+}
+
+
+
+/* the "more" sub panel  */
+div#simpUIControls {
+   /*  top: 388px; */
+   /*  left: 46px; */
+   /*  width: 251px; */
+    /* height: 81px; */
+    /* display: none; */
+    /* padding-top: 12px; */
+}
+
+
+
+
+
+.UI2SubPannel {
+    width: 53%;
+    margin-left: 28%;
+    margin-top: 55px;
+    position: relative;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+
+.buttonPanelSmp{
+    border-width: 1px;
+    border-color: white;
+    border-style: solid;
+    border-radius: 4px;
+}
+
+
+/* screen switch panel simple buttons  */
+#lblModeSimple {
+    left: 74px;
+    top: -7px;
+    position: absolute;
+    background: black;
+    width: 60px;
+    padding-left: 9px;
+}
+
+ 
+
+#lblFrameRateUISimp{
+    position: absolute;
+    left: 41px;
+    top: -7px;
+    background: black;
+    width: 123px;
+    padding-left: 10px;
+}
+
+
+#lblSimpleMoreControls {
+    position: absolute;
+    left: 74px;
+    top: -7px;
+    background: black;
+    width: 61px;
+    padding-left: 6px;
+}
+ 

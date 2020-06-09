@@ -49,48 +49,48 @@
             <!-- <div id = mainHorz>  -->
                 <div id=col1 class=verCol>
                     <div id="leftSideBar">
+                        <!-- switch from UI1 to UI2 -->
                         <div id=divSwitchUI>
                             <button id=btnSwitchDesign onclick="switchUiDesign()"></button>
                             <label id=lblSwitch>switch UI</label>
                         </div>   
                         
     
-                        
-                        <div id = buttonsPanel1 class=buttonPanelSmp>
-                            <label id=lblModeSimple class="lblSwitchTitelAlt">
-                                MODE
-                            </label>
+                        <div id=divUIStdControlPanel>
+                            <div id = buttonsPanel1 class='buttonPanelSmp UI2SubPannel' >
+                                <label id=lblModeSimple class="lblSwitchTitelAlt">
+                                    MODE
+                                </label>
 
-                            <button id=btnAbout	 class="controlButton" onclick="switchToHome()">home</button>
-                            <button id=btnSingeRing class="controlButton" onclick="switchTosingleRing()">single Ring</button>
-                            <button id=btn3Rings class="controlButton" onclick="switchTo3Rings()">3 rings</button>
-                            <button id=btnRingCrossing class="controlButton" onclick="switchToRingsCrossing()">rings crossing</button>
-                            <button id=btnAccumalator class="controlButton" onclick="switchToAccumulator()">accumalator</button>
-                            <button id=btnMasks class="controlButton" onclick="startMasksClock()">masks</button>
-                            <button id=stop	 class="controlButton" onclick="stopTick()">stop</button>
-                            <!-- <button id=btnAbout	 class="controlButton" onclick="toggleAboutContentShow()">about</button> -->
-                            <button id=btnAbout	 class="controlButton" onclick="switchToContacts()">contacts</button>
-                            
+                                <button id=btnAbout	 class="controlButton" onclick="switchToHome()">home</button>
+                                <button id=btnSingeRing class="controlButton" onclick="switchTosingleRing()">single Ring</button>
+                                <button id=btn3Rings class="controlButton" onclick="switchTo3Rings()">3 rings</button>
+                                <button id=btnRingCrossing class="controlButton" onclick="switchToRingsCrossing()">rings crossing</button>
+                                <button id=btnAccumalator class="controlButton" onclick="switchToAccumulator()">accumalator</button>
+                                <button id=btnMasks class="controlButton" onclick="startMasksClock()">masks</button>
+                                <button id=stop	 class="controlButton" onclick="stopTick()">stop</button>
+                                <!-- <button id=btnAbout	 class="controlButton" onclick="toggleAboutContentShow()">about</button> -->
+                                <button id=btnAbout	 class="controlButton" onclick="switchToContacts()">contacts</button>
+                                
+                            </div>
+                            <!--  <div id=aboutContent>
+                                a demonstration of a bunch of design ideas for 
+                                clocks, implmented in HTML5, SVG. 
+                                by oded wolff, 2017. 
+                                your feeback is welcome
+                                <a href="mailto:odedwolff@gmail.com">odedwolff@gmail.com</a>
+                            </div> -->
+                            <div id=fpsSlider class='buttonPanelSmp UI2SubPannel'>
+                                <label id=lblFrameRateUISimp class="lblSwitchTitelAlt">FRAME RATE</label>
+                                <input type="range" id="fpsSlide" class=disable-select name="fpsSlide"  onchange="fpsSlideChange()" min="1" max="20">
+                            </div>
+                            <div id=simpUIControls class='buttonPanelSmp UI2SubPannel'>
+                                <label id=lblSimpleMoreControls class="lblSwitchTitelAlt">MORE</label>
+                                <button id=btnSwitchUiFromSimple class=controlButton  onclick="switchUiDesign()"> 
+                                    switch ui
+                                </button>
+                            </div>
                         </div>
-                        <div id=aboutContent>
-                            a demonstration of a bunch of design ideas for 
-                            clocks, implmented in HTML5, SVG. 
-                            by oded wolff, 2017. 
-                            your feeback is welcome
-                            <a href="mailto:odedwolff@gmail.com">odedwolff@gmail.com</a>
-                        </div>
-                        <div id=fpsSlider class=buttonPanelSmp>
-                            <label id=lblFrameRateUISimp class="lblSwitchTitelAlt">FRAME RATE</label>
-                            <input type="range" id="fpsSlide" class=disable-select name="fpsSlide"  onchange="fpsSlideChange()" min="1" max="20">
-                        </div>
-                        <div id=simpUIControls class=buttonPanelSmp>
-                            <label id=lblSimpleMoreControls class="lblSwitchTitelAlt">MORE</label>
-                            <button id=btnSwitchUiFromSimple class=controlButton  onclick="switchUiDesign()"> 
-                                switch ui
-                            </button>
-                            <button class=controlButton>what's frame rate</button>
-                        </div>
-    
                         
     
                         <div id=divRingsOOP>
@@ -334,7 +334,8 @@
             var uiConfig = {
                 //0 for simple, 1 for fency 
                 currnentMode:1,
-                simpleUIElmIDs:['buttonsPanel1','fpsSlider','simpUIControls'],
+                //simpleUIElmIDs:['buttonsPanel1','fpsSlider','simpUIControls'],
+                simpleUIElmIDs:['divUIStdControlPanel'],
                 fenccyUIElmIDs:['div3Rings', 'divRingsOOP','divSwitchUI']
             }
 
