@@ -408,4 +408,54 @@ div#simpUIControls {
     width: 61px;
     padding-left: 6px;
 }
+
+
+#divLinks {
+    position: absolute;
+    top: 297px;
+    left: 126px;
+    /* position: relative; */
+    /* background: #131d23a6; */
+    z-index: 40;
+}
+
+
+
+#divLinks > a {
+    /* color: #abec11; */
+    color: #44e1ff;
+    display: block;
+    font-size: 21px;
+    margin-top: 26px;
+    text-decoration: none;
+    text-align: center;
+}
  
+
+
+.underShader {
+    background: #00000059;
+    position: absolute;
+}
+
+
+
+#rectUnderShadingHor {
+    height: 35%;
+    width: 100%;
+    top: 50%;
+}
+
+
+#rectUnderShadingVer {
+    height: 100%;
+    width: 35%;
+    left: 10%;
+}
+
+div#divLinkUnderShading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+}
