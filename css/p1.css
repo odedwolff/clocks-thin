@@ -5,12 +5,14 @@
 
 
 
+
+
 #btnSwitchDesign {
     background: black;
     height: 15px;
-    background: #000000;
+    background: #114c18;
     border-width: 2px;
-    border-color: #0d00bf;
+    border-color: #9ba4bd;
 }
 
 
@@ -205,11 +207,11 @@ div#divTitle1 {
 }
 
 .clsCircElmActiveMin{
-    fill:rgb(224, 168, 13);  
+    fill:rgb(239, 200, 45) 
 }
 
 .clsCircElmActiveHr{
-    fill:rgb(14, 14, 14); 
+    fill:rgb(236, 11, 11); 
 }
 
 
