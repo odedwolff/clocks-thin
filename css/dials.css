@@ -335,6 +335,7 @@ circle#circleDialOOP {
     position: absolute;
     z-index: 10;
     color: #ffffffed;
+    font-size: 13px;
 }
 
 
@@ -357,6 +358,7 @@ circle#circleDialOOP {
      -khtml-user-select: none; /* Konqueror HTML */
      -moz-user-select: none; /* Firefox */
      -ms-user-select: none; /* Internet Explorer/Edge */
+     font-size: 13px;
 }
 
 .clsScleDot{
@@ -402,14 +404,15 @@ div#divRingsOOP {
     top: 25px;
 }
 
-.clsDialLabel{
-    position: absolute;
-    font-size: 26px;
-    color: #151010;
-    font-weight: 900;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #8affc3ff;
 
+
+.clsDialLabel {
+    position: absolute;
+    font-size: 21px;
+    color: #efefef;
+    /* font-weight: 900; */
+    /* -webkit-text-stroke-width: 1px; */
+    /* -webkit-text-stroke-color: #d2d2d2; */
 }
 
 

@@ -44,7 +44,8 @@ var controllerContexts = {
         //fDescValSelectHandler:(x)=>{console.log("selected stop no " + x); invokeSwitchFunc(x);},
         fDescValSelectHandler:handleSelctionOOPDial,
         //stopsDeg:[-120,-80, -40, 0, 40, 80, 120],
-        stopTexts:["home","1 ring", "3 rings", "crossing", "accuomlator", "masks", "stop","contacts"],
+        //stopTexts:["home","1 ring", "3 rings", "crossing", "accuomlator", "masks", "stop","contacts"],
+        stopTexts:["HOME","1 RING", "3 RINGS", "CROSSING", "SUM", "MASKS", "FRZ","LINKS"], 
         //stopTexts:["1", "2", "3", "4", "5", "6","7"],
         /**change pivot location within moving dial */
         offsetX:45,
@@ -52,6 +53,7 @@ var controllerContexts = {
         postMouseRepositionfunc:move3OOPWheels.bind(null,/*scale*/3.0),
         startDraggingFunc:null,
         stopDraggingFunc:null,
+        //onload:setupLabels.bind(null, 'contOOPRings', 100, 'divRingsOutOfPhase')
         onload:setupLabels.bind(null, 'contOOPRings', 100, 'divRingsOutOfPhase')
     }
 }
