@@ -10,9 +10,13 @@
 #btnSwitchDesign {
     background: black;
     height: 15px;
-    background: #114c18;
+    background: #00e41b;
     border-width: 2px;
     border-color: #9ba4bd;
+}
+
+#btnSwitchDesign:hover{
+    cursor: pointer;
 }
 
 
