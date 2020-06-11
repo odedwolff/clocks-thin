@@ -1,4 +1,22 @@
 
+/* lock portrait orientation */
+/* 
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    html {
+      transform: rotate(-90deg);
+      transform-origin: left top;
+      width: 100vh;
+      overflow-x: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+}
+ */
+
+
+
+
 body{
     background-color:  #000000;
     /* font-family: Verdana, Courier, "Levenim MT",Arial, "Helvetica Neue", Helvetica, sans-serif; */
@@ -7,7 +25,7 @@ body{
     /* margin: 0px; */
 }
 
-@media  screen and (min-width: 481px){
+@media  screen and (min-width: 481px) {
     #col1 {
         width: 30%;
         height: 200px;
@@ -149,6 +167,79 @@ body{
     }
     
 }
+
+
+
+@media screen and (max-height: 480px) and (orientation:landscape){
+
+
+    
+
+    #col1 {
+        top: 38px;
+        left: 2px;
+    }
+
+
+    #col2 {
+        width: 103%;
+        height: 200px;
+        left: 100vw;
+        top: 18vh;
+    }
+
+    #divLoadingAlert{
+        width: 1000px;
+        height: 1500px;
+        position: absolute;
+        background: rgb(34, 34, 76);
+        z-index: 90;
+        color: burlywood;
+    }
+
+    .clsDynLetter{
+        width:30px;
+        height:20px;
+        position: absolute;
+        color:#bd2424;
+        text-align: center;
+        font-size: 32px;
+        left:-600px;
+    }
+
+    #divColHome1 {
+        left: 117px;
+        top: 4px;
+        width: 263px;
+    }
+    
+    
+    #divColHome2 {
+        left: 411px;
+        top: 38px;
+        width: 255px;
+    }
+    
+    
+    #h1Timers {
+        position: absolute;
+        top: 492px;
+        left: 410px;
+    }
+
+    
+    #divUIStdControlPanel {
+        display: none;
+        position: absolute;
+        top: -3vh;
+        left: -6vw;
+        width: 110vw;
+    }
+   
+}
+
+ 
+
 
 .verCol {
     position: absolute;
