@@ -1,3 +1,6 @@
+/**implanation of custom dial controls UI */
+
+
 const config={
     fps:5,
     limitBackBounceDeg:7.5
@@ -38,22 +41,16 @@ var controllerContexts = {
         dialId:"svgDialRingOOP",
         dragging:false,   /*runtime state, init to false*/
         isDescrete:true,
-        /* 0deg is....*/
-       /*  stopsDeg:[60, 100, 140, 180, 220, 260, 300], */
+        /* 0deg is down*/
         stopsDeg:[60, 94.3, 128.6, 162.85, 197.14, 231.42, 265.71, 300],
-        //fDescValSelectHandler:(x)=>{console.log("selected stop no " + x); invokeSwitchFunc(x);},
         fDescValSelectHandler:handleSelctionOOPDial,
-        //stopsDeg:[-120,-80, -40, 0, 40, 80, 120],
-        //stopTexts:["home","1 ring", "3 rings", "crossing", "accuomlator", "masks", "stop","contacts"],
         stopTexts:["HOME","1 RING", "3 RINGS", "CROSSING", "SUM", "MASKS", "FRZ","LINKS"], 
-        //stopTexts:["1", "2", "3", "4", "5", "6","7"],
         /**change pivot location within moving dial */
         offsetX:45,
         offsetY:45,
         postMouseRepositionfunc:move3OOPWheels.bind(null,/*scale*/3.0),
         startDraggingFunc:null,
         stopDraggingFunc:null,
-        //onload:setupLabels.bind(null, 'contOOPRings', 100, 'divRingsOutOfPhase')
         onload:setupLabels.bind(null, 'contOOPRings', 100, 'divRingsOutOfPhase')
     }
 }
@@ -61,34 +58,20 @@ var controllerContexts = {
 function handleSelctionOOPDial(i){
     console.log("selected stop no " + i); 
     invokeSwitchFunc(i);
-/* 
-    if(i==controllerContexts.contOOPRings.stopsDeg.length-1){
-        expFuncs.showAboutContent();
-    }else{
-        expFuncs.hideAboutContent();
-    } */
 
 }
-
-
-
-//knobSwitchFuncs = [switchTosingleRing, switchTo3Rings, switchToRingsCrossing, switchToAccumulator,  startMasksClock, stopTick, toggleAboutContentShow ];
-       
+      
 knobSwitchFuncNamesOrdered= ['switchToHome', 'switchTosingleRing', 'switchTo3Rings', 'switchToRingsCrossing', 'switchToAccumulator',  'startMasksClock', 'stop', 'switchToContacts' ];
-
-
 
 function invokeSwitchFunc(i){
     var key = knobSwitchFuncNamesOrdered[i];
     expFuncs[key]();
 }
         
-
 const fpsSetup = {
     min:1,
     max:20
 }
-
 
 var fpsAnimationConfig = {
     elmsInfos:{
@@ -188,12 +171,8 @@ function setupCircleRange(pivX, pivY, rad, angMin, angMax, nmSteps, offsetX, off
 
 function drawSpotDialTop(){
     setupCircleRange(controllerContexts['contDialtop'].pivX, controllerContexts['contDialtop'].pivY,
-    //controllerContexts['contDialtop'].dotsRad, 82, 302, 9, -10, 0);
    controllerContexts['contDialtop'].dotsRad, globalSettings.minAngle, globalSettings.maxAngle, 7, -10, 0);
 }
-
-
-
 
 function addNewCircle(left,top, parent){
     var newDiv = document.createElement("div");
@@ -203,11 +182,7 @@ function addNewCircle(left,top, parent){
             <circle class="clsCircleDot" cx="10" cy="10" r="5" stroke="black" stroke-width="3" fill="red" />
         </svg>`;
  
-    /*     `<svg height="100" width="100">
-        <circle cx="50" cy="50" r="5" stroke="black" stroke-width="3" fill="red" />
-    </svg>`; */
     parent.appendChild(newDiv);
-    //newDiv.style='position:absolute';
     newDiv.style.left=left + "px";
     newDiv.style.top=top + "px";
 }
@@ -224,8 +199,6 @@ function go(){
     roatateAroundExt('svgDialRing', 50, 50, 200, 0, -90, 0.4);
 }
 
-
-
 //rotate an element
 //args: element id, initial rotation, degrees to roatat, animation duration 
 function rotateAnim(elmId, startDeg, dDeg, animDurSec){
@@ -233,9 +206,7 @@ function rotateAnim(elmId, startDeg, dDeg, animDurSec){
     var nmFrames = animDurSec * config.fps;
     degPerSec=dDeg/animDurSec;
     var curRot = startDeg;
-    
     stepRotat(elm, nmFrames,curRot, degPerSec);
-
 }
 
 //impliments on stop of the animation 
@@ -268,7 +239,6 @@ function roatateAroundExtStep(elm, pvtX, pvtY, rad, curRot, dDegPerSec, framesRe
         , 
     
     1000/config.fps);
-      
 }
 
 function handleContainerStartDragging(contName){
@@ -285,7 +255,6 @@ function handleContainerStopDragging(contName){
     }
 }
 
-
 function angleFromPivot(containerElm, pvtXLoc, pvtYLoc, xMouseAbs, yMouseAbs, containerName){
     var pivPos = posInDoc(containerElm);
     mouseXLoc = xMouseAbs - pivPos.left;
@@ -301,18 +270,7 @@ function angleFromPivot(containerElm, pvtXLoc, pvtYLoc, xMouseAbs, yMouseAbs, co
     if (offsetFromPivot.x > 0  && offsetFromPivot.y >  0) angleToOffsetDeg=angleToOffsetDeg+180
     else 
     if (offsetFromPivot.x < 0  && offsetFromPivot.y >  0) angleToOffsetDeg=angleToOffsetDeg + 360;
-
     var offsetedAngle =  (angleToOffsetDeg + 90) % 360;          
-    /* if(offsetedAngle<globalSettings.minAngle){
-        controllerContexts[containerName].dragging=false;
-        handleContainerStopDragging(containerName);
-        offsetedAngle=globalSettings.minAngle + config.limitBackBounceDeg;
-    }
-    if(offsetedAngle>globalSettings.maxAngle){
-        offsetedAngle=globalSettings.maxAngle - config.limitBackBounceDeg;
-        controllerContexts[containerName].dragging=false;
-        handleContainerStopDragging(containerName);
-    } */
     if(offsetedAngle<globalSettings.minAngle - config.limitBackBounceDeg){
         controllerContexts[containerName].dragging=false;
         handleContainerStopDragging(containerName);
@@ -345,7 +303,6 @@ function positionDial(angle, containerName, atCloseststop){
     var top = 
         controllerContexts[containerName].pivY 
         + Math.sin((angle/360) * 2 * Math.PI) * controllerContexts[containerName].rad;
-
     
     //console.log("positioning lef,top:" + left,top);
     dialElm.style.left=left - controllerContexts[containerName].offsetX;
@@ -386,9 +343,6 @@ function posInDoc(el) {
     return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
 }
 
-
-
-
 function mouseDownInDial(containerName, e){
     //console.log("started tracking"); 
     controllerContexts[containerName].dragging=true; 
@@ -409,7 +363,6 @@ function mouseUpInContainer(containerName, e){
     if(!controllerContexts[containerName].dragging){
         return;
     }
-    
     //console.log("stopped tracking"); 
     controllerContexts[containerName].dragging=false; 
     handleContainerStopDragging(containerName);
@@ -439,16 +392,6 @@ function documentByContainer(containerName){
     //else, return the global documment reference 
     return document;
 }
-
-
-//read current string from Style field 
-/* function currentScale(transformStr){
-    var i = transformStr.indexOf("scale");
-    for(;transformStr[i]!='(';i++){}
-    for(;)
-}
- */
-
 
 /**continer specific handlers **/
 
@@ -481,24 +424,16 @@ function move3OOPWheels(scale, angle){
     document.getElementById("divPathOOPInner").style.transform="scale(" + scale + ") rotate(" + angle * -1 + "deg)";
 }
 
-
-
 /*******************************************************/
-
-
 
 /**set listeners for the moving parts**/
 function docLoadHandler(){
     //setUpListeners();
 }
 
-
-
-
 function setUpListeners(){
     
     //register mouse events 
-    
     document.getElementById('circleDial2').addEventListener('mousedown', mouseDownInDial.bind(null, 'contDialtop'));
     document.getElementById('divSprite2').addEventListener('mousemove', mouseMoveHandler.bind(null, 'contDialtop'));
     document.getElementById('divSprite2').addEventListener('mouseup', mouseUpInContainer.bind(null, 'contDialtop'));
@@ -530,14 +465,10 @@ function touchMoveHndlerD2(containerName, eTouches){
 }
 
 function toucUpHandler(containerName, eTouches){
-    //if(eTouches.targetTouches && eTouches.targetTouches[0])
-        mouseUpInContainer(containerName, eTouches.changedTouches[0]);
+    mouseUpInContainer(containerName, eTouches.changedTouches[0]);
 }
 
 
-
-
-//TODO - should move to main insex.html script ?
 function onLoad_ringsControl(){
     setUpListeners();
     const keys = Object.keys(controllerContexts);
@@ -559,9 +490,6 @@ function initDials(){
         positionDial(180 , continerNames[i], false);
     }
 }
-
-
-
 
 function showTradeOffSymbols(flag){
     var items = document.querySelectorAll(".objTradeOffSymbol");
@@ -589,7 +517,3 @@ function blurUnderTOSymbols(flag){
         elm.style.filter=str;
     }
 }
-
-
-
-//window.addEventListener("load", onLoad);

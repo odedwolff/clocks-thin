@@ -1,3 +1,5 @@
+/**wait animation implementation */
+
 var rawText = "loading...";
 
 var waitAnimConf = {
