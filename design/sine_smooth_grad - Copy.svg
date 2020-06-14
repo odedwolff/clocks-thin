@@ -30,7 +30,7 @@
      id="namedview7"
      showgrid="false"
      inkscape:zoom="0.84096521"
-     inkscape:cx="173.6677"
+     inkscape:cx="391.86935"
      inkscape:cy="490.80413"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
@@ -544,9 +544,9 @@
        height="114.26056"
        width="143.57541"
        id="rect912-7"
-       style="display:inline;opacity:1;fill:url(#radialGradient914-7);fill-opacity:1;fill-rule:evenodd;stroke-width:0.39686093" />
+       style="display:inline;opacity:0.7;fill:url(#radialGradient914-7);fill-opacity:1;fill-rule:evenodd;stroke-width:0.39686093" />
     <rect
-       style="display:inline;opacity:1;fill:url(#radialGradient2558);fill-opacity:1;fill-rule:evenodd;stroke-width:0.39686093"
+       style="display:inline;opacity:0.7;fill:url(#radialGradient2558);fill-opacity:1;fill-rule:evenodd;stroke-width:0.39686093"
        id="rect2556"
        width="143.57541"
        height="114.26056"
@@ -554,7 +554,7 @@
        y="85.527641"
        ry="0" />
     <rect
-       style="display:inline;opacity:0.994;fill:url(#radialGradient2562);fill-opacity:1;fill-rule:evenodd;stroke-width:0.39686093"
+       style="display:inline;opacity:0.7;fill:url(#radialGradient2562);fill-opacity:1;fill-rule:evenodd;stroke-width:0.39686093"
        id="rect2560"
        width="143.57541"
        height="114.26056"

@@ -41,6 +41,7 @@
          style="stop-color:#f3f3f3;stop-opacity:0;" />
     </linearGradient>
     <linearGradient
+       inkscape:collect="always"
        id="linearGradient1005-3-8"
        osb:paint="gradient">
       <stop
@@ -53,6 +54,7 @@
          id="stop1003" />
     </linearGradient>
     <linearGradient
+       inkscape:collect="always"
        id="linearGradient934"
        osb:paint="gradient">
       <stop
@@ -332,7 +334,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.66955096"
-     inkscape:cx="267.45006"
+     inkscape:cx="541.51434"
      inkscape:cy="305.57549"
      inkscape:document-units="mm"
      inkscape:current-layer="g850"
@@ -404,11 +406,11 @@
        height="114.26056"
        width="143.57541"
        id="rect912"
-       style="display:inline;opacity:1;fill:url(#radialGradient914);fill-opacity:1;fill-rule:evenodd;stroke-width:0.39686093"
+       style="display:inline;opacity:0.7;fill:url(#radialGradient914);fill-opacity:1;fill-rule:evenodd;stroke-width:0.39686093"
        transform="scale(1,-1)" />
     <rect
        transform="scale(1,-1)"
-       style="display:inline;opacity:1;fill:url(#radialGradient2558);fill-opacity:1;fill-rule:evenodd;stroke-width:0.39686093"
+       style="display:inline;opacity:0.7;fill:url(#radialGradient2558);fill-opacity:1;fill-rule:evenodd;stroke-width:0.39686093"
        id="rect2556"
        width="143.57541"
        height="114.26056"
@@ -417,7 +419,7 @@
        ry="0" />
     <rect
        transform="scale(1,-1)"
-       style="display:inline;opacity:1;fill:url(#radialGradient2562);fill-opacity:1;fill-rule:evenodd;stroke-width:0.39686093"
+       style="display:inline;opacity:0.7;fill:url(#radialGradient2562);fill-opacity:1;fill-rule:evenodd;stroke-width:0.39686093"
        id="rect2560"
        width="143.57541"
        height="114.26056"

@@ -92,14 +92,15 @@ const fpsSetup = {
 
 var fpsAnimationConfig = {
     elmsInfos:{
+        //aka elephent 
         objWeights : {
             minScale:0.03,
-            maxScale:0.27,
+            maxScale:0.45,
             isGrowingClockwise:true
         },
         objFeather : {
             minScale:0.16,
-            maxScale:0.6,
+            maxScale:0.75,
             isGrowingClockwise:false
         },
         objSineSmooth:{
