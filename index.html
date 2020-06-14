@@ -7,29 +7,17 @@
         <meta charset="utf-8">
         <title>timers</title>
         <meta name="description" content="The HTML5 Herald">
-        <!-- <meta name="author" content="SitePoint"> -->
         <meta name="viewport" content="width=device-width">
-
         <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
 
         <script src="http://code.jquery.com/jquery-latest.js"></script>
-<!--         <link rel="stylesheet" href="css/p1.css">
- -->    
-        
-
+            
         <link rel="stylesheet" href="css/p1.css">    
         <link rel="stylesheet" href="css/dials.css">
         <link rel="stylesheet" href="css/layout.css">
 
-
         <script>
-           /*  global scope vars */
-            /*  button control funcitons */
-          // var switchTosingleRing, switchTo3Rings, switchToRingsCrossing, switchToAccumulator,  startMasksClock, stopTick, toggleAboutContentShow;
-          var expFuncs={
-            /* showAboutContent:showAboutContent, 
-            hideAboutContent:hideAboutContent */
-          };
+            var expFuncs={};
         </script>
 
         <script src="scripts/elm_rendrers.js"></script>
@@ -38,12 +26,6 @@
         <script src="scripts/masks_ticker.js"></script>
         <script src="scripts/rings_controls.js"></script>
         <script src="scripts/waitAnim.js"></script>
-
-
-        <!--[if lt IE 9]>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-              
-        <![endif]-->
     </head>
 
     <body>
@@ -56,14 +38,11 @@
                             <button id=btnSwitchDesign onclick="switchUiDesign()"></button>
                             <label id=lblSwitch>SWITCH UI</label>
                         </div>   
-                        
-    
                         <div id=divUIStdControlPanel>
                             <div id = buttonsPanel1 class='buttonPanelSmp UI2SubPannel' >
                                 <label id=lblModeSimple class="lblSwitchTitelAlt">
                                     MODE
                                 </label>
-
                                 <button id=btnAbout	 class="controlButton" onclick="switchToHome()">HOME</button>
                                 <button id=btnSingeRing class="controlButton" onclick="switchTosingleRing()">1 RING</button>
                                 <button id=btn3Rings class="controlButton" onclick="switchTo3Rings()">3 RINGS</button>
@@ -71,17 +50,8 @@
                                 <button id=btnAccumalator class="controlButton" onclick="switchToAccumulator()">ACC</button>
                                 <button id=btnMasks class="controlButton" onclick="startMasksClock()">MASKS</button>
                                 <button id=stop	 class="controlButton" onclick="stopTick()">FRZ</button>
-                                <!-- <button id=btnAbout	 class="controlButton" onclick="toggleAboutContentShow()">about</button> -->
                                 <button id=btnAbout	 class="controlButton" onclick="switchToContacts()">LINKS</button>
-                                
                             </div>
-                            <!--  <div id=aboutContent>
-                                a demonstration of a bunch of design ideas for 
-                                clocks, implmented in HTML5, SVG. 
-                                by oded wolff, 2017. 
-                                your feeback is welcome
-                                <a href="mailto:odedwolff@gmail.com">odedwolff@gmail.com</a>
-                            </div> -->
                             <div id=fpsSlider class='buttonPanelSmp UI2SubPannel'>
                                 <label id=lblFrameRateUISimp class="lblSwitchTitelAlt">FRAME RATE</label>
                                 <input type="range" id="fpsSlide" class=disable-select name="fpsSlide"  onchange="fpsSlideChange()" min="1" max="20">
@@ -93,8 +63,6 @@
                                 </button>
                             </div>
                         </div>
-                        
-    
                         <div id=divRingsOOP>
                             <div id=divRingsOutOfPhase>
                             
@@ -128,7 +96,6 @@
                                 
                             </div>
                         </div>
-    
                         <div id=div3Rings>
                             <div id=divSprite2>
                                 <div id=div3RingsStaticBG>
@@ -160,42 +127,31 @@
     
                                 <div id=divTradOffSymbols class='clsTradeOffSymbols disable-select'>
                                     <object type="image/svg+xml" data="design/feather.svg" class="objTradeOffSymbol" id=objFeather>
-                                        svg not supported <!-- fallback image in CSS -->
+                                        svg not supported 
                                     </object>
                                     <object type="image/svg+xml" data="design/elephent.svg" class="objTradeOffSymbol" id=objWeights>
-                                        svg not supported <!-- fallback image in CSS -->
+                                        svg not supported 
                                     </object>
                                     <object type="image/svg+xml" data="design/sine_smooth_grad.svg" class="objTradeOffSymbol" id=objSineSmooth>
-                                        svg not supported <!-- fallback image in CSS -->
+                                        svg not supported 
                                     </object>
                                     <object type="image/svg+xml" data="design/sine_desc_grad.svg" class="objTradeOffSymbol" id=objSineDesc>
-                                        svg not supported <!-- fallback image in CSS -->
+                                        svg not supported 
                                     </object>
                                 </div>
-    
                                 <div id=labelMinRadFps class='clsLabelRadFps disable-select'>MIN</div>
-                                <div id=labelMaxRadFps class='clsLabelRadFps disable-select'>MAX</div>
-                                
+                                <div id=labelMaxRadFps class='clsLabelRadFps disable-select'>MAX</div>      
                             </div>
-    
                             <label id=lblMode class='clsDialLabel disable-select'>MODE</label>
                             <label id=lblFps class='clsDialLabel disable-select'>FRAME RATE</label>
-    
-    
                         </div>
-    
                     </div>
                 </div>
             
                 <div id=col2 class=verCol>
-                    
-
                     <div id=divHomeScreen class=themeContainer>
                         <div class=panelCls>
-                            
-                           <!--  <img id=imgHomeBack> -->
                             <div id=divHomeImge>
-
                             </div>
                             <div id=divHomeScreenCont>
                                     <h1 id=h1Timers>timers</h1>
@@ -226,14 +182,9 @@
                            
                         </div>
                     </div>
-
-
                     <div id=divContacts class=themeContainer>
                         <div class=panelCls>
-                            
-                           <!--  <img id=imgHomeBack> -->
                             <div id=divContactsImge>
-
                             </div>
                             <div id=divContactsScreenCont>
                                 <div id=divLinks>
@@ -251,10 +202,6 @@
                            
                         </div>
                     </div>
-                    
-                    
-                    
-                    
                     <!--svg container for different clocks --> 
                     <div id = svgCont class = themeContainer>
                         <div id = panel4	class = panelCls>
@@ -262,49 +209,31 @@
                             </svg>
                         </div>
                     </div>
-
-
                     <!--svg container for the MASKS clock -->
                     <div id = masksContainer class = themeContainer>
                         <div id = panel5	class = panelClsSqr>
-                            <!--<svg class="gridCell1" viewBox="0 0 800 500" preserveAspectRatio="none">-->
                             <svg  id=svgMasksBase class="clsSvgMasks" width="800" height="500"  viewBox="0 0 800 500" preserveAspectRatio="none">   
-                            
-                            <!--a static background hidden by dynamic mask - a plane that covers 
-                                the whole background, but has holed in it - rays that are oriented 
-                                by a clock dials, through which the background is visible--> 
                                 <g id = "gMask" fill-rule="evenodd" fill="#8b1a00" stroke="black" stroke-width="0">
-                                    
                                     <!--the mask definition--> 
                                     <defs>
-                                        <mask id="clockMask">
-<!--                                             <rect id="rectSubt" width="800" height="500" fill="#fff" />
- -->                                            
+                                        <mask id="clockMask">                                         
                                             <rect id="rectSubt" fill="#fff" />
                                             <path id=pathRaySec d= "M50,50 100,100,20,87 z" fill="#000"/>
                                             <path id=pathRayMin d= "M100,50 100,100,20,87 z" fill="#000"/>
                                             <path id=pathRayHr d= "M150,50 100,100,20,87 z" fill="#000"/>
                                         </mask>
                                     </defs> 
-
-
                                     <!--the background elemnt--> 
                                     <g transform="scale(0.835, 0.95)" > 
                                         <use xlink:href="resources/balkon.svg#3030"></use>
                                     </g>
-                                    
                                     <!--the mask the covers the subject image, from which the dials are subtracting-->  
-                                    <!-- <rect  id = "baseRectClk" y="-10" width="800" height="550"   mask="url(#clockMask)"/> -->
                                     <rect  id = "baseRectClk" y="0"  mask="url(#clockMask)"/>
-                            
-                                    
                                 </g>
-
                             </svg>
                         </div>
                     </div>
                 </div>
-
                 <!-- container for load wait animation -->                
                 <div id=divLoadingAlert>
 
@@ -329,18 +258,12 @@
             var svgNS = svg.namespaceURI;
             var msIn1Min = 1000 * 60;
             var aboutContentShown = false;
-            
             var uiConfig = {
                 //0 for simple, 1 for fency 
                 currnentMode:1,
-                //simpleUIElmIDs:['buttonsPanel1','fpsSlider','simpUIControls'],
                 simpleUIElmIDs:['divUIStdControlPanel'],
                 fenccyUIElmIDs:['div3Rings', 'divRingsOOP','divSwitchUI']
             }
-
-
-            
-           
 
             function switchUiDesign(){
                 console.log("switchUiDesign()");
@@ -367,7 +290,6 @@
                     for(i in uiConfig.fenccyUIElmIDs){
                         document.getElementById(uiConfig.fenccyUIElmIDs[i]).style.display="block";
                     }
-
                 }
             }
 
@@ -387,8 +309,6 @@
                     
                     //the displacement function to be projected on the face of the circle 
                     var f = fCustom1(/*scaleX*/4.0, /*scaleY*/33.0, /*decay*/ 2);
-
-                    
                     //parameters for the peripherial elements 
                     var dsnParmats = {
                         radiusNormal: 2,
@@ -428,14 +348,11 @@
                     fRenderHr(d);
                     fRenderMin(d);
                     fRenderSec(d);
-
-
                 };
                 currentIntervalFunc=tick;
                 return setInterval(tick, 1000 / numPracitalPerSecond);
             }
 
-            
             /**
              * starting the 3 circles clock 
              * 
@@ -444,9 +361,7 @@
              * **/
             
             function start3CirclesTicking(numPracitalPerSecond, panelName) {
-
                 var center = [450, 250];
-
                 //parameters for Hour elment rendering  
                 var dsnParmasHr = {
                     color: "#FFFFFF",
@@ -455,8 +370,6 @@
 
                 //function fer rendering hour elements 
                 var fElmGeneratorHr = fElmConstant.bind(dsnParmasHr);
-
-
                 var fRenderHr = function (dateTimeInfo) {
                     var currentMinProp = dateTimeInfo.getMinutes() / 60;
                     var currentHRProp = dateTimeInfo.getHours() / 12 + currentMinProp / 12;
@@ -489,15 +402,14 @@
 
                 };
 
-
                 //seconds element parameters
                 var dsnParmatsSec = {
                     radiusNormal: 2,
                     radiusFullHr: 4,
                     dfltClr: "#FFFFFF"
                 };
-                //seconds element rendering function 
 
+                //seconds element rendering function 
                 fElmGeneratorSec = fCircElmNoColorHrSec.bind(dsnParmatsSec);
                 var fRenderSec = function (dateTimeInfo) {
 
@@ -515,7 +427,6 @@
                         fRenderHr, fRenderMin, fRenderSec);
 
             }
-
 
             /**
              * starts a clock with mutually crossing circles
@@ -682,44 +593,20 @@
                 $("#masksContainer").hide();
 
             }
-
-
-           
-
-
             
             function showAboutContent() {
-                //$("#aboutContent").show(400);
-                //$("#aboutContent").show();
-                /* $("#aboutContent").style.display="block" */
                 document.getElementById("aboutContent").style.display="block";
                 $("#aboutContent").animate({opacity:0.75}, 200 );
             }
             expFuncs.showAboutContent=showAboutContent;
 
-            function hideAboutContent() {
-                //$("#aboutContent").hide(400);
-                 
+            function hideAboutContent() {  
                 $("#aboutContent").animate({opacity:0}, 400 );
-                /* $("#aboutContent").style.display="none" */
                 document.getElementById("aboutContent").style.display="none";
-                /* $("#aboutContent").hide(); */
             }
 
             expFuncs.hideAboutContent=hideAboutContent;
-           
-
-           // $("#btnAbout").click(toggleAboutContentShow);
-            //$("#btnMasks").click(startMasksClock);
-            //$("#btnSingeRing").click(switchTosingleRing);
-            //$("#btn3Rings").click(switchTo3Rings);
-           // $("#btnRingCrossing").click(switchToRingsCrossing);
-           // $("#btnAccumalator").click(switchToAccumulator);
-           // $("#stop").click(stopTick);
-
-            
-
-
+    
             //slider event handler 
             function fpsSlideChange(){
                 val = document.getElementById("fpsSlide").value;
@@ -737,9 +624,6 @@
                 interval=setInterval(currentIntervalFunc, 1000/val);
             }
             expFuncs.changeFPS=changeFPS;
-
-
-
             
             function switchToAccumulator(){
                 hideAllMainPanels();
@@ -790,7 +674,6 @@
             }
             expFuncs.toggleAboutContentShow = toggleAboutContentShow;
 
-            
             //switchToMaks
             function startMasksClock() {
                 clearInterval(interval);
@@ -827,10 +710,6 @@
 
             expFuncs.switchToHome =switchToHome;
            
-
-           
-
-
             function adjustToBrowser(){
                 var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
                 var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
@@ -869,7 +748,6 @@
 
             function onLoad(){
                 onLoad_ringsControl();
-                //applyUiMode(uiConfig.currnentMode);
                 switchToHome();
                 stopWaitAnim();
                 adjustToBrowser();
@@ -879,7 +757,6 @@
             function domReadyHandler(){
                 startWaitAnim();
             }
-
 
             document.addEventListener("DOMContentLoaded", domReadyHandler, false);
             window.addEventListener("load", onLoad);
@@ -905,4 +782,3 @@
 
 
 
-a
